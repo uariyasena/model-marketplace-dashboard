@@ -398,9 +398,6 @@ st.sidebar.markdown(f"**Last Updated:** March 24, 2026")
 # Download button
 st.sidebar.markdown("---")
 st.sidebar.markdown("### 📥 Downloads")
-if st.sidebar.button("📄 Download as PDF"):
-    st.sidebar.info("Open the HTML file in browser and use Ctrl+P → Save as PDF")
-
 if st.sidebar.button("📊 Download Metrics Excel"):
     st.sidebar.info("Metrics export feature coming soon!")
 
