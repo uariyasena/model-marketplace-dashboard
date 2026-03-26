@@ -1065,6 +1065,19 @@ elif section == "🔄 Process Flow":
     st.markdown("---")
     st.markdown("### View All Steps")
 
+    # Add gradient styling to expander labels
+    st.markdown(f"""
+    <style>
+        div[data-testid="stExpander"] summary p {{
+            background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }}
+    </style>
+    """, unsafe_allow_html=True)
+
     for i, step in enumerate(steps, 1):
         with st.expander(f"{step['title']}"):
             st.markdown(f"**👤 WHO:** {step['who']}")
