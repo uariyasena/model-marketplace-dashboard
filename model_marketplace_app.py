@@ -1035,11 +1035,14 @@ elif section == "🔄 Process Flow":
     else:
         gradient = f"linear-gradient(135deg, {selected_step['color']} 0%, {APEX_COLORS['lighter_gray']} 100%)"
 
-    # Apply gg gradient to all step titles
-    text_style = f"""background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                     -webkit-background-clip: text;
-                     -webkit-text-fill-color: transparent;
-                     background-clip: text;"""
+    # Use white gradient text for dark backgrounds (navy)
+    if selected_step['color'] == APEX_COLORS['navy']:
+        text_style = f"""background: linear-gradient(135deg, white 0%, {APEX_COLORS['light_blue']} 100%);
+                         -webkit-background-clip: text;
+                         -webkit-text-fill-color: transparent;
+                         background-clip: text;"""
+    else:
+        text_style = "color: white;"
 
     st.markdown(f"""
     <div style='background: {gradient};
