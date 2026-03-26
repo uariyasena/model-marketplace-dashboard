@@ -965,8 +965,7 @@ elif section == "🔄 Process Flow":
             "what": "Enable Model Marketplace at correspondent level",
             "where": "Client Configurator → Experience Settings → Enable Model Marketplace",
             "timeline": "Completed during client onboarding",
-            "color": APEX_COLORS['amethyst'],
-            "color2": APEX_COLORS['amethyst_pink']
+            "color": APEX_COLORS['blue']
         },
         {
             "title": "Step 2: User Permission Configuration",
@@ -974,8 +973,7 @@ elif section == "🔄 Process Flow":
             "what": "Grant subscribe permissions to specific users",
             "where": "User management interface",
             "timeline": "Before first use",
-            "color": APEX_COLORS['amethyst'],
-            "color2": APEX_COLORS['amethyst_pink']
+            "color": APEX_COLORS['bright_blue']
         },
         {
             "title": "Step 3: Client Acceptance & Discovery",
@@ -983,8 +981,7 @@ elif section == "🔄 Process Flow":
             "what": "Sign in to Ascend Workstation → Trading → Model Marketplace",
             "where": "Accept Apex Terms & Conditions (one-time, all providers)",
             "timeline": "5-10 minutes (one-time setup)",
-            "color": APEX_COLORS['amethyst'],
-            "color2": APEX_COLORS['amethyst_pink']
+            "color": APEX_COLORS['sky_blue']
         },
         {
             "title": "Step 4: Model Evaluation",
@@ -992,8 +989,7 @@ elif section == "🔄 Process Flow":
             "what": "Review model details: Holdings, Target Weights, Summary, Resources",
             "where": "Columns: Provider | Model | Investment Vehicle | Status",
             "timeline": "Variable - depends on research depth",
-            "color": APEX_COLORS['amethyst'],
-            "color2": APEX_COLORS['amethyst_pink']
+            "color": APEX_COLORS['navy']
         },
         {
             "title": "Step 5: Model Subscription",
@@ -1001,8 +997,7 @@ elif section == "🔄 Process Flow":
             "what": "Click Subscribe → Accept Provider-Specific T&Cs",
             "where": "Status changes: AVAILABLE → SUBSCRIBED, Button: Green → Red",
             "timeline": "2-3 minutes per model",
-            "color": APEX_COLORS['amethyst'],
-            "color2": APEX_COLORS['amethyst_pink']
+            "color": APEX_COLORS['green']
         },
         {
             "title": "Step 6: Post-Subscription Configuration in Rebalancer",
@@ -1010,8 +1005,7 @@ elif section == "🔄 Process Flow":
             "what": "CRITICAL: Verify asset class assignments for each security",
             "where": "Rebalancer → Settings → Models → Create Goals → Assign to Accounts",
             "timeline": "15-30 minutes for first model",
-            "color": APEX_COLORS['amethyst'],
-            "color2": APEX_COLORS['amethyst_pink']
+            "color": APEX_COLORS['gold']
         },
         {
             "title": "Step 7: Portfolio Rebalancing",
@@ -1019,8 +1013,7 @@ elif section == "🔄 Process Flow":
             "what": "Initiate rebalance → Review generated buy/sell orders → Submit trades",
             "where": "Review compliance disclosures before submission",
             "timeline": "Variable based on portfolio size",
-            "color": APEX_COLORS['amethyst'],
-            "color2": APEX_COLORS['amethyst_pink']
+            "color": APEX_COLORS['purple']
         },
         {
             "title": "Step 8: Unsubscribe (Optional)",
@@ -1036,11 +1029,17 @@ elif section == "🔄 Process Flow":
     # Display selected step
     selected_step = steps[step_progress - 1]
 
-    # All steps use amethyst gradient
-    gradient = f"linear-gradient(135deg, {selected_step['color']} 0%, {selected_step['color2']} 100%)"
+    # Handle gradient for Step 8 (amethyst gradient)
+    if 'color2' in selected_step:
+        gradient = f"linear-gradient(135deg, {selected_step['color']} 0%, {selected_step['color2']} 100%)"
+    else:
+        gradient = f"linear-gradient(135deg, {selected_step['color']} 0%, {APEX_COLORS['lighter_gray']} 100%)"
 
-    # Use white text for all steps
-    text_style = "color: white;"
+    # Apply gg gradient to all step titles
+    text_style = f"""background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                     -webkit-background-clip: text;
+                     -webkit-text-fill-color: transparent;
+                     background-clip: text;"""
 
     st.markdown(f"""
     <div style='background: {gradient};
