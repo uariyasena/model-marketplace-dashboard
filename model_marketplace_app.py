@@ -1451,48 +1451,8 @@ elif section == "📢 Marketing Strategy":
 
     st.markdown("### Target Audience Priority")
 
-    # Priority chart
+    # Priority table
     import pandas as pd
-
-    # Create visual priority chart
-    fig = go.Figure()
-
-    audiences = ["Existing Rebalancer\nClients (38 firms)", "Classic Clients\nPost-Migration", "New Rebalancer\nProspects"]
-    priorities = [3, 2, 1]  # Reversed for visual impact (higher = more important)
-    colors = [APEX_COLORS['gold'], APEX_COLORS['blue'], APEX_COLORS['sky_blue']]
-
-    fig.add_trace(go.Bar(
-        y=audiences,
-        x=priorities,
-        orientation='h',
-        marker=dict(
-            color=colors,
-            line=dict(color='white', width=2)
-        ),
-        text=['🥇 Priority 1<br>Easiest Adoption', '🥈 Priority 2<br>Post-Migration', '🥉 Priority 3<br>Market Growth'],
-        textposition='inside',
-        textfont=dict(color='white', size=14, family='Arial Black'),
-        hovertemplate='<b>%{y}</b><br>Priority Level: %{x}<extra></extra>'
-    ))
-
-    fig.update_layout(
-        xaxis=dict(
-            title="Priority Level",
-            showgrid=False,
-            showticklabels=False,
-            range=[0, 3.5]
-        ),
-        yaxis=dict(
-            title="",
-            showgrid=False
-        ),
-        plot_bgcolor='white',
-        height=300,
-        margin=dict(l=20, r=20, t=20, b=20),
-        showlegend=False
-    )
-
-    st.plotly_chart(fig, use_container_width=True)
 
     # Create dataframe
     priority_data = pd.DataFrame({
@@ -1510,24 +1470,22 @@ elif section == "📢 Marketing Strategy":
         ]
     })
 
-    # Configure AgGrid with custom CSS for gradient
+    # Add CSS for gradient text
+    st.markdown(f"""
+    <style>
+        .ag-cell[col-id="Audience"], .ag-cell[col-id="Size"], .ag-cell[col-id="Rationale"] {{
+            background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }}
+    </style>
+    """, unsafe_allow_html=True)
+
+    # Configure AgGrid
     gb = GridOptionsBuilder.from_dataframe(priority_data)
     gb.configure_default_column(sortable=True, resizable=True)
-
-    # Configure specific columns with gradient styling
-    gb.configure_column("Audience", cellStyle={'background': f'linear-gradient(135deg, {APEX_COLORS["amethyst"]} 0%, {APEX_COLORS["amethyst_pink"]} 100%)',
-                                                '-webkit-background-clip': 'text',
-                                                '-webkit-text-fill-color': 'transparent',
-                                                'font-weight': '600'})
-    gb.configure_column("Size", cellStyle={'background': f'linear-gradient(135deg, {APEX_COLORS["amethyst"]} 0%, {APEX_COLORS["amethyst_pink"]} 100%)',
-                                           '-webkit-background-clip': 'text',
-                                           '-webkit-text-fill-color': 'transparent',
-                                           'font-weight': '600'})
-    gb.configure_column("Rationale", cellStyle={'background': f'linear-gradient(135deg, {APEX_COLORS["amethyst"]} 0%, {APEX_COLORS["amethyst_pink"]} 100%)',
-                                                '-webkit-background-clip': 'text',
-                                                '-webkit-text-fill-color': 'transparent',
-                                                'font-weight': '600'})
-
     gridOptions = gb.build()
 
     # Display AgGrid
