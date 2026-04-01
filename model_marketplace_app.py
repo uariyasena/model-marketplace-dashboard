@@ -2696,51 +2696,6 @@ elif section == "🗺️ Roadmap":
 elif section == "📞 Contact Directory":
     st.title("📞 Contact Directory")
 
-    st.markdown("### Key Contacts")
-
-    contacts = pd.DataFrame({
-        "Role": [
-            "Product Management",
-            "Sales/RM Coordination",
-            "Onboarding",
-            "Client Services (Primary)",
-            "Client Services (Backup)",
-            "Technical Escalation",
-            "Provider Relations"
-        ],
-        "Contact": [
-            "Model Marketplace & Rebalancer PM",
-            "Rich or Larry",
-            "Client Configurator Team",
-            "Park",
-            "Steven Glenn",
-            "Engineering",
-            "Jennifer Zmarzly (Franklin Templeton)"
-        ],
-        "Responsibility": [
-            "Product strategy, roadmap, feature prioritization",
-            "Provider business development, new provider sourcing",
-            "Enable Model Marketplace via standard onboarding process",
-            "Client support, issue resolution, ticket management",
-            "Backup support for client issues",
-            "Via PagerDuty or Client Service escalation",
-            "Franklin Templeton partnership, SFTP coordination"
-        ],
-        "Email": [
-            "[Contact Info]",
-            "[Contact Info]",
-            "[Via onboarding]",
-            "[Contact Info]",
-            "[Contact Info]",
-            "[Via PagerDuty]",
-            "Jennifer.Zmarzly@franklintempleton.com"
-        ]
-    })
-
-    st.dataframe(contacts, use_container_width=True, hide_index=True)
-
-    st.markdown("---")
-
     st.markdown("### Support Process")
 
     st.markdown(f"""
