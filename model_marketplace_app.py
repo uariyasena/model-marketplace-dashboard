@@ -1167,7 +1167,7 @@ elif section == "👥 Roles & Responsibilities":
         else:
             return f'color: {APEX_COLORS["charcoal"]};'
 
-    styled_df = filtered_df.style.applymap(style_matrix).set_properties(**{
+    styled_df = filtered_df.style.map(style_matrix).set_properties(**{
         'text-align': 'center'
     }, subset=filtered_df.columns[1:])  # Center all columns except Activity
 
