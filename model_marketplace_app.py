@@ -312,11 +312,11 @@ def create_provider_status_chart():
 
 def create_timeline_chart():
     """Create roadmap timeline visualization"""
-    quarters = ['Q2 2026', 'Q3 2026', 'Q4 2026+']
+    quarters = ['Q2 2026', 'Coming Soon', 'Future']
     milestones = [
         'Marketing Launch & Press Release',
-        'Automatic Scheduled Rebalancing',
-        'Revenue Model & Provider Expansion'
+        'Enhanced Model Analytics',
+        'Provider Expansion & Features'
     ]
 
     fig = go.Figure()
@@ -465,7 +465,7 @@ if section == "🏠 Home":
                         background: linear-gradient(135deg, white 0%, {APEX_COLORS['light_blue']} 100%);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
-                        background-clip: text;'>~50K</div>
+                        background-clip: text;'>50,000+</div>
             <div style='color: white; font-size: 16px; font-weight: 500; opacity: 0.9;'>Accounts on Platform</div>
         </div>
         """, unsafe_allow_html=True)
