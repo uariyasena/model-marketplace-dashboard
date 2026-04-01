@@ -497,8 +497,8 @@ if section == "🏠 Home":
                         background: linear-gradient(135deg, white 0%, {APEX_COLORS['light_blue']} 100%);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
-                        background-clip: text;'>$0</div>
-            <div style='color: white; font-size: 16px; font-weight: 500; opacity: 0.9;'>Client Cost (FREE!)</div>
+                        background-clip: text;'>3 BPS</div>
+            <div style='color: white; font-size: 16px; font-weight: 500; opacity: 0.9;'>Starting Fee (AUM-based)</div>
         </div>
         """, unsafe_allow_html=True)
 
@@ -597,9 +597,9 @@ if section == "🏠 Home":
                     height: 280px;
                     display: flex;
                     flex-direction: column;'>
-            <h3 style='margin-top: 0; color: white; border: none;'>🚀 Coming in Q3 2026</h3>
+            <h3 style='margin-top: 0; color: white; border: none;'>🚀 Coming Soon</h3>
             <ul style='line-height: 2; font-size: 17px; margin: 0; padding-left: 20px; flex: 1;'>
-                <li><strong>Automatic Scheduled Rebalancing</strong> (Top Priority!)</li>
+                <li><strong>Enhanced Model Analytics</strong></li>
                 <li>Dedicated BD resource for provider acquisition</li>
                 <li>Enhanced provider onboarding process</li>
             </ul>
@@ -1007,7 +1007,7 @@ elif section == "🔄 Process Flow":
         {
             "title": "Step 7: Portfolio Rebalancing",
             "who": "Client/Advisor",
-            "what": "Initiate rebalance → Review generated buy/sell orders → Submit trades",
+            "what": "Initiate rebalance → Review proposals → Accept proposals → Review in Accepted Proposals tab → Submit trades",
             "where": "Review compliance disclosures before submission",
             "timeline": "Variable based on portfolio size",
             "color": APEX_COLORS['purple']
@@ -1083,7 +1083,7 @@ elif section == "🔄 Process Flow":
             st.markdown(f"**⏱️ TIMELINE:** {step['timeline']}")
 
     # Key limitation warning
-    st.warning("⚠️ **KEY LIMITATION:** Apex does NOT automatically execute trades. Automatic scheduled rebalancing planned for Q3 2026. Clients must currently review and submit all trade orders manually.")
+    st.warning("⚠️ **KEY LIMITATION:** Apex does NOT automatically execute trades. Clients must currently review and submit all trade orders manually.")
 
 elif section == "👥 Roles & Responsibilities":
     st.title("👥 Roles & Responsibilities Matrix")
@@ -1325,9 +1325,9 @@ elif section == "💰 Revenue Model":
         st.markdown(f"""
         <div style='background: linear-gradient(135deg, {APEX_COLORS['green']} 0%, {APEX_COLORS['sky_blue']} 100%);
                     padding: 30px; border-radius: 10px; text-align: center; color: white;'>
-            <div style='font-size: 48px; font-weight: bold;'>$0</div>
-            <div style='font-size: 18px; margin-top: 10px; font-weight: 600;'>Client Fees</div>
-            <div style='font-size: 15px; opacity: 0.9;'>Free access to marketplace</div>
+            <div style='font-size: 48px; font-weight: bold;'>3 BPS</div>
+            <div style='font-size: 18px; margin-top: 10px; font-weight: 600;'>Rebalancer Fee</div>
+            <div style='font-size: 15px; opacity: 0.9;'>+ $0.20/account/month</div>
         </div>
         """, unsafe_allow_html=True)
 
@@ -1335,9 +1335,9 @@ elif section == "💰 Revenue Model":
         st.markdown(f"""
         <div style='background: linear-gradient(135deg, {APEX_COLORS['blue']} 0%, {APEX_COLORS['bright_blue']} 100%);
                     padding: 30px; border-radius: 10px; text-align: center; color: white;'>
-            <div style='font-size: 48px; font-weight: bold;'>$0</div>
-            <div style='font-size: 18px; margin-top: 10px; font-weight: 600;'>Provider Fees</div>
-            <div style='font-size: 15px; opacity: 0.9;'>No charges currently</div>
+            <div style='font-size: 40px; font-weight: bold;'>Varies</div>
+            <div style='font-size: 18px; margin-top: 10px; font-weight: 600;'>Direct Indexing</div>
+            <div style='font-size: 15px; opacity: 0.9;'>3-6 BPS additional</div>
         </div>
         """, unsafe_allow_html=True)
 
@@ -2131,10 +2131,10 @@ elif section == "❓ Q&A":
     qa_data = [
         ("What if we're still on Classic?", "Model Marketplace is Ascend-only. Let's discuss your Ascend migration timeline and prioritize Model Marketplace access post-migration."),
         ("We're not Rebalancer clients. Can we still use Model Marketplace?", "No, Model Marketplace requires Rebalancer subscription. Let's explore if Rebalancer is right for your firm first."),
-        ("Do we have to pay for Model Marketplace?", "No, access is currently free for all Rebalancer clients. You only pay the standard fees embedded in the ETFs/securities within the models."),
+        ("Do we have to pay for Model Marketplace?", "Rebalancer fees apply: 3 BPS of AUM assigned to rebalancing goals (billed monthly) + $0.20 per funded account per month. Direct indexing features have additional fees. Contact your RM for detailed pricing."),
         ("Can we customize the models after subscribing?", "Subscribed models from providers cannot be edited, but you can create custom models in Rebalancer and use marketplace models as a starting point/reference."),
         ("How often are models updated?", "Providers update their models on their own schedule. Franklin Templeton provides daily performance reporting. Model composition updates vary by provider."),
-        ("Does Apex automatically rebalance our accounts?", "Not currently. You must manually initiate rebalancing or call our API. Automatic scheduled rebalancing is planned for Q3 2026."),
+        ("Does Apex automatically rebalance our accounts?", "Not currently. You must manually initiate rebalancing or call our API."),
         ("What if we want a specific provider added?", "Contact your RM. We're actively seeking new provider partnerships (current bottleneck: no dedicated BD resource)."),
         ("Are there regulatory/compliance concerns?", "Each provider has their own T&Cs that clients accept. Apex provides disclosure language on all trade orders. Clients maintain full responsibility for trade execution."),
         ("What happens if a model provider leaves the marketplace?", "You would be notified in advance. Already-assigned accounts would continue with the last known model composition, but new subscriptions would not be available."),
@@ -2446,8 +2446,8 @@ elif section == "🗺️ Roadmap":
         st.markdown(f"""
         <div style='text-align: center; padding: 20px; background: linear-gradient(135deg, {APEX_COLORS['navy']} 0%, {APEX_COLORS['blue']} 100%);
                     border-radius: 12px; border: 2px solid {APEX_COLORS['navy']};'>
-            <div style='font-size: 18px; font-weight: 700; color: white; margin-bottom: 10px;'>Q3 2026</div>
-            <div style='font-size: 14px; color: white;'>Automatic Scheduled Rebalancing</div>
+            <div style='font-size: 18px; font-weight: 700; color: white; margin-bottom: 10px;'>Coming Soon</div>
+            <div style='font-size: 14px; color: white;'>Enhanced Model Analytics & Performance Tracking</div>
             <div style='margin-top: 15px; padding: 8px; background: rgba(255,255,255,0.2); color: white; border-radius: 20px; font-size: 12px; font-weight: 600;'>
                 🚀 PLANNED
             </div>
@@ -2483,7 +2483,7 @@ elif section == "🗺️ Roadmap":
     """, unsafe_allow_html=True)
 
     # Detailed roadmap tabs
-    tab1, tab2, tab3 = st.tabs(["📅 Q2 2026 (Current)", "🚀 Q3 2026 (Planned)", "💡 Q4 2026+ (Future)"])
+    tab1, tab2, tab3 = st.tabs(["📅 Current Focus", "🚀 Coming Soon", "💡 Future Vision"])
 
     with tab1:
         st.markdown(f"""
@@ -2542,7 +2542,7 @@ elif section == "🗺️ Roadmap":
                     padding: 20px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['navy']}; margin-bottom: 25px;'>
             <h3 style='background: linear-gradient(135deg, {APEX_COLORS['navy']} 0%, {APEX_COLORS['blue']} 100%);
                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-                       margin-top: 0; font-weight: 600;'>Q3 2026 - Planned Enhancements</h3>
+                       margin-top: 0; font-weight: 600;'>Coming Soon - Planned Enhancements</h3>
             <div style='padding: 8px 16px; background: linear-gradient(135deg, {APEX_COLORS['navy']} 0%, {APEX_COLORS['blue']} 100%); color: white; border-radius: 20px; font-size: 14px; font-weight: 600; display: inline-block;'>
                 🚀 Priority: High
             </div>
@@ -2554,7 +2554,7 @@ elif section == "🗺️ Roadmap":
                     padding: 25px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['amethyst']}; margin-bottom: 20px;'>
             <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-                       margin-top: 0; font-size: 18px; font-weight: 700;'>🎯 Top Priority: Automatic Scheduled Rebalancing</h4>
+                       margin-top: 0; font-size: 18px; font-weight: 700;'>🎯 Top Priority: Enhanced Model Analytics & Performance Tracking</h4>
         </div>
         """, unsafe_allow_html=True)
 
@@ -2572,16 +2572,16 @@ elif section == "🗺️ Roadmap":
         </style>
         """, unsafe_allow_html=True)
 
-        with st.expander("📋 Details on Automatic Rebalancing", expanded=True):
+        with st.expander("📋 Details on Enhanced Analytics", expanded=True):
             col1, col2 = st.columns(2)
 
             with col1:
                 st.markdown(f"""
                 <h5 style='color: {APEX_COLORS['blue']};'>✨ Capabilities</h5>
                 <ul>
-                    <li>Configure rebalance frequency (daily, weekly, monthly, quarterly)</li>
-                    <li>System automatically generates orders based on schedule</li>
-                    <li>Requires client review before execution (compliance)</li>
+                    <li>Model performance tracking and comparisons</li>
+                    <li>Historical performance data visualization</li>
+                    <li>Drift analysis and monitoring dashboards</li>
                 </ul>
                 """, unsafe_allow_html=True)
 
@@ -2589,23 +2589,23 @@ elif section == "🗺️ Roadmap":
                 st.markdown(f"""
                 <h5 style='color: {APEX_COLORS['green']};'>✅ Benefits</h5>
                 <ul>
-                    <li>Reduced manual workload</li>
-                    <li>Consistent rebalancing discipline</li>
-                    <li>Better drift management</li>
-                    <li>Scalable to thousands of accounts</li>
+                    <li>Data-driven model selection</li>
+                    <li>Better client reporting capabilities</li>
+                    <li>Performance benchmarking across providers</li>
+                    <li>Enhanced due diligence tools</li>
                 </ul>
                 """, unsafe_allow_html=True)
 
             st.markdown(f"""
             <div style='background: linear-gradient(135deg, rgba(251,191,36,0.1) 0%, rgba(245,158,11,0.05) 100%);
                         padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 4px solid {APEX_COLORS['gold']};'>
-                <strong style='color: {APEX_COLORS['gold']};'>⚠️ Current Limitation:</strong><br>
-                Clients must manually initiate each rebalance - time-consuming for large account bases
+                <strong style='color: {APEX_COLORS['gold']};'>💡 What's Coming:</strong><br>
+                Advanced analytics to help advisors make informed model selection decisions
             </div>
             """, unsafe_allow_html=True)
 
         st.markdown(f"""
-        <h4 style='color: {APEX_COLORS['navy']}; margin-top: 30px;'>📌 Other Q3 Initiatives</h4>
+        <h4 style='color: {APEX_COLORS['navy']}; margin-top: 30px;'>📌 Other Planned Initiatives</h4>
         <ul>
             <li>Enhanced provider onboarding process</li>
             <li>Dedicated BD resource for provider acquisition</li>
@@ -2617,7 +2617,7 @@ elif section == "🗺️ Roadmap":
         st.markdown(f"""
         <div style='background: linear-gradient(135deg, rgba(112,48,160,0.1) 0%, rgba(112,48,160,0.05) 100%);
                     padding: 20px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['purple']}; margin-bottom: 25px;'>
-            <h3 style='color: {APEX_COLORS['purple']}; margin-top: 0;'>Q4 2026 & Beyond - Future Vision</h3>
+            <h3 style='color: {APEX_COLORS['purple']}; margin-top: 0;'>Future Vision</h3>
             <div style='padding: 8px 16px; background: {APEX_COLORS['purple']}; color: white; border-radius: 20px; font-size: 14px; font-weight: 600; display: inline-block;'>
                 💡 Future
             </div>
@@ -2629,8 +2629,7 @@ elif section == "🗺️ Roadmap":
             ("📊 Expanded Provider Catalog", "Target: 10+ providers across asset classes"),
             ("📈 Model Performance Analytics Dashboard", "Compare provider performance, track AUM"),
             ("🔍 Advanced Filtering and Search", "Filter by asset class, strategy, performance"),
-            ("⚖️ Model Comparison Tools", "Side-by-side comparison of holdings, weights, performance"),
-            ("🤖 Automated Trade Execution", "Pending compliance approval, fully automated rebalancing")
+            ("⚖️ Model Comparison Tools", "Side-by-side comparison of holdings, weights, performance")
         ]
 
         for title, desc in initiatives:
