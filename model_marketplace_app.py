@@ -2259,59 +2259,84 @@ elif section == "📈 Success Metrics":
             <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0;'>Adoption Metrics</h4>
             <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 14px;'>Track how clients are discovering and adopting Model Marketplace</p>
         </div>
+
+        <table style='width: 100%; border-collapse: collapse; margin: 20px 0;'>
+            <thead>
+                <tr style='background: {APEX_COLORS['navy']}; color: white;'>
+                    <th style='padding: 12px; text-align: left; border: 1px solid #ddd;'>Metric</th>
+                    <th style='padding: 12px; text-align: left; border: 1px solid #ddd;'>Description</th>
+                    <th style='padding: 12px; text-align: left; border: 1px solid #ddd;'>Target (2026)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style='background: white;'>
+                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['blue']} 0%, {APEX_COLORS['navy']} 100%);
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                        Correspondents with Model Marketplace enabled
+                    </td>
+                    <td style='padding: 12px; border: 1px solid #ddd; color: {APEX_COLORS['charcoal']};'>
+                        Number of firms with access configured
+                    </td>
+                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                        30+
+                    </td>
+                </tr>
+                <tr style='background: #f9f9f9;'>
+                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['blue']} 0%, {APEX_COLORS['navy']} 100%);
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                        Users with subscribe permissions
+                    </td>
+                    <td style='padding: 12px; border: 1px solid #ddd; color: {APEX_COLORS['charcoal']};'>
+                        Authorized users who can subscribe to models
+                    </td>
+                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                        100+
+                    </td>
+                </tr>
+                <tr style='background: white;'>
+                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['blue']} 0%, {APEX_COLORS['navy']} 100%);
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                        Active model subscriptions
+                    </td>
+                    <td style='padding: 12px; border: 1px solid #ddd; color: {APEX_COLORS['charcoal']};'>
+                        Total number of model subscriptions across all clients
+                    </td>
+                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                        500+
+                    </td>
+                </tr>
+                <tr style='background: #f9f9f9;'>
+                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['blue']} 0%, {APEX_COLORS['navy']} 100%);
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                        Accounts utilizing marketplace models
+                    </td>
+                    <td style='padding: 12px; border: 1px solid #ddd; color: {APEX_COLORS['charcoal']};'>
+                        Client accounts with marketplace model assignments
+                    </td>
+                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                        10,000+
+                    </td>
+                </tr>
+                <tr style='background: white;'>
+                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['blue']} 0%, {APEX_COLORS['navy']} 100%);
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                        Subscription conversion rate
+                    </td>
+                    <td style='padding: 12px; border: 1px solid #ddd; color: {APEX_COLORS['charcoal']};'>
+                        Browsers → subscribers conversion
+                    </td>
+                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                        40%
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         """, unsafe_allow_html=True)
-
-        adoption_data = pd.DataFrame({
-            "Metric": [
-                "Correspondents with Model Marketplace enabled",
-                "Users with subscribe permissions",
-                "Active model subscriptions",
-                "Accounts utilizing marketplace models",
-                "Subscription conversion rate"
-            ],
-            "Description": [
-                "Number of firms with access configured",
-                "Authorized users who can subscribe to models",
-                "Total number of model subscriptions across all clients",
-                "Client accounts with marketplace model assignments",
-                "Browsers → subscribers conversion"
-            ],
-            "Target (2026)": ["30+", "100+", "500+", "10,000+", "40%"]
-        })
-
-        # Configure AgGrid
-        gb = GridOptionsBuilder.from_dataframe(adoption_data)
-        gb.configure_default_column(sortable=True, resizable=True)
-        gb.configure_column("Metric", cellStyle={'color': APEX_COLORS["blue"], 'font-weight': '600'})
-        gb.configure_column("Target (2026)", cellStyle={'color': APEX_COLORS["amethyst_pink"], 'font-weight': '600'})
-        gridOptions = gb.build()
-
-        st.markdown(f"""
-        <style>
-            .ag-cell[col-id="Metric"] {{
-                background: linear-gradient(135deg, {APEX_COLORS['blue']} 0%, {APEX_COLORS['navy']} 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                font-weight: 600;
-            }}
-            .ag-cell[col-id="Target (2026)"] {{
-                background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                font-weight: 600;
-            }}
-        </style>
-        """, unsafe_allow_html=True)
-
-        AgGrid(
-            adoption_data,
-            gridOptions=gridOptions,
-            height=250,
-            fit_columns_on_grid_load=True,
-            theme='streamlit'
-        )
 
     with tab2:
         st.markdown(f"""
@@ -2320,65 +2345,84 @@ elif section == "📈 Success Metrics":
             <h4 style='color: {APEX_COLORS['green']}; margin-top: 0;'>Usage Metrics</h4>
             <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 14px;'>Measure active engagement and product stickiness</p>
         </div>
+
+        <table style='width: 100%; border-collapse: collapse; margin: 20px 0;'>
+            <thead>
+                <tr style='background: {APEX_COLORS['navy']}; color: white;'>
+                    <th style='padding: 12px; text-align: left; border: 1px solid #ddd;'>Metric</th>
+                    <th style='padding: 12px; text-align: left; border: 1px solid #ddd;'>Description</th>
+                    <th style='padding: 12px; text-align: left; border: 1px solid #ddd;'>Insight</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style='background: white;'>
+                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['green']} 0%, {APEX_COLORS['blue']} 100%);
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                        Models subscribed per client (average)
+                    </td>
+                    <td style='padding: 12px; border: 1px solid #ddd; color: {APEX_COLORS['charcoal']};'>
+                        Average number of models each client subscribes to
+                    </td>
+                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                        Product stickiness
+                    </td>
+                </tr>
+                <tr style='background: #f9f9f9;'>
+                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['green']} 0%, {APEX_COLORS['blue']} 100%);
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                        Most popular providers
+                    </td>
+                    <td style='padding: 12px; border: 1px solid #ddd; color: {APEX_COLORS['charcoal']};'>
+                        Provider ranking by subscription count
+                    </td>
+                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                        Provider value to users
+                    </td>
+                </tr>
+                <tr style='background: white;'>
+                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['green']} 0%, {APEX_COLORS['blue']} 100%);
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                        Most popular models
+                    </td>
+                    <td style='padding: 12px; border: 1px solid #ddd; color: {APEX_COLORS['charcoal']};'>
+                        Top 10 models by adoption
+                    </td>
+                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                        Strategy preferences
+                    </td>
+                </tr>
+                <tr style='background: #f9f9f9;'>
+                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['green']} 0%, {APEX_COLORS['blue']} 100%);
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                        Rebalance frequency using marketplace models
+                    </td>
+                    <td style='padding: 12px; border: 1px solid #ddd; color: {APEX_COLORS['charcoal']};'>
+                        How often clients rebalance with marketplace models
+                    </td>
+                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                        Active usage
+                    </td>
+                </tr>
+                <tr style='background: white;'>
+                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['green']} 0%, {APEX_COLORS['blue']} 100%);
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                        AUM in marketplace-model-based accounts
+                    </td>
+                    <td style='padding: 12px; border: 1px solid #ddd; color: {APEX_COLORS['charcoal']};'>
+                        Total assets under management using marketplace models
+                    </td>
+                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                        Business impact
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         """, unsafe_allow_html=True)
-
-        usage_data = pd.DataFrame({
-            "Metric": [
-                "Models subscribed per client (average)",
-                "Most popular providers",
-                "Most popular models",
-                "Rebalance frequency using marketplace models",
-                "AUM in marketplace-model-based accounts"
-            ],
-            "Description": [
-                "Average number of models each client subscribes to",
-                "Provider ranking by subscription count",
-                "Top 10 models by adoption",
-                "How often clients rebalance with marketplace models",
-                "Total assets under management using marketplace models"
-            ],
-            "Insight": [
-                "Product stickiness",
-                "Provider value to users",
-                "Strategy preferences",
-                "Active usage",
-                "Business impact"
-            ]
-        })
-
-        # Configure AgGrid
-        gb = GridOptionsBuilder.from_dataframe(usage_data)
-        gb.configure_default_column(sortable=True, resizable=True)
-        gb.configure_column("Metric", cellStyle={'color': APEX_COLORS["green"], 'font-weight': '600'})
-        gb.configure_column("Insight", cellStyle={'color': APEX_COLORS["amethyst_pink"], 'font-weight': '600'})
-        gridOptions = gb.build()
-
-        st.markdown(f"""
-        <style>
-            .ag-cell[col-id="Metric"] {{
-                background: linear-gradient(135deg, {APEX_COLORS['green']} 0%, {APEX_COLORS['blue']} 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                font-weight: 600;
-            }}
-            .ag-cell[col-id="Insight"] {{
-                background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                font-weight: 600;
-            }}
-        </style>
-        """, unsafe_allow_html=True)
-
-        AgGrid(
-            usage_data,
-            gridOptions=gridOptions,
-            height=250,
-            fit_columns_on_grid_load=True,
-            theme='streamlit'
-        )
 
     with tab3:
         st.markdown(f"""
