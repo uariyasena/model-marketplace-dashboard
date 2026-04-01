@@ -1451,8 +1451,48 @@ elif section == "📢 Marketing Strategy":
 
     st.markdown("### Target Audience Priority")
 
-    # Priority table
+    # Priority chart
     import pandas as pd
+
+    # Create visual priority chart
+    fig = go.Figure()
+
+    audiences = ["Existing Rebalancer\nClients (38 firms)", "Classic Clients\nPost-Migration", "New Rebalancer\nProspects"]
+    priorities = [3, 2, 1]  # Reversed for visual impact (higher = more important)
+    colors = [APEX_COLORS['gold'], APEX_COLORS['blue'], APEX_COLORS['sky_blue']]
+
+    fig.add_trace(go.Bar(
+        y=audiences,
+        x=priorities,
+        orientation='h',
+        marker=dict(
+            color=colors,
+            line=dict(color='white', width=2)
+        ),
+        text=['🥇 Priority 1<br>Easiest Adoption', '🥈 Priority 2<br>Post-Migration', '🥉 Priority 3<br>Market Growth'],
+        textposition='inside',
+        textfont=dict(color='white', size=14, family='Arial Black'),
+        hovertemplate='<b>%{y}</b><br>Priority Level: %{x}<extra></extra>'
+    ))
+
+    fig.update_layout(
+        xaxis=dict(
+            title="Priority Level",
+            showgrid=False,
+            showticklabels=False,
+            range=[0, 3.5]
+        ),
+        yaxis=dict(
+            title="",
+            showgrid=False
+        ),
+        plot_bgcolor='white',
+        height=300,
+        margin=dict(l=20, r=20, t=20, b=20),
+        showlegend=False
+    )
+
+    st.plotly_chart(fig, use_container_width=True)
 
     # Create dataframe
     priority_data = pd.DataFrame({
@@ -1527,7 +1567,7 @@ elif section == "📢 Marketing Strategy":
         <ul>
             <li>Launch managed portfolios without hiring investment team</li>
             <li>Scale to thousands of accounts with automated updates</li>
-            <li><strong>Free access</strong> for all Rebalancer clients</li>
+            <li><strong>Competitive pricing</strong> - 3 BPS + $0.20/account/month</li>
             <li>Compete with larger firms using institutional models</li>
             <li>Choose from multiple providers</li>
             <li>Maintain compliance with automatic updates</li>
