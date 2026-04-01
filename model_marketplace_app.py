@@ -821,7 +821,7 @@ elif section == "📊 Executive Summary":
     with col2:
         st.markdown(f"""
         <div class='stat-card'>
-            <div class='stat-number'>~50K</div>
+            <div class='stat-number'>50,000+</div>
             <div class='stat-label'>Accounts on Rebalancer</div>
         </div>
         """, unsafe_allow_html=True)
