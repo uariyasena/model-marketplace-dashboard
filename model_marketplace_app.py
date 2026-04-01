@@ -1451,51 +1451,66 @@ elif section == "📢 Marketing Strategy":
 
     st.markdown("### Target Audience Priority")
 
-    # Priority table
-    import pandas as pd
-
-    # Create dataframe
-    priority_data = pd.DataFrame({
-        "Priority": ["🥇 1", "🥈 2", "🥉 3"],
-        "Audience": [
-            "Existing Rebalancer Clients on Ascend",
-            "Classic Clients Post-Migration",
-            "New Rebalancer Prospects"
-        ],
-        "Size": ["38 firms", "TBD", "Market"],
-        "Rationale": [
-            "Already using platform, easiest adoption",
-            "Will have Rebalancer access after conversion",
-            "Model Marketplace as differentiator"
-        ]
-    })
-
-    # Add CSS for gradient text
+    # Priority table with gradient styling
     st.markdown(f"""
-    <style>
-        .ag-cell[col-id="Audience"], .ag-cell[col-id="Size"], .ag-cell[col-id="Rationale"] {{
-            background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 600;
-        }}
-    </style>
+    <table style='width: 100%; border-collapse: collapse; margin: 20px 0;'>
+        <thead>
+            <tr style='background: {APEX_COLORS['navy']}; color: white;'>
+                <th style='padding: 12px; text-align: left; border: 1px solid #ddd;'>Priority</th>
+                <th style='padding: 12px; text-align: left; border: 1px solid #ddd;'>Audience</th>
+                <th style='padding: 12px; text-align: left; border: 1px solid #ddd;'>Size</th>
+                <th style='padding: 12px; text-align: left; border: 1px solid #ddd;'>Rationale</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style='padding: 12px; border: 1px solid #ddd;'>🥇 1</td>
+                <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                    Existing Rebalancer Clients on Ascend
+                </td>
+                <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                    38 firms
+                </td>
+                <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                    Already using platform, easiest adoption
+                </td>
+            </tr>
+            <tr style='background: #f9f9f9;'>
+                <td style='padding: 12px; border: 1px solid #ddd;'>🥈 2</td>
+                <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                    Classic Clients Post-Migration
+                </td>
+                <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                    TBD
+                </td>
+                <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                    Will have Rebalancer access after conversion
+                </td>
+            </tr>
+            <tr>
+                <td style='padding: 12px; border: 1px solid #ddd;'>🥉 3</td>
+                <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                    New Rebalancer Prospects
+                </td>
+                <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                    Market
+                </td>
+                <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
+                    Model Marketplace as differentiator
+                </td>
+            </tr>
+        </tbody>
+    </table>
     """, unsafe_allow_html=True)
-
-    # Configure AgGrid
-    gb = GridOptionsBuilder.from_dataframe(priority_data)
-    gb.configure_default_column(sortable=True, resizable=True)
-    gridOptions = gb.build()
-
-    # Display AgGrid
-    AgGrid(
-        priority_data,
-        gridOptions=gridOptions,
-        height=200,
-        fit_columns_on_grid_load=True,
-        theme='streamlit'
-    )
 
     st.markdown("---")
 
