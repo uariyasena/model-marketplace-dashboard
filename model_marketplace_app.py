@@ -1652,6 +1652,17 @@ elif section == "📢 Marketing Strategy":
 elif section == "💼 Use Cases":
     st.title("💼 Client Use Cases & Value Stories")
 
+    # Style for larger selectbox label
+    st.markdown(f"""
+    <style>
+        div[data-testid="stSelectbox"] label {{
+            font-size: 20px !important;
+            font-weight: 600 !important;
+            color: {APEX_COLORS['navy']} !important;
+        }}
+    </style>
+    """, unsafe_allow_html=True)
+
     use_case = st.selectbox(
         "Select a use case scenario:",
         [
