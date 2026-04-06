@@ -449,7 +449,7 @@ if section == "🏠 Home":
                         background: linear-gradient(135deg, white 0%, {APEX_COLORS['light_blue']} 100%);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
-                        background-clip: text;'>38</div>
+                        background-clip: text;'>41</div>
             <div style='color: {APEX_COLORS['light_blue']}; font-size: 16px; font-weight: 500;'>Active Rebalancer Clients</div>
         </div>
         """, unsafe_allow_html=True)
@@ -465,7 +465,7 @@ if section == "🏠 Home":
                         background: linear-gradient(135deg, white 0%, {APEX_COLORS['light_blue']} 100%);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
-                        background-clip: text;'>50,000+</div>
+                        background-clip: text;'>33,080</div>
             <div style='color: white; font-size: 16px; font-weight: 500; opacity: 0.9;'>Accounts on Platform</div>
         </div>
         """, unsafe_allow_html=True)
@@ -816,12 +816,12 @@ elif section == "📊 Executive Summary":
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.plotly_chart(create_metric_chart(38, "Active Rebalancer Clients", 'navy'), use_container_width=True)
+        st.plotly_chart(create_metric_chart(41, "Active Rebalancer Clients", 'navy'), use_container_width=True)
 
     with col2:
         st.markdown(f"""
         <div class='stat-card'>
-            <div class='stat-number'>50,000+</div>
+            <div class='stat-number'>33,080</div>
             <div class='stat-label'>Accounts on Rebalancer</div>
         </div>
         """, unsafe_allow_html=True)
@@ -1393,7 +1393,7 @@ elif section == "💰 Revenue Model":
             st.markdown("**Rationale:**")
             st.markdown("""
             - ✅ Once adoption grows, providers gain value
-            - ✅ Access to 38 firms, 50K+ accounts
+            - ✅ Access to 41 firms, 33,080 accounts
             - ✅ Automated distribution
             - ✅ Standard marketplace model
             """)
@@ -1471,7 +1471,7 @@ elif section == "📢 Marketing Strategy":
                 </td>
                 <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
                     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                    38 firms
+                    41 firms
                 </td>
                 <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
                     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
@@ -1553,7 +1553,7 @@ elif section == "📢 Marketing Strategy":
         <div style='background-color: #F3E5F5; padding: 20px; border-radius: 10px;'>
         <h4 style='color: {APEX_COLORS['purple']};'>Messaging for Model Providers</h4>
         <ul>
-            <li><strong>Distribution reach:</strong> 38 RIA firms managing 50,000+ accounts</li>
+            <li><strong>Distribution reach:</strong> 41 RIA firms managing 33,080 accounts</li>
             <li><strong>Automated platform:</strong> Upload once, updates propagate automatically</li>
             <li><strong>Growing ecosystem:</strong> Reach Apex's digital advisors and wealth managers</li>
             <li><strong>Partnership opportunity</strong> with premier fintech custody platform</li>
@@ -1756,7 +1756,7 @@ elif section == "💼 Use Cases":
         with col2:
             st.markdown("**Results:**")
             st.metric("Launch Time", "Weeks", delta="vs. months")
-            st.metric("Scale", "50K+", delta="accounts supported")
+            st.metric("Scale", "33,080", delta="accounts supported")
 
             st.success("✅ Professional-grade models")
             st.success("✅ Tax optimization features")
@@ -1846,8 +1846,8 @@ elif section == "💼 Use Cases":
 
         with col2:
             st.markdown("**Results:**")
-            st.metric("Distribution", "38", delta="RIA firms")
-            st.metric("Accounts", "50K+", delta="potential reach")
+            st.metric("Distribution", "41", delta="RIA firms")
+            st.metric("Accounts", "33,080", delta="potential reach")
 
             st.success("✅ Automated updates")
             st.success("✅ Reduced operational burden")
@@ -2328,7 +2328,7 @@ elif section == "📈 Success Metrics":
         <div style='margin-bottom: 20px;'>
             <div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;'>
                 <span style='font-weight: 600; color: {APEX_COLORS['charcoal']}; font-size: 14px;'>Total Rebalancer Clients</span>
-                <span style='font-weight: 700; color: {APEX_COLORS['navy']}; font-size: 16px;'>38</span>
+                <span style='font-weight: 700; color: {APEX_COLORS['navy']}; font-size: 16px;'>41</span>
             </div>
             <div style='background: #E0E0E0; border-radius: 8px; height: 35px; position: relative; overflow: hidden;'>
                 <div style='background: linear-gradient(90deg, {APEX_COLORS['navy']} 0%, {APEX_COLORS['blue']} 100%); height: 100%; width: 7.6%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-start; padding-left: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);'></div>
