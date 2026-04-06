@@ -2126,8 +2126,9 @@ elif section == "🔧 Rebalancer Integration":
                     <li>Review proposed trades for accuracy</li>
                     <li>Accept proposals to move to Accepted Proposals tab</li>
                     <li>Submit trades to execution</li>
-                    <li>View trade blotter for analysis</li>
-                    <li>Explore historical trade data</li>
+                    <li>View trade blotter to track executed trades (status, fill quantity, fill price)</li>
+                    <li>Analyze trades by individual account or basket view</li>
+                    <li>Review historical trade data for compliance and reporting</li>
                 </ul>
             </div>
             """, unsafe_allow_html=True)
