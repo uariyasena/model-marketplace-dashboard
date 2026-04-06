@@ -2018,6 +2018,134 @@ elif section == "🔧 Rebalancer Integration":
             </div>
             """, unsafe_allow_html=True)
 
+    elif selected_feature == "Direct Indexing":
+        st.markdown(f"""
+        <div style='background: linear-gradient(135deg, rgba(128,44,192,0.1) 0%, rgba(236,0,117,0.05) 100%);
+                    padding: 25px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['amethyst']}; margin-top: 20px;'>
+            <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+                       margin-top: 0; font-size: 20px; font-weight: 600;'>📈 Direct Indexing</h4>
+            <p style='margin: 0; font-size: 15px;'><strong>Purpose:</strong> Own individual securities instead of index funds for tax optimization and customization</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        col1, col2 = st.columns([1, 1])
+
+        with col1:
+            st.markdown(f"""
+            <div style='background: white; padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['light_gray']}; height: 100%;'>
+                <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0;'>⚙️ How it works</h4>
+                <ul style='line-height: 1.8;'>
+                    <li>Replicate index fund performance with individual securities</li>
+                    <li>Own stocks directly instead of ETFs</li>
+                    <li>Customize holdings (exclude specific companies/sectors)</li>
+                    <li>Harvest tax losses on individual positions</li>
+                    <li>Standard (3 BPS) or Custom (6 BPS) options</li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
+
+        with col2:
+            st.markdown(f"""
+            <div style='background: linear-gradient(135deg, rgba(128,44,192,0.05) 0%, rgba(236,0,117,0.02) 100%);
+                        padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['amethyst']}; height: 100%;'>
+                <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                           -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+                           margin-top: 0; font-weight: 600;'>✅ Benefits</h4>
+                <ul style='line-height: 1.8;'>
+                    <li>Superior tax-loss harvesting opportunities</li>
+                    <li>Portfolio personalization & exclusions</li>
+                    <li>No ETF expense ratios</li>
+                    <li>Track index performance with customization</li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
+
+    elif selected_feature == "Threshold Management":
+        st.markdown(f"""
+        <div style='background: linear-gradient(135deg, rgba(0,102,204,0.1) 0%, rgba(59,130,246,0.05) 100%);
+                    padding: 25px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['blue']}; margin-top: 20px;'>
+            <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0; font-size: 20px;'>📏 Threshold Management</h4>
+            <p style='margin: 0; font-size: 15px;'><strong>Purpose:</strong> Control when rebalancing occurs by setting drift tolerances</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        col1, col2 = st.columns([1, 1])
+
+        with col1:
+            st.markdown(f"""
+            <div style='background: white; padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['light_gray']}; height: 100%;'>
+                <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0;'>⚙️ How it works</h4>
+                <ul style='line-height: 1.8;'>
+                    <li>Set asset class thresholds (e.g., ±5% drift tolerance)</li>
+                    <li>Set individual security thresholds</li>
+                    <li>Configure model target cash levels</li>
+                    <li>Define mandatory cash requirements</li>
+                    <li>Use absolute or relative percentage differences</li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
+
+        with col2:
+            st.markdown(f"""
+            <div style='background: linear-gradient(135deg, rgba(0,102,204,0.05) 0%, rgba(59,130,246,0.02) 100%);
+                        padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['blue']}; height: 100%;'>
+                <h4 style='color: {APEX_COLORS['navy']}; margin-top: 0;'>✅ Benefits</h4>
+                <ul style='line-height: 1.8;'>
+                    <li>Reduce unnecessary trading</li>
+                    <li>Balance drift vs. transaction costs</li>
+                    <li>Maintain portfolio discipline</li>
+                    <li>Customize per client risk tolerance</li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
+
+    elif selected_feature == "Trade Management":
+        st.markdown(f"""
+        <div style='background: linear-gradient(135deg, rgba(0,32,96,0.1) 0%, rgba(0,102,204,0.05) 100%);
+                    padding: 25px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['navy']}; margin-top: 20px;'>
+            <h4 style='color: {APEX_COLORS['navy']}; margin-top: 0; font-size: 20px;'>💼 Trade Management</h4>
+            <p style='margin: 0; font-size: 15px;'><strong>Purpose:</strong> Generate, review, and execute rebalancing trades</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        col1, col2 = st.columns([1, 1])
+
+        with col1:
+            st.markdown(f"""
+            <div style='background: white; padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['light_gray']}; height: 100%;'>
+                <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0;'>⚙️ How it works</h4>
+                <ul style='line-height: 1.8;'>
+                    <li>Generate proposals from SOD (Start of Day) files</li>
+                    <li>Review proposed trades for accuracy</li>
+                    <li>Accept proposals to move to Accepted Proposals tab</li>
+                    <li>Submit trades to execution</li>
+                    <li>View trade blotter for analysis</li>
+                    <li>Explore historical trade data</li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
+
+        with col2:
+            st.markdown(f"""
+            <div style='background: linear-gradient(135deg, rgba(0,32,96,0.05) 0%, rgba(0,102,204,0.02) 100%);
+                        padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['navy']}; height: 100%;'>
+                <h4 style='color: {APEX_COLORS['navy']}; margin-top: 0;'>✅ Benefits</h4>
+                <ul style='line-height: 1.8;'>
+                    <li>Streamlined rebalancing workflow</li>
+                    <li>Review before execution</li>
+                    <li>Compliance disclosures built-in</li>
+                    <li>Trade history tracking</li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
+
 elif section == "📝 Onboarding Checklist":
     st.title("📝 Client Onboarding Checklist")
 
