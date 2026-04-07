@@ -853,7 +853,7 @@ elif section == "📰 Press Release Brief":
     </div>
     """, unsafe_allow_html=True)
 
-    # Key Announcement Points - Eye-catching staggered layout
+    # Key Announcement Points
     st.markdown(f"""
     <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
                -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
@@ -862,19 +862,15 @@ elif section == "📰 Press Release Brief":
     </h3>
     """, unsafe_allow_html=True)
 
-    # Staggered card layout with gradient borders
-    st.markdown(f"""
-    <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 30px 0;'>
+    # Row 1
+    col1, col2 = st.columns(2)
 
-        <!-- Card 1: What We're Launching -->
+    with col1:
+        st.markdown(f"""
         <div style='background: white; padding: 30px; border-radius: 16px;
                     box-shadow: 0 8px 24px rgba(0,102,204,0.15);
-                    border: 3px solid transparent;
-                    background-image: linear-gradient(white, white), linear-gradient(135deg, {APEX_COLORS['blue']} 0%, {APEX_COLORS['navy']} 100%);
-                    background-origin: border-box;
-                    background-clip: padding-box, border-box;
-                    transform: translateY(-10px);
-                    transition: all 0.3s ease;'>
+                    border: 3px solid {APEX_COLORS['blue']};
+                    margin-bottom: 20px;'>
             <div style='display: flex; align-items: center; margin-bottom: 20px;'>
                 <div style='font-size: 48px; margin-right: 15px;'>🎯</div>
                 <h4 style='color: {APEX_COLORS['blue']}; margin: 0; font-size: 20px; font-weight: 700;'>What We're Launching</h4>
@@ -886,16 +882,14 @@ elif section == "📰 Press Release Brief":
                 <li><strong style='color: {APEX_COLORS['navy']};'>Strategic Partnership with State Street</strong></li>
             </ul>
         </div>
+        """, unsafe_allow_html=True)
 
-        <!-- Card 2: Key Benefits -->
+    with col2:
+        st.markdown(f"""
         <div style='background: white; padding: 30px; border-radius: 16px;
                     box-shadow: 0 8px 24px rgba(128,44,192,0.15);
-                    border: 3px solid transparent;
-                    background-image: linear-gradient(white, white), linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                    background-origin: border-box;
-                    background-clip: padding-box, border-box;
-                    transform: translateY(10px);
-                    transition: all 0.3s ease;'>
+                    border: 3px solid {APEX_COLORS['amethyst']};
+                    margin-bottom: 20px;'>
             <div style='display: flex; align-items: center; margin-bottom: 20px;'>
                 <div style='font-size: 48px; margin-right: 15px;'>✨</div>
                 <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
@@ -909,16 +903,17 @@ elif section == "📰 Press Release Brief":
                 <li>Tax-loss harvesting and direct indexing ready</li>
             </ul>
         </div>
+        """, unsafe_allow_html=True)
 
-        <!-- Card 3: Market Opportunity -->
+    # Row 2
+    col3, col4 = st.columns(2)
+
+    with col3:
+        st.markdown(f"""
         <div style='background: white; padding: 30px; border-radius: 16px;
                     box-shadow: 0 8px 24px rgba(40,167,69,0.15);
-                    border: 3px solid transparent;
-                    background-image: linear-gradient(white, white), linear-gradient(135deg, {APEX_COLORS['green']} 0%, {APEX_COLORS['sky_blue']} 100%);
-                    background-origin: border-box;
-                    background-clip: padding-box, border-box;
-                    transform: translateY(10px);
-                    transition: all 0.3s ease;'>
+                    border: 3px solid {APEX_COLORS['green']};
+                    margin-bottom: 20px;'>
             <div style='display: flex; align-items: center; margin-bottom: 20px;'>
                 <div style='font-size: 48px; margin-right: 15px;'>💰</div>
                 <h4 style='color: {APEX_COLORS['green']}; margin: 0; font-size: 20px; font-weight: 700;'>Market Opportunity</h4>
@@ -930,16 +925,14 @@ elif section == "📰 Press Release Brief":
                 <li>Democratizing institutional strategies for smaller RIAs</li>
             </ul>
         </div>
+        """, unsafe_allow_html=True)
 
-        <!-- Card 4: Future Vision -->
+    with col4:
+        st.markdown(f"""
         <div style='background: white; padding: 30px; border-radius: 16px;
                     box-shadow: 0 8px 24px rgba(251,191,36,0.15);
-                    border: 3px solid transparent;
-                    background-image: linear-gradient(white, white), linear-gradient(135deg, {APEX_COLORS['gold']} 0%, {APEX_COLORS['bright_blue']} 100%);
-                    background-origin: border-box;
-                    background-clip: padding-box, border-box;
-                    transform: translateY(-10px);
-                    transition: all 0.3s ease;'>
+                    border: 3px solid {APEX_COLORS['gold']};
+                    margin-bottom: 20px;'>
             <div style='display: flex; align-items: center; margin-bottom: 20px;'>
                 <div style='font-size: 48px; margin-right: 15px;'>🚀</div>
                 <h4 style='color: {APEX_COLORS['gold']}; margin: 0; font-size: 20px; font-weight: 700;'>Future Vision</h4>
@@ -951,9 +944,7 @@ elif section == "📰 Press Release Brief":
                 <li>Dedicated BD resource for provider acquisition</li>
             </ul>
         </div>
-
-    </div>
-    """, unsafe_allow_html=True)
+        """, unsafe_allow_html=True)
 
     st.markdown("---")
 
