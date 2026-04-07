@@ -1300,7 +1300,7 @@ elif section == "🎯 Strategic Partner: State Street":
     with col1:
         st.markdown(f"""
         <div style='background: linear-gradient(135deg, rgba(251,191,36,0.1) 0%, rgba(245,158,11,0.05) 100%);
-                    padding: 30px; border-radius: 12px; border: 2px solid {APEX_COLORS['gold']}; height: 100%;'>
+                    padding: 30px; border-radius: 12px; border: 2px solid {APEX_COLORS['gold']}; min-height: 280px;'>
             <h4 style='color: {APEX_COLORS['gold']}; margin-top: 0;'>📋 Status: Coming Soon</h4>
             <p style='color: {APEX_COLORS['charcoal']}; line-height: 1.8; margin-bottom: 15px;'>
                 State Street models are in final stages of onboarding and will be available on Model Marketplace shortly.
@@ -1314,7 +1314,7 @@ elif section == "🎯 Strategic Partner: State Street":
     with col2:
         st.markdown(f"""
         <div style='background: linear-gradient(135deg, rgba(40,167,69,0.1) 0%, rgba(40,167,69,0.05) 100%);
-                    padding: 30px; border-radius: 12px; border: 2px solid {APEX_COLORS['green']}; height: 100%;'>
+                    padding: 30px; border-radius: 12px; border: 2px solid {APEX_COLORS['green']}; min-height: 280px;'>
             <h4 style='color: {APEX_COLORS['green']}; margin-top: 0;'>🎯 Next Steps</h4>
             <ol style='color: {APEX_COLORS['charcoal']}; line-height: 1.8; margin: 0; padding-left: 20px;'>
                 <li>Receive holdings data from State Street</li>
