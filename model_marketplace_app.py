@@ -1694,6 +1694,10 @@ elif section == "👥 Roles & Responsibilities":
     # Client Eligibility Section
     st.markdown("### ✅ Client Eligibility Checker")
 
+    st.markdown("""
+    **Requirements:** Client must be on Ascend platform and have an active Rebalancer subscription.
+    """)
+
     with st.form("eligibility_form"):
         st.markdown("Check if a client is eligible for Model Marketplace:")
 
