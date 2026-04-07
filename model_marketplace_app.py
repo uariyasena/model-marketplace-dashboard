@@ -387,8 +387,7 @@ section = st.sidebar.radio(
         "🔧 Rebalancer Integration",
         "📝 Onboarding Checklist",
         "❓ Q&A",
-        "📈 Success Metrics",
-        "📞 Contact Directory"
+        "📈 Success Metrics"
     ]
 )
 
@@ -3230,53 +3229,6 @@ elif section == "📈 Success Metrics":
                 <div style='font-size: 14px; color: {APEX_COLORS['charcoal']}; margin-top: 10px;'>Measure user satisfaction for marketplace</div>
             </div>
             """, unsafe_allow_html=True)
-
-elif section == "📞 Contact Directory":
-    st.title("📞 Contact Directory")
-
-    st.markdown("### Support Process")
-
-    st.markdown(f"""
-    <div style='background-color: #E3F2FD; padding: 20px; border-radius: 10px;'>
-    <h4>How to Get Support:</h4>
-    <ol>
-        <li><strong>Open Apex Service Center ticket</strong></li>
-        <li><strong>Category:</strong> Select "Rebalancer"</li>
-        <li><strong>Provide detailed information:</strong>
-            <ul>
-                <li>Description of issue</li>
-                <li>Steps to reproduce</li>
-                <li>Expected vs. actual behavior</li>
-                <li>Screenshots if applicable</li>
-            </ul>
-        </li>
-        <li><strong>Support Flow:</strong> Park (Primary) → Engineering Escalation (as needed)</li>
-    </ol>
-    </div>
-    """, unsafe_allow_html=True)
-
-    st.markdown("---")
-
-    st.markdown("### Documentation Resources")
-
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.markdown("**Official Documentation:**")
-        st.markdown("""
-        - 📚 Apex Support Portal: support.apexfintechsolutions.com
-        - 🔧 Developer Portal
-        - 📋 This Framework Document
-        """)
-
-    with col2:
-        st.markdown("**Additional Resources:**")
-        st.markdown("""
-        - Provider fact sheets
-        - Video tutorials (coming soon)
-        - FAQ documents
-        - Training materials
-        """)
 
 # ============================================================
 # FOOTER
