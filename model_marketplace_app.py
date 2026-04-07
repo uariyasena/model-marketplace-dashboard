@@ -1470,9 +1470,9 @@ elif section == "🔄 Process Flow":
 
     # Client Journey Map Section
     st.markdown(f"""
-    <div style='background: linear-gradient(135deg, rgba(0,102,204,0.08) 0%, rgba(0,32,96,0.05) 100%);
-                padding: 30px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['blue']}; margin-bottom: 30px;'>
-        <h3 style='color: {APEX_COLORS['navy']}; margin: 0 0 10px 0;'>End-to-End Client Journey</h3>
+    <div style='background: linear-gradient(135deg, rgba(128,44,192,0.08) 0%, rgba(236,0,117,0.05) 100%);
+                padding: 30px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['amethyst']}; margin-bottom: 30px;'>
+        <h3 style='color: {APEX_COLORS['amethyst']}; margin: 0 0 10px 0;'>End-to-End Client Journey</h3>
         <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 16px;'>
             Visual overview of how clients go from existing Rebalancer users to actively delivering
             institutional models to their advisors and end clients.
@@ -1512,23 +1512,23 @@ elif section == "🔄 Process Flow":
     # Arrow 1->2
     st.markdown(f"""
     <div style='text-align: center; margin: 20px 0;'>
-        <div style='width: 3px; height: 30px; background: linear-gradient(180deg, {APEX_COLORS['blue']}, {APEX_COLORS['bright_blue']}); margin: 0 auto;'></div>
+        <div style='width: 3px; height: 30px; background: linear-gradient(180deg, {APEX_COLORS['blue']}, {APEX_COLORS['sky_blue']}); margin: 0 auto;'></div>
         <div style='width: 0; height: 0; margin: 0 auto;
                     border-left: 10px solid transparent;
                     border-right: 10px solid transparent;
-                    border-top: 12px solid {APEX_COLORS['bright_blue']};'></div>
+                    border-top: 12px solid {APEX_COLORS['sky_blue']};'></div>
     </div>
     """, unsafe_allow_html=True)
 
     # Stage 2
     st.markdown(f"""
     <div style='display: flex; align-items: center; margin-bottom: 25px;'>
-        <div style='background: {APEX_COLORS['bright_blue']}; color: white; width: 60px; height: 60px; border-radius: 50%;
+        <div style='background: {APEX_COLORS['sky_blue']}; color: white; width: 60px; height: 60px; border-radius: 50%;
                     display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold;
-                    flex-shrink: 0; margin-right: 20px; box-shadow: 0 4px 12px rgba(59,130,246,0.3);'>2</div>
-        <div style='flex-grow: 1; background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(0,176,240,0.05) 100%);
-                    padding: 20px; border-radius: 12px; border-left: 4px solid {APEX_COLORS['bright_blue']};'>
-            <h4 style='color: {APEX_COLORS['bright_blue']}; margin: 0 0 10px 0;'>Access & Permissions</h4>
+                    flex-shrink: 0; margin-right: 20px; box-shadow: 0 4px 12px rgba(0,176,240,0.3);'>2</div>
+        <div style='flex-grow: 1; background: linear-gradient(135deg, rgba(0,176,240,0.1) 0%, rgba(0,176,240,0.05) 100%);
+                    padding: 20px; border-radius: 12px; border-left: 4px solid {APEX_COLORS['sky_blue']};'>
+            <h4 style='color: {APEX_COLORS['sky_blue']}; margin: 0 0 10px 0;'>Access & Permissions</h4>
             <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
                 <strong>Who:</strong> Client Administrator + Apex Onboarding<br>
                 <strong>What:</strong> Grant subscribe permissions to authorized users, configure access<br>
@@ -1541,7 +1541,7 @@ elif section == "🔄 Process Flow":
     # Arrow 2->3
     st.markdown(f"""
     <div style='text-align: center; margin: 20px 0;'>
-        <div style='width: 3px; height: 30px; background: linear-gradient(180deg, {APEX_COLORS['bright_blue']}, {APEX_COLORS['green']}); margin: 0 auto;'></div>
+        <div style='width: 3px; height: 30px; background: linear-gradient(180deg, {APEX_COLORS['sky_blue']}, {APEX_COLORS['green']}); margin: 0 auto;'></div>
         <div style='width: 0; height: 0; margin: 0 auto;
                     border-left: 10px solid transparent;
                     border-right: 10px solid transparent;
