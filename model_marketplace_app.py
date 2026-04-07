@@ -377,7 +377,6 @@ section = st.sidebar.radio(
         "📊 Executive Summary",
         "📰 Press Release Brief",
         "📊 Why Model Marketplace",
-        "✅ Client Eligibility",
         "🔄 Process Flow",
         "👥 Roles & Responsibilities",
         "🏢 Model Providers",
@@ -1348,123 +1347,6 @@ elif section == "🎯 Strategic Partner: State Street":
     </div>
     """, unsafe_allow_html=True)
 
-elif section == "✅ Client Eligibility":
-    st.title("✅ Client Eligibility & Prerequisites")
-
-    st.markdown("### Who Can Use Model Marketplace?")
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    # Side-by-side comparison layout
-    col_left, col_right = st.columns([1, 1], gap="large")
-
-    with col_left:
-        st.markdown(f"""<div style='border: 4px dashed {APEX_COLORS['green']}; background: linear-gradient(135deg, rgba(40,167,69,0.03) 0%, rgba(0,102,204,0.03) 100%); padding: 40px; border-radius: 20px; box-shadow: 0 4px 20px rgba(40,167,69,0.15); min-height: 520px;'>
-            <div style='text-align: center; margin-bottom: 35px;'>
-                <div style='font-size: 70px; margin-bottom: 10px;'>✅</div>
-                <h3 style='color: {APEX_COLORS['green']}; margin: 0; font-size: 26px; border: none;'>You're Eligible If...</h3>
-            </div>""", unsafe_allow_html=True)
-
-        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['blue']}; border-radius: 15px; padding: 25px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(0,102,204,0.1);'>
-                <div style='display: flex; align-items: center; gap: 20px;'>
-                    <div style='font-size: 45px;'>🖥️</div>
-                    <div style='flex: 1;'>
-                        <h4 style='color: {APEX_COLORS['navy']}; margin: 0 0 5px 0; font-size: 18px;'>Ascend Client</h4>
-                        <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 14px;'>Active on Ascend platform</p>
-                    </div>
-                </div>
-            </div>""", unsafe_allow_html=True)
-
-        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['bright_blue']}; border-radius: 15px; padding: 25px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(59,130,246,0.1);'>
-                <div style='display: flex; align-items: center; gap: 20px;'>
-                    <div style='font-size: 45px;'>⚖️</div>
-                    <div style='flex: 1;'>
-                        <h4 style='color: {APEX_COLORS['navy']}; margin: 0 0 5px 0; font-size: 18px;'>Rebalancer Active</h4>
-                        <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 14px;'>Current Rebalancer subscription</p>
-                    </div>
-                </div>
-            </div>""", unsafe_allow_html=True)
-
-        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['sky_blue']}; border-radius: 15px; padding: 25px; box-shadow: 0 2px 8px rgba(0,176,240,0.1);'>
-                <div style='display: flex; align-items: center; gap: 20px;'>
-                    <div style='font-size: 45px;'>⚙️</div>
-                    <div style='flex: 1;'>
-                        <h4 style='color: {APEX_COLORS['navy']}; margin: 0 0 5px 0; font-size: 18px;'>Configured Access</h4>
-                        <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 14px;'>Enabled in Client Configurator</p>
-                    </div>
-                </div>
-            </div>
-        </div>""", unsafe_allow_html=True)
-
-    with col_right:
-        st.markdown(f"""<div style='border: 4px dotted {APEX_COLORS['charcoal']}; background: linear-gradient(135deg, rgba(45,55,72,0.03) 0%, rgba(107,114,128,0.03) 100%); padding: 40px; border-radius: 20px; box-shadow: 0 4px 20px rgba(45,55,72,0.15); min-height: 520px;'>
-            <div style='text-align: center; margin-bottom: 35px;'>
-                <div style='font-size: 70px; margin-bottom: 10px;'>⚠️</div>
-                <h3 style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 26px; border: none;'>Not Yet Available For...</h3>
-            </div>""", unsafe_allow_html=True)
-
-        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['charcoal']}; border-radius: 15px; padding: 25px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(45,55,72,0.1);'>
-                <div style='display: flex; align-items: center; gap: 20px;'>
-                    <div style='font-size: 45px; opacity: 0.6;'>🚫</div>
-                    <div style='flex: 1;'>
-                        <h4 style='color: {APEX_COLORS['charcoal']}; margin: 0 0 5px 0; font-size: 18px;'>Classic Platform</h4>
-                        <p style='color: {APEX_COLORS['gray']}; margin: 0; font-size: 14px;'>Available after Ascend migration</p>
-                    </div>
-                </div>
-            </div>""", unsafe_allow_html=True)
-
-        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['gray']}; border-radius: 15px; padding: 25px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(107,114,128,0.1);'>
-                <div style='display: flex; align-items: center; gap: 20px;'>
-                    <div style='font-size: 45px; opacity: 0.6;'>⛔</div>
-                    <div style='flex: 1;'>
-                        <h4 style='color: {APEX_COLORS['charcoal']}; margin: 0 0 5px 0; font-size: 18px;'>Non-Rebalancer Clients</h4>
-                        <p style='color: {APEX_COLORS['gray']}; margin: 0; font-size: 14px;'>Requires Rebalancer subscription</p>
-                    </div>
-                </div>
-            </div>""", unsafe_allow_html=True)
-
-        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['gold']}; border-radius: 15px; padding: 25px; box-shadow: 0 2px 8px rgba(251,191,36,0.1);'>
-                <div style='display: flex; align-items: center; gap: 20px;'>
-                    <div style='font-size: 45px;'>💡</div>
-                    <div style='flex: 1;'>
-                        <h4 style='color: {APEX_COLORS['gold']}; margin: 0 0 5px 0; font-size: 18px;'>Mid-Migration</h4>
-                        <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 14px;'>Partial access (migrated accounts only)</p>
-                    </div>
-                </div>
-            </div>
-        </div>""", unsafe_allow_html=True)
-
-    st.markdown("---")
-
-    # Eligibility Checker
-    st.markdown("### 🔍 Eligibility Checker")
-
-    with st.form("eligibility_form"):
-        st.markdown("Check if a client is eligible for Model Marketplace:")
-
-        col1, col2 = st.columns(2)
-
-        with col1:
-            on_ascend = st.radio("Is the client on Ascend platform?", ["Yes", "No"], horizontal=True)
-            is_rebalancer = st.radio("Is the client a Rebalancer customer?", ["Yes", "No"], horizontal=True)
-
-        with col2:
-            migration_status = st.selectbox("Migration Status:", ["Fully on Ascend", "Mid-migration", "Classic only"])
-
-        submitted = st.form_submit_button("Check Eligibility")
-
-        if submitted:
-            if on_ascend == "Yes" and is_rebalancer == "Yes" and migration_status == "Fully on Ascend":
-                st.success("✅ **ELIGIBLE!** This client can use Model Marketplace immediately after onboarding team enables access.")
-            elif on_ascend == "Yes" and is_rebalancer == "Yes" and migration_status == "Mid-migration":
-                st.warning("⚠️ **PARTIALLY ELIGIBLE** - Client can use Model Marketplace but only for migrated accounts.")
-            else:
-                reasons = []
-                if on_ascend == "No":
-                    reasons.append("Must be on Ascend platform")
-                if is_rebalancer == "No":
-                    reasons.append("Must be a Rebalancer client")
-                st.error(f"❌ **NOT ELIGIBLE** - Client needs: {', '.join(reasons)}")
-
 elif section == "🔄 Process Flow":
     st.title("🔄 Model Marketplace Process Flow")
 
@@ -1808,6 +1690,123 @@ elif section == "🔄 Process Flow":
 
 elif section == "👥 Roles & Responsibilities":
     st.title("👥 Roles & Responsibilities Matrix")
+
+    # Client Eligibility Section
+    st.markdown("### ✅ Client Eligibility & Prerequisites")
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # Side-by-side comparison layout
+    col_left, col_right = st.columns([1, 1], gap="large")
+
+    with col_left:
+        st.markdown(f"""<div style='border: 4px dashed {APEX_COLORS['green']}; background: linear-gradient(135deg, rgba(40,167,69,0.03) 0%, rgba(0,102,204,0.03) 100%); padding: 40px; border-radius: 20px; box-shadow: 0 4px 20px rgba(40,167,69,0.15); min-height: 520px;'>
+            <div style='text-align: center; margin-bottom: 35px;'>
+                <div style='font-size: 70px; margin-bottom: 10px;'>✅</div>
+                <h3 style='color: {APEX_COLORS['green']}; margin: 0; font-size: 26px; border: none;'>You're Eligible If...</h3>
+            </div>""", unsafe_allow_html=True)
+
+        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['blue']}; border-radius: 15px; padding: 25px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(0,102,204,0.1);'>
+                <div style='display: flex; align-items: center; gap: 20px;'>
+                    <div style='font-size: 45px;'>🖥️</div>
+                    <div style='flex: 1;'>
+                        <h4 style='color: {APEX_COLORS['navy']}; margin: 0 0 5px 0; font-size: 18px;'>Ascend Client</h4>
+                        <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 14px;'>Active on Ascend platform</p>
+                    </div>
+                </div>
+            </div>""", unsafe_allow_html=True)
+
+        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['bright_blue']}; border-radius: 15px; padding: 25px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(59,130,246,0.1);'>
+                <div style='display: flex; align-items: center; gap: 20px;'>
+                    <div style='font-size: 45px;'>⚖️</div>
+                    <div style='flex: 1;'>
+                        <h4 style='color: {APEX_COLORS['navy']}; margin: 0 0 5px 0; font-size: 18px;'>Rebalancer Active</h4>
+                        <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 14px;'>Current Rebalancer subscription</p>
+                    </div>
+                </div>
+            </div>""", unsafe_allow_html=True)
+
+        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['sky_blue']}; border-radius: 15px; padding: 25px; box-shadow: 0 2px 8px rgba(0,176,240,0.1);'>
+                <div style='display: flex; align-items: center; gap: 20px;'>
+                    <div style='font-size: 45px;'>⚙️</div>
+                    <div style='flex: 1;'>
+                        <h4 style='color: {APEX_COLORS['navy']}; margin: 0 0 5px 0; font-size: 18px;'>Configured Access</h4>
+                        <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 14px;'>Enabled in Client Configurator</p>
+                    </div>
+                </div>
+            </div>
+        </div>""", unsafe_allow_html=True)
+
+    with col_right:
+        st.markdown(f"""<div style='border: 4px dotted {APEX_COLORS['charcoal']}; background: linear-gradient(135deg, rgba(45,55,72,0.03) 0%, rgba(107,114,128,0.03) 100%); padding: 40px; border-radius: 20px; box-shadow: 0 4px 20px rgba(45,55,72,0.15); min-height: 520px;'>
+            <div style='text-align: center; margin-bottom: 35px;'>
+                <div style='font-size: 70px; margin-bottom: 10px;'>⚠️</div>
+                <h3 style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 26px; border: none;'>Not Yet Available For...</h3>
+            </div>""", unsafe_allow_html=True)
+
+        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['charcoal']}; border-radius: 15px; padding: 25px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(45,55,72,0.1);'>
+                <div style='display: flex; align-items: center; gap: 20px;'>
+                    <div style='font-size: 45px; opacity: 0.6;'>🚫</div>
+                    <div style='flex: 1;'>
+                        <h4 style='color: {APEX_COLORS['charcoal']}; margin: 0 0 5px 0; font-size: 18px;'>Classic Platform</h4>
+                        <p style='color: {APEX_COLORS['gray']}; margin: 0; font-size: 14px;'>Available after Ascend migration</p>
+                    </div>
+                </div>
+            </div>""", unsafe_allow_html=True)
+
+        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['gray']}; border-radius: 15px; padding: 25px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(107,114,128,0.1);'>
+                <div style='display: flex; align-items: center; gap: 20px;'>
+                    <div style='font-size: 45px; opacity: 0.6;'>⛔</div>
+                    <div style='flex: 1;'>
+                        <h4 style='color: {APEX_COLORS['charcoal']}; margin: 0 0 5px 0; font-size: 18px;'>Non-Rebalancer Clients</h4>
+                        <p style='color: {APEX_COLORS['gray']}; margin: 0; font-size: 14px;'>Requires Rebalancer subscription</p>
+                    </div>
+                </div>
+            </div>""", unsafe_allow_html=True)
+
+        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['gold']}; border-radius: 15px; padding: 25px; box-shadow: 0 2px 8px rgba(251,191,36,0.1);'>
+                <div style='display: flex; align-items: center; gap: 20px;'>
+                    <div style='font-size: 45px;'>💡</div>
+                    <div style='flex: 1;'>
+                        <h4 style='color: {APEX_COLORS['gold']}; margin: 0 0 5px 0; font-size: 18px;'>Mid-Migration</h4>
+                        <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 14px;'>Partial access (migrated accounts only)</p>
+                    </div>
+                </div>
+            </div>
+        </div>""", unsafe_allow_html=True)
+
+    st.markdown("---")
+
+    # Eligibility Checker
+    st.markdown("### 🔍 Eligibility Checker")
+
+    with st.form("eligibility_form"):
+        st.markdown("Check if a client is eligible for Model Marketplace:")
+
+        col1, col2 = st.columns(2)
+
+        with col1:
+            on_ascend = st.radio("Is the client on Ascend platform?", ["Yes", "No"], horizontal=True)
+            is_rebalancer = st.radio("Is the client a Rebalancer customer?", ["Yes", "No"], horizontal=True)
+
+        with col2:
+            migration_status = st.selectbox("Migration Status:", ["Fully on Ascend", "Mid-migration", "Classic only"])
+
+        submitted = st.form_submit_button("Check Eligibility")
+
+        if submitted:
+            if on_ascend == "Yes" and is_rebalancer == "Yes" and migration_status == "Fully on Ascend":
+                st.success("✅ **ELIGIBLE!** This client can use Model Marketplace immediately after onboarding team enables access.")
+            elif on_ascend == "Yes" and is_rebalancer == "Yes" and migration_status == "Mid-migration":
+                st.warning("⚠️ **PARTIALLY ELIGIBLE** - Client can use Model Marketplace but only for migrated accounts.")
+            else:
+                reasons = []
+                if on_ascend == "No":
+                    reasons.append("Must be on Ascend platform")
+                if is_rebalancer == "No":
+                    reasons.append("Must be a Rebalancer client")
+                st.error(f"❌ **NOT ELIGIBLE** - Client needs: {', '.join(reasons)}")
+
+    st.markdown("---")
 
     st.markdown("### Who Does What?")
 
