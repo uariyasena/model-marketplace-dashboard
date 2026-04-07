@@ -1156,10 +1156,12 @@ elif section == "🎯 Strategic Partner: State Street":
 
     # Why State Street
     st.markdown(f"""
-    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-               font-weight: 700; font-size: 24px; margin-bottom: 20px;'>
-        🌟 Why State Street?
+    <h3 style='font-weight: 700; font-size: 24px; margin-bottom: 20px;'>
+        <span style='filter: none;'>🌟</span>
+        <span style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;'>
+            Why State Street?
+        </span>
     </h3>
     """, unsafe_allow_html=True)
 
@@ -1169,9 +1171,13 @@ elif section == "🎯 Strategic Partner: State Street":
         st.markdown(f"""
         <div style='background: white; padding: 30px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['amethyst']};
                     margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: 100%;'>
-            <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-                       margin-top: 0; font-weight: 600;'>🏦 Industry Leadership</h4>
+            <h4 style='margin-top: 0; font-weight: 600;'>
+                <span style='filter: none;'>🏦</span>
+                <span style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                             -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;'>
+                    Industry Leadership
+                </span>
+            </h4>
             <ul style='line-height: 1.8; color: {APEX_COLORS['charcoal']};'>
                 <li>Global financial services leader</li>
                 <li>$4+ trillion in AUM</li>
@@ -1201,10 +1207,12 @@ elif section == "🎯 Strategic Partner: State Street":
 
     # Partnership Value
     st.markdown(f"""
-    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-               font-weight: 700; font-size: 24px; margin-bottom: 20px; margin-top: 30px;'>
-        💎 Partnership Value Proposition
+    <h3 style='font-weight: 700; font-size: 24px; margin-bottom: 20px; margin-top: 30px;'>
+        <span style='filter: none;'>💎</span>
+        <span style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;'>
+            Partnership Value Proposition
+        </span>
     </h3>
     """, unsafe_allow_html=True)
 
@@ -1242,9 +1250,13 @@ elif section == "🎯 Strategic Partner: State Street":
     st.markdown(f"""
     <div style='background: linear-gradient(135deg, rgba(128,44,192,0.08) 0%, rgba(236,0,117,0.05) 100%);
                 padding: 30px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['amethyst']}; margin-bottom: 20px;'>
-        <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-                   margin-top: 0; font-size: 20px; font-weight: 600;'>🚀 Value for State Street</h4>
+        <h4 style='margin-top: 0; font-size: 20px; font-weight: 600;'>
+            <span style='filter: none;'>🚀</span>
+            <span style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                         -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;'>
+                Value for State Street
+            </span>
+        </h4>
         <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;'>
             <div>
                 <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
@@ -1274,10 +1286,12 @@ elif section == "🎯 Strategic Partner: State Street":
 
     # Current Status
     st.markdown(f"""
-    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-               font-weight: 700; font-size: 24px; margin-bottom: 20px; margin-top: 30px;'>
-        📊 Current Status & Next Steps
+    <h3 style='font-weight: 700; font-size: 24px; margin-bottom: 20px; margin-top: 30px;'>
+        <span style='filter: none;'>📊</span>
+        <span style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;'>
+            Current Status & Next Steps
+        </span>
     </h3>
     """, unsafe_allow_html=True)
 
@@ -1316,10 +1330,12 @@ elif section == "🎯 Strategic Partner: State Street":
 
     # Press Release Angle
     st.markdown(f"""
-    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-               font-weight: 700; font-size: 24px; margin-bottom: 20px; margin-top: 30px;'>
-        📰 Press Release Messaging
+    <h3 style='font-weight: 700; font-size: 24px; margin-bottom: 20px; margin-top: 30px;'>
+        <span style='filter: none;'>📰</span>
+        <span style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;'>
+            Press Release Messaging
+        </span>
     </h3>
     """, unsafe_allow_html=True)
 
