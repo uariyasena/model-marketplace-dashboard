@@ -1320,43 +1320,6 @@ elif section == "🎯 Strategic Partner: State Street":
         </ol>
         """, unsafe_allow_html=True)
 
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    # Press Release Angle
-    st.markdown(f"""
-    <h3 style='font-weight: 700; font-size: 24px; margin-bottom: 20px; margin-top: 30px;'>
-        <span style='filter: none;'>📰</span>
-        <span style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;'>
-            Press Release Messaging
-        </span>
-    </h3>
-    """, unsafe_allow_html=True)
-
-    st.markdown(f"""
-    <div style='background: linear-gradient(135deg, rgba(128,44,192,0.05) 0%, rgba(236,0,117,0.02) 100%);
-                padding: 35px; border-radius: 12px; border: 2px solid {APEX_COLORS['amethyst']};'>
-        <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-                   margin-top: 0; font-size: 20px; font-weight: 600;'>🎤 Recommended Headline</h4>
-        <p style='font-size: 18px; font-weight: 600; color: {APEX_COLORS['navy']}; margin: 15px 0; line-height: 1.6;'>
-            "Apex Fintech Solutions Partners with State Street to Launch Model Marketplace,
-            Bringing Institutional Investment Strategies to RIAs and Digital Advisors"
-        </p>
-        <hr style='border: none; border-top: 1px solid #ddd; margin: 20px 0;'>
-        <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-                   margin: 20px 0 10px 0; font-size: 18px; font-weight: 600;'>Key Message Points:</h4>
-        <ul style='color: {APEX_COLORS['charcoal']}; line-height: 1.8; margin: 10px 0;'>
-            <li>First-of-its-kind partnership between premier custody platform and global asset manager</li>
-            <li>State Street models available alongside Aptis, Franklin Templeton, and Timco and Sachs</li>
-            <li>Enables firms of all sizes to compete with institutional-quality investment solutions</li>
-            <li>Seamless integration with Apex Rebalancer platform serving 41 firms</li>
-            <li>Foundation for expanding provider network and model selection</li>
-        </ul>
-    </div>
-    """, unsafe_allow_html=True)
-
 elif section == "🔄 Process Flow":
     st.title("🔄 Model Marketplace Process Flow")
 
