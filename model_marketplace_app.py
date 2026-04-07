@@ -375,10 +375,14 @@ section = st.sidebar.radio(
     [
         "🏠 Home",
         "📊 Executive Summary",
+        "📰 Press Release Brief",
+        "📊 Why Model Marketplace",
         "✅ Client Eligibility",
+        "🗺️ Client Journey Map",
         "🔄 Process Flow",
         "👥 Roles & Responsibilities",
         "🏢 Model Providers",
+        "🎯 Strategic Partner: State Street",
         "💰 Revenue Model",
         "📢 Marketing Strategy",
         "💼 Use Cases",
@@ -828,6 +832,711 @@ elif section == "📊 Executive Summary":
 
     with col3:
         st.plotly_chart(create_metric_chart(4, "Model Providers Live", 'blue'), use_container_width=True)
+
+elif section == "📰 Press Release Brief":
+    st.title("📰 Press Release Brief")
+
+    st.markdown(f"""
+    <div style='background: linear-gradient(135deg, {APEX_COLORS['navy']} 0%, {APEX_COLORS['blue']} 100%);
+                padding: 40px; border-radius: 15px; margin-bottom: 30px;'>
+        <h2 style='color: white; margin: 0 0 15px 0; font-size: 28px; border: none;'>📢 Apex Launches Model Marketplace</h2>
+        <p style='color: white; font-size: 18px; margin: 0; opacity: 0.95;'>
+            Premier custody platform partners with State Street and leading asset managers to deliver
+            institutional-quality investment models to RIAs and digital advisors
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Key Announcement Points
+    st.markdown(f"""
+    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+               font-weight: 700; font-size: 24px; margin-bottom: 20px;'>
+        📋 Key Announcement Points
+    </h3>
+    """, unsafe_allow_html=True)
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.markdown(f"""
+        <div style='background: white; padding: 25px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['blue']}; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);'>
+            <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0;'>🎯 What We're Launching</h4>
+            <ul style='line-height: 1.8; color: {APEX_COLORS['charcoal']};'>
+                <li>Model Marketplace platform integrated with Apex Rebalancer</li>
+                <li>Access to institutional-quality investment models</li>
+                <li>Initial partners: Aptis, Franklin Templeton, Timco and Sachs</li>
+                <li><strong>Strategic Partnership with State Street</strong></li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown(f"""
+        <div style='background: white; padding: 25px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['green']}; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);'>
+            <h4 style='color: {APEX_COLORS['green']}; margin-top: 0;'>💰 Market Opportunity</h4>
+            <ul style='line-height: 1.8; color: {APEX_COLORS['charcoal']};'>
+                <li>41 Rebalancer clients representing significant AUM</li>
+                <li>33,080 accounts on platform</li>
+                <li>Growing demand for turnkey model solutions</li>
+                <li>Democratizing institutional strategies for smaller RIAs</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col2:
+        st.markdown(f"""
+        <div style='background: white; padding: 25px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['amethyst']}; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);'>
+            <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+                       margin-top: 0; font-weight: 600;'>✨ Key Benefits</h4>
+            <ul style='line-height: 1.8; color: {APEX_COLORS['charcoal']};'>
+                <li>Reduce portfolio construction time by 70%</li>
+                <li>Automatic model updates from providers</li>
+                <li>Seamless integration with existing workflows</li>
+                <li>Tax-loss harvesting and direct indexing ready</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+        st.markdown(f"""
+        <div style='background: white; padding: 25px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['gold']}; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);'>
+            <h4 style='color: {APEX_COLORS['gold']}; margin-top: 0;'>🚀 Future Vision</h4>
+            <ul style='line-height: 1.8; color: {APEX_COLORS['charcoal']};'>
+                <li>Expanding provider network</li>
+                <li>Enhanced model analytics and performance tracking</li>
+                <li>Growing ecosystem of digital advisors</li>
+                <li>Dedicated BD resource for provider acquisition</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("---")
+
+    # Sample Messaging
+    st.markdown(f"""
+    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+               font-weight: 700; font-size: 24px; margin-bottom: 20px; margin-top: 30px;'>
+        💬 Sample Messaging & Quotes
+    </h3>
+    """, unsafe_allow_html=True)
+
+    st.markdown(f"""
+    <div style='background: linear-gradient(135deg, rgba(0,102,204,0.08) 0%, rgba(0,32,96,0.05) 100%);
+                padding: 30px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['blue']}; margin-bottom: 20px;'>
+        <h4 style='color: {APEX_COLORS['navy']}; margin-top: 0; font-size: 18px;'>🎙️ Executive Quote (Sample)</h4>
+        <p style='font-style: italic; font-size: 16px; line-height: 1.8; color: {APEX_COLORS['charcoal']}; margin: 15px 0;'>
+            "Model Marketplace represents a significant milestone in democratizing institutional-quality investment strategies.
+            By partnering with industry leaders like State Street, we're enabling RIAs of all sizes to offer the same sophisticated
+            portfolio solutions previously available only to the largest wealth managers."
+        </p>
+        <p style='margin: 0; font-weight: 600; color: {APEX_COLORS['navy']};'>— [Executive Name], [Title], Apex Fintech Solutions</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown(f"""
+    <div style='background: linear-gradient(135deg, rgba(128,44,192,0.08) 0%, rgba(236,0,117,0.05) 100%);
+                padding: 30px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['amethyst']}; margin-bottom: 20px;'>
+        <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+                   margin-top: 0; font-size: 18px; font-weight: 600;'>🏦 State Street Quote (Sample)</h4>
+        <p style='font-style: italic; font-size: 16px; line-height: 1.8; color: {APEX_COLORS['charcoal']}; margin: 15px 0;'>
+            "Our partnership with Apex opens new distribution channels for State Street's investment strategies,
+            allowing us to serve a broader range of advisors and their clients through a best-in-class technology platform."
+        </p>
+        <p style='margin: 0; font-weight: 600;'><span style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>— [Executive Name], [Title], State Street</span></p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Quick Stats Box
+    st.markdown(f"""
+    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+               font-weight: 700; font-size: 24px; margin-bottom: 20px; margin-top: 30px;'>
+        📊 Press Release Stats
+    </h3>
+    """, unsafe_allow_html=True)
+
+    col1, col2, col3, col4 = st.columns(4)
+
+    with col1:
+        st.markdown(f"""
+        <div style='background: linear-gradient(135deg, {APEX_COLORS['navy']} 0%, {APEX_COLORS['blue']} 100%);
+                    padding: 25px; border-radius: 12px; text-align: center;'>
+            <div style='font-size: 36px; font-weight: bold; color: white;'>41</div>
+            <div style='color: white; font-size: 14px; opacity: 0.9; margin-top: 8px;'>Rebalancer Clients</div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col2:
+        st.markdown(f"""
+        <div style='background: linear-gradient(135deg, {APEX_COLORS['blue']} 0%, {APEX_COLORS['bright_blue']} 100%);
+                    padding: 25px; border-radius: 12px; text-align: center;'>
+            <div style='font-size: 36px; font-weight: bold; color: white;'>33K+</div>
+            <div style='color: white; font-size: 14px; opacity: 0.9; margin-top: 8px;'>Accounts on Platform</div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col3:
+        st.markdown(f"""
+        <div style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                    padding: 25px; border-radius: 12px; text-align: center;'>
+            <div style='font-size: 36px; font-weight: bold; color: white;'>4</div>
+            <div style='color: white; font-size: 14px; opacity: 0.9; margin-top: 8px;'>Model Providers</div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col4:
+        st.markdown(f"""
+        <div style='background: linear-gradient(135deg, {APEX_COLORS['green']} 0%, {APEX_COLORS['sky_blue']} 100%);
+                    padding: 25px; border-radius: 12px; text-align: center;'>
+            <div style='font-size: 36px; font-weight: bold; color: white;'>70%</div>
+            <div style='color: white; font-size: 14px; opacity: 0.9; margin-top: 8px;'>Time Savings</div>
+        </div>
+        """, unsafe_allow_html=True)
+
+elif section == "📊 Why Model Marketplace":
+    st.title("📊 Why Model Marketplace?")
+
+    st.markdown(f"""
+    <div style='background: linear-gradient(to right, {APEX_COLORS['lighter_gray']} 0%, white 100%);
+                border-left: 8px solid {APEX_COLORS['blue']};
+                padding: 40px 50px;
+                border-radius: 12px;
+                margin-bottom: 40px;
+                box-shadow: 0 2px 12px rgba(0,0,0,0.08);'>
+        <h3 style='color: {APEX_COLORS['navy']}; margin: 0 0 15px 0; font-size: 28px;'>
+            Three Approaches to Portfolio Management
+        </h3>
+        <p style='color: {APEX_COLORS['charcoal']}; font-size: 16px; line-height: 1.8; margin: 0;'>
+            Most Apex Rebalancer clients currently manage their own proprietary models. Model Marketplace offers
+            a complementary approach—allowing firms to blend custom strategies with institutional models or
+            offer clients choice between proprietary and third-party solutions.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Comparison Table
+    st.markdown(f"""
+    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+               font-weight: 700; font-size: 24px; margin-bottom: 20px;'>
+        🔄 Comparison: Custom vs Marketplace vs Hybrid
+    </h3>
+    """, unsafe_allow_html=True)
+
+    st.markdown(f"""
+    <table style='width: 100%; border-collapse: collapse; margin: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1);'>
+        <thead>
+            <tr style='background: {APEX_COLORS['navy']}; color: white;'>
+                <th style='padding: 15px; text-align: left; border: 1px solid #ddd;'>Aspect</th>
+                <th style='padding: 15px; text-align: left; border: 1px solid #ddd;'>Custom Models Only</th>
+                <th style='padding: 15px; text-align: left; border: 1px solid #ddd;'>Marketplace Only</th>
+                <th style='padding: 15px; text-align: left; border: 1px solid #ddd;'>Hybrid Approach</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style='background: white;'>
+                <td style='padding: 15px; border: 1px solid #ddd; font-weight: 600; color: {APEX_COLORS['blue']};'>Investment Philosophy</td>
+                <td style='padding: 15px; border: 1px solid #ddd;'>100% proprietary</td>
+                <td style='padding: 15px; border: 1px solid #ddd;'>100% third-party institutional</td>
+                <td style='padding: 15px; border: 1px solid #ddd; background: linear-gradient(135deg, rgba(128,44,192,0.05) 0%, rgba(236,0,117,0.02) 100%);'>
+                    Mix of proprietary + institutional ✨
+                </td>
+            </tr>
+            <tr style='background: #f9f9f9;'>
+                <td style='padding: 15px; border: 1px solid #ddd; font-weight: 600; color: {APEX_COLORS['blue']};'>Research Overhead</td>
+                <td style='padding: 15px; border: 1px solid #ddd;'>High - in-house team required</td>
+                <td style='padding: 15px; border: 1px solid #ddd; background: linear-gradient(135deg, rgba(40,167,69,0.05) 0%, rgba(40,167,69,0.02) 100%);'>
+                    None - provider manages ✅
+                </td>
+                <td style='padding: 15px; border: 1px solid #ddd;'>Moderate - focus on strategic allocation</td>
+            </tr>
+            <tr style='background: white;'>
+                <td style='padding: 15px; border: 1px solid #ddd; font-weight: 600; color: {APEX_COLORS['blue']};'>Client Options</td>
+                <td style='padding: 15px; border: 1px solid #ddd;'>Firm strategies only</td>
+                <td style='padding: 15px; border: 1px solid #ddd;'>Institutional strategies only</td>
+                <td style='padding: 15px; border: 1px solid #ddd; background: linear-gradient(135deg, rgba(128,44,192,0.05) 0%, rgba(236,0,117,0.02) 100%);'>
+                    Full menu - client choice ✨
+                </td>
+            </tr>
+            <tr style='background: #f9f9f9;'>
+                <td style='padding: 15px; border: 1px solid #ddd; font-weight: 600; color: {APEX_COLORS['blue']};'>Time to Market</td>
+                <td style='padding: 15px; border: 1px solid #ddd;'>Months to build</td>
+                <td style='padding: 15px; border: 1px solid #ddd; background: linear-gradient(135deg, rgba(40,167,69,0.05) 0%, rgba(40,167,69,0.02) 100%);'>
+                    Weeks to subscribe ✅
+                </td>
+                <td style='padding: 15px; border: 1px solid #ddd;'>Immediate expansion</td>
+            </tr>
+            <tr style='background: white;'>
+                <td style='padding: 15px; border: 1px solid #ddd; font-weight: 600; color: {APEX_COLORS['blue']};'>Scalability</td>
+                <td style='padding: 15px; border: 1px solid #ddd;'>Limited by team capacity</td>
+                <td style='padding: 15px; border: 1px solid #ddd; background: linear-gradient(135deg, rgba(40,167,69,0.05) 0%, rgba(40,167,69,0.02) 100%);'>
+                    Unlimited with automation ✅
+                </td>
+                <td style='padding: 15px; border: 1px solid #ddd; background: linear-gradient(135deg, rgba(128,44,192,0.05) 0%, rgba(236,0,117,0.02) 100%);'>
+                    Best of both worlds ✨
+                </td>
+            </tr>
+            <tr style='background: #f9f9f9;'>
+                <td style='padding: 15px; border: 1px solid #ddd; font-weight: 600; color: {APEX_COLORS['blue']};'>Brand Control</td>
+                <td style='padding: 15px; border: 1px solid #ddd; background: linear-gradient(135deg, rgba(40,167,69,0.05) 0%, rgba(40,167,69,0.02) 100%);'>
+                    Full branding control ✅
+                </td>
+                <td style='padding: 15px; border: 1px solid #ddd;'>Provider-branded</td>
+                <td style='padding: 15px; border: 1px solid #ddd; background: linear-gradient(135deg, rgba(128,44,192,0.05) 0%, rgba(236,0,117,0.02) 100%);'>
+                    Selective white-labeling ✨
+                </td>
+            </tr>
+            <tr style='background: white;'>
+                <td style='padding: 15px; border: 1px solid #ddd; font-weight: 600; color: {APEX_COLORS['blue']};'>Best For</td>
+                <td style='padding: 15px; border: 1px solid #ddd;'>Large RIAs with research teams</td>
+                <td style='padding: 15px; border: 1px solid #ddd;'>Digital advisors, new entrants</td>
+                <td style='padding: 15px; border: 1px solid #ddd; background: linear-gradient(135deg, rgba(128,44,192,0.05) 0%, rgba(236,0,117,0.02) 100%);'>
+                    Growing RIAs seeking flexibility ✨
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    """, unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # Use Case Examples
+    st.markdown(f"""
+    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+               font-weight: 700; font-size: 24px; margin-top: 40px; margin-bottom: 20px;'>
+        💡 Real-World Scenarios
+    </h3>
+    """, unsafe_allow_html=True)
+
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.markdown(f"""
+        <div style='background: white; padding: 25px; border-radius: 12px; border: 2px solid {APEX_COLORS['blue']}; height: 100%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);'>
+            <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0;'>🏢 Scenario 1</h4>
+            <p style='font-weight: 600; color: {APEX_COLORS['navy']};'>Custom Only</p>
+            <p style='font-size: 14px; line-height: 1.6; color: {APEX_COLORS['charcoal']};'>
+                Large wealth manager with 10-person investment committee. Built proprietary models over years.
+                Uses Rebalancer for portfolio management but doesn't need external models.
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col2:
+        st.markdown(f"""
+        <div style='background: white; padding: 25px; border-radius: 12px; border: 2px solid {APEX_COLORS['green']}; height: 100%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);'>
+            <h4 style='color: {APEX_COLORS['green']}; margin-top: 0;'>📱 Scenario 2</h4>
+            <p style='font-weight: 600; color: {APEX_COLORS['navy']};'>Marketplace Only</p>
+            <p style='font-size: 14px; line-height: 1.6; color: {APEX_COLORS['charcoal']};'>
+                Digital advisor launching managed portfolios. No in-house research team. Subscribes to
+                Franklin Templeton and Aptis models. Scales to 10,000+ accounts quickly.
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col3:
+        st.markdown(f"""
+        <div style='background: white; padding: 25px; border-radius: 12px; border: 2px solid {APEX_COLORS['amethyst']}; height: 100%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);'>
+            <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+                       margin-top: 0; font-weight: 600;'>🌟 Scenario 3</h4>
+            <p style='font-weight: 600; color: {APEX_COLORS['navy']};'>Hybrid Approach</p>
+            <p style='font-size: 14px; line-height: 1.6; color: {APEX_COLORS['charcoal']};'>
+                Mid-sized RIA with custom value-oriented models. Clients request ESG and thematic exposure.
+                Adds State Street ESG models to complement proprietary strategies.
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+
+elif section == "🗺️ Client Journey Map":
+    st.title("🗺️ Client Journey Map")
+
+    st.markdown(f"""
+    <div style='background: linear-gradient(135deg, rgba(0,102,204,0.08) 0%, rgba(0,32,96,0.05) 100%);
+                padding: 30px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['blue']}; margin-bottom: 30px;'>
+        <h3 style='color: {APEX_COLORS['navy']}; margin: 0 0 10px 0;'>End-to-End Client Journey</h3>
+        <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 16px;'>
+            Visual overview of how clients go from existing Rebalancer users to actively delivering
+            institutional models to their advisors and end clients.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Journey Stages
+    st.markdown(f"""
+    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+               font-weight: 700; font-size: 24px; margin-bottom: 30px;'>
+        🛤️ Five-Stage Journey
+    </h3>
+    """, unsafe_allow_html=True)
+
+    # Stage 1
+    st.markdown(f"""
+    <div style='display: flex; align-items: center; margin-bottom: 25px;'>
+        <div style='background: {APEX_COLORS['blue']}; color: white; width: 60px; height: 60px; border-radius: 50%;
+                    display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold;
+                    flex-shrink: 0; margin-right: 20px; box-shadow: 0 4px 12px rgba(0,102,204,0.3);'>1</div>
+        <div style='flex-grow: 1; background: linear-gradient(135deg, rgba(0,102,204,0.1) 0%, rgba(59,130,246,0.05) 100%);
+                    padding: 20px; border-radius: 12px; border-left: 4px solid {APEX_COLORS['blue']};'>
+            <h4 style='color: {APEX_COLORS['blue']}; margin: 0 0 10px 0;'>Discovery & Enablement</h4>
+            <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
+                <strong>Who:</strong> Apex Sales/RM + Client<br>
+                <strong>What:</strong> Client learns about Model Marketplace, evaluates fit, decides to enable<br>
+                <strong>Output:</strong> Feature enabled in Client Configurator
+            </p>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Arrow
+    st.markdown("""
+    <div style='text-align: center; font-size: 32px; margin: 10px 0; color: #666;'>⬇️</div>
+    """, unsafe_allow_html=True)
+
+    # Stage 2
+    st.markdown(f"""
+    <div style='display: flex; align-items: center; margin-bottom: 25px;'>
+        <div style='background: {APEX_COLORS['bright_blue']}; color: white; width: 60px; height: 60px; border-radius: 50%;
+                    display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold;
+                    flex-shrink: 0; margin-right: 20px; box-shadow: 0 4px 12px rgba(59,130,246,0.3);'>2</div>
+        <div style='flex-grow: 1; background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(0,176,240,0.05) 100%);
+                    padding: 20px; border-radius: 12px; border-left: 4px solid {APEX_COLORS['bright_blue']};'>
+            <h4 style='color: {APEX_COLORS['bright_blue']}; margin: 0 0 10px 0;'>Access & Permissions</h4>
+            <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
+                <strong>Who:</strong> Client Administrator + Apex Onboarding<br>
+                <strong>What:</strong> Grant subscribe permissions to authorized users, configure access<br>
+                <strong>Output:</strong> Users can access Model Marketplace in Ascend
+            </p>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div style='text-align: center; font-size: 32px; margin: 10px 0; color: #666;'>⬇️</div>
+    """, unsafe_allow_html=True)
+
+    # Stage 3
+    st.markdown(f"""
+    <div style='display: flex; align-items: center; margin-bottom: 25px;'>
+        <div style='background: {APEX_COLORS['green']}; color: white; width: 60px; height: 60px; border-radius: 50%;
+                    display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold;
+                    flex-shrink: 0; margin-right: 20px; box-shadow: 0 4px 12px rgba(40,167,69,0.3);'>3</div>
+        <div style='flex-grow: 1; background: linear-gradient(135deg, rgba(40,167,69,0.1) 0%, rgba(40,167,69,0.05) 100%);
+                    padding: 20px; border-radius: 12px; border-left: 4px solid {APEX_COLORS['green']};'>
+            <h4 style='color: {APEX_COLORS['green']}; margin: 0 0 10px 0;'>Browse & Subscribe</h4>
+            <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
+                <strong>Who:</strong> End Client/Advisor<br>
+                <strong>What:</strong> Browse models, review holdings/weights, subscribe to selected models, accept T&Cs<br>
+                <strong>Output:</strong> Subscribed models available in Rebalancer
+            </p>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div style='text-align: center; font-size: 32px; margin: 10px 0; color: #666;'>⬇️</div>
+    """, unsafe_allow_html=True)
+
+    # Stage 4
+    st.markdown(f"""
+    <div style='display: flex; align-items: center; margin-bottom: 25px;'>
+        <div style='background: {APEX_COLORS['amethyst']}; color: white; width: 60px; height: 60px; border-radius: 50%;
+                    display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold;
+                    flex-shrink: 0; margin-right: 20px; box-shadow: 0 4px 12px rgba(128,44,192,0.3);'>4</div>
+        <div style='flex-grow: 1; background: linear-gradient(135deg, rgba(128,44,192,0.1) 0%, rgba(236,0,117,0.05) 100%);
+                    padding: 20px; border-radius: 12px; border-left: 4px solid {APEX_COLORS['amethyst']};'>
+            <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+                       margin: 0 0 10px 0; font-weight: 600;'>Configure & Assign</h4>
+            <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
+                <strong>Who:</strong> Client/Advisor<br>
+                <strong>What:</strong> Verify asset class mappings, create goals, assign models to client accounts, set thresholds<br>
+                <strong>Output:</strong> Accounts ready for rebalancing with marketplace models
+            </p>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div style='text-align: center; font-size: 32px; margin: 10px 0; color: #666;'>⬇️</div>
+    """, unsafe_allow_html=True)
+
+    # Stage 5
+    st.markdown(f"""
+    <div style='display: flex; align-items: center; margin-bottom: 25px;'>
+        <div style='background: {APEX_COLORS['gold']}; color: white; width: 60px; height: 60px; border-radius: 50%;
+                    display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold;
+                    flex-shrink: 0; margin-right: 20px; box-shadow: 0 4px 12px rgba(251,191,36,0.3);'>5</div>
+        <div style='flex-grow: 1; background: linear-gradient(135deg, rgba(251,191,36,0.1) 0%, rgba(245,158,11,0.05) 100%);
+                    padding: 20px; border-radius: 12px; border-left: 4px solid {APEX_COLORS['gold']};'>
+            <h4 style='color: {APEX_COLORS['gold']}; margin: 0 0 10px 0;'>Rebalance & Deliver</h4>
+            <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
+                <strong>Who:</strong> Client/Advisor<br>
+                <strong>What:</strong> Initiate rebalance, review proposals, accept proposals, submit trades, deliver models to end clients<br>
+                <strong>Output:</strong> Institutional models actively managed for client accounts
+            </p>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # Key Touchpoints
+    st.markdown(f"""
+    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+               font-weight: 700; font-size: 24px; margin-top: 40px; margin-bottom: 20px;'>
+        🎯 Key Touchpoints & Timeline
+    </h3>
+    """, unsafe_allow_html=True)
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.markdown(f"""
+        <div style='background: white; padding: 25px; border-radius: 12px; border: 2px solid {APEX_COLORS['blue']}; height: 100%;'>
+            <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0;'>⏱️ Typical Timeline</h4>
+            <ul style='line-height: 1.8; color: {APEX_COLORS['charcoal']};'>
+                <li><strong>Stage 1-2:</strong> 1-2 weeks (enablement + permissions)</li>
+                <li><strong>Stage 3:</strong> 5-10 minutes (browse + subscribe)</li>
+                <li><strong>Stage 4:</strong> 15-30 minutes (first-time configuration)</li>
+                <li><strong>Stage 5:</strong> Variable (ongoing rebalancing)</li>
+                <li><strong>Total Time to First Rebalance:</strong> ~2-3 weeks</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col2:
+        st.markdown(f"""
+        <div style='background: white; padding: 25px; border-radius: 12px; border: 2px solid {APEX_COLORS['green']}; height: 100%;'>
+            <h4 style='color: {APEX_COLORS['green']}; margin-top: 0;'>✅ Success Criteria</h4>
+            <ul style='line-height: 1.8; color: {APEX_COLORS['charcoal']};'>
+                <li>Client successfully subscribed to at least 1 model</li>
+                <li>Asset class mappings verified</li>
+                <li>Models assigned to test accounts</li>
+                <li>First rebalance executed successfully</li>
+                <li>Client understands ongoing workflow</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+elif section == "🎯 Strategic Partner: State Street":
+    st.title("🎯 Strategic Partner: State Street")
+
+    # Hero Section
+    st.markdown(f"""
+    <div style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                padding: 50px 40px;
+                border-radius: 20px;
+                text-align: center;
+                margin-bottom: 40px;
+                box-shadow: 0 8px 24px rgba(128,44,192,0.2);'>
+        <h1 style='font-size: 48px; color: white; margin: 0; font-weight: bold; border: none;'>
+            State Street Partnership
+        </h1>
+        <h3 style='font-size: 24px; color: white; margin: 20px 0 0 0; font-weight: 400; border: none; padding: 0; opacity: 0.95;'>
+            Top Strategic Partner for Model Marketplace Launch
+        </h3>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Why State Street
+    st.markdown(f"""
+    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+               font-weight: 700; font-size: 24px; margin-bottom: 20px;'>
+        🌟 Why State Street?
+    </h3>
+    """, unsafe_allow_html=True)
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.markdown(f"""
+        <div style='background: white; padding: 30px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['amethyst']};
+                    margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: 100%;'>
+            <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+                       margin-top: 0; font-weight: 600;'>🏦 Industry Leadership</h4>
+            <ul style='line-height: 1.8; color: {APEX_COLORS['charcoal']};'>
+                <li>Global financial services leader</li>
+                <li>$4+ trillion in AUM</li>
+                <li>Trusted institutional brand</li>
+                <li>Deep expertise in asset management</li>
+                <li>Proven track record in model portfolios</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col2:
+        st.markdown(f"""
+        <div style='background: white; padding: 30px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['blue']};
+                    margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); height: 100%;'>
+            <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0;'>🤝 Strategic Alignment</h4>
+            <ul style='line-height: 1.8; color: {APEX_COLORS['charcoal']};'>
+                <li>Shared vision for democratizing institutional strategies</li>
+                <li>Commitment to technology-enabled distribution</li>
+                <li>Focus on RIA and digital advisor markets</li>
+                <li>Long-term partnership approach</li>
+                <li>Aligned incentives for mutual growth</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # Partnership Value
+    st.markdown(f"""
+    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+               font-weight: 700; font-size: 24px; margin-bottom: 20px; margin-top: 30px;'>
+        💎 Partnership Value Proposition
+    </h3>
+    """, unsafe_allow_html=True)
+
+    # Value for Apex
+    st.markdown(f"""
+    <div style='background: linear-gradient(135deg, rgba(0,102,204,0.08) 0%, rgba(0,32,96,0.05) 100%);
+                padding: 30px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['blue']}; margin-bottom: 20px;'>
+        <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0; font-size: 20px;'>📈 Value for Apex</h4>
+        <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;'>
+            <div>
+                <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
+                    ✅ <strong>Credibility:</strong> Premier brand validates Model Marketplace
+                </p>
+            </div>
+            <div>
+                <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
+                    ✅ <strong>Quality:</strong> Institutional-grade models attract sophisticated clients
+                </p>
+            </div>
+            <div>
+                <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
+                    ✅ <strong>Scale:</strong> State Street's brand draws client interest
+                </p>
+            </div>
+            <div>
+                <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
+                    ✅ <strong>Differentiation:</strong> Competitive advantage in custody market
+                </p>
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Value for State Street
+    st.markdown(f"""
+    <div style='background: linear-gradient(135deg, rgba(128,44,192,0.08) 0%, rgba(236,0,117,0.05) 100%);
+                padding: 30px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['amethyst']}; margin-bottom: 20px;'>
+        <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+                   margin-top: 0; font-size: 20px; font-weight: 600;'>🚀 Value for State Street</h4>
+        <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;'>
+            <div>
+                <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
+                    ✅ <strong>Distribution:</strong> Access to 41 RIA firms and 33,080 accounts
+                </p>
+            </div>
+            <div>
+                <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
+                    ✅ <strong>Automation:</strong> Scalable platform for model delivery
+                </p>
+            </div>
+            <div>
+                <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
+                    ✅ <strong>Market Access:</strong> Reach emerging digital advisor segment
+                </p>
+            </div>
+            <div>
+                <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
+                    ✅ <strong>Efficiency:</strong> One integration reaches multiple advisors
+                </p>
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # Current Status
+    st.markdown(f"""
+    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+               font-weight: 700; font-size: 24px; margin-bottom: 20px; margin-top: 30px;'>
+        📊 Current Status & Next Steps
+    </h3>
+    """, unsafe_allow_html=True)
+
+    col1, col2 = st.columns([1, 1])
+
+    with col1:
+        st.markdown(f"""
+        <div style='background: linear-gradient(135deg, rgba(251,191,36,0.1) 0%, rgba(245,158,11,0.05) 100%);
+                    padding: 30px; border-radius: 12px; border: 2px solid {APEX_COLORS['gold']}; height: 100%;'>
+            <h4 style='color: {APEX_COLORS['gold']}; margin-top: 0;'>📋 Status: Coming Soon</h4>
+            <p style='color: {APEX_COLORS['charcoal']}; line-height: 1.8; margin-bottom: 15px;'>
+                State Street models are in final stages of onboarding and will be available on Model Marketplace shortly.
+            </p>
+            <p style='margin: 0; font-size: 14px;'>
+                <strong style='color: {APEX_COLORS['navy']};'>Awaiting:</strong> Final model holdings data submission
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col2:
+        st.markdown(f"""
+        <div style='background: linear-gradient(135deg, rgba(40,167,69,0.1) 0%, rgba(40,167,69,0.05) 100%);
+                    padding: 30px; border-radius: 12px; border: 2px solid {APEX_COLORS['green']}; height: 100%;'>
+            <h4 style='color: {APEX_COLORS['green']}; margin-top: 0;'>🎯 Next Steps</h4>
+            <ol style='color: {APEX_COLORS['charcoal']}; line-height: 1.8; margin: 0; padding-left: 20px;'>
+                <li>Receive holdings data from State Street</li>
+                <li>Upload models to production</li>
+                <li>Internal testing and validation</li>
+                <li>Launch announcement and press release</li>
+                <li>Client enablement and training</li>
+            </ol>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # Press Release Angle
+    st.markdown(f"""
+    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+               font-weight: 700; font-size: 24px; margin-bottom: 20px; margin-top: 30px;'>
+        📰 Press Release Messaging
+    </h3>
+    """, unsafe_allow_html=True)
+
+    st.markdown(f"""
+    <div style='background: linear-gradient(135deg, rgba(128,44,192,0.05) 0%, rgba(236,0,117,0.02) 100%);
+                padding: 35px; border-radius: 12px; border: 2px solid {APEX_COLORS['amethyst']};'>
+        <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+                   margin-top: 0; font-size: 20px; font-weight: 600;'>🎤 Recommended Headline</h4>
+        <p style='font-size: 18px; font-weight: 600; color: {APEX_COLORS['navy']}; margin: 15px 0; line-height: 1.6;'>
+            "Apex Fintech Solutions Partners with State Street to Launch Model Marketplace,
+            Bringing Institutional Investment Strategies to RIAs and Digital Advisors"
+        </p>
+        <hr style='border: none; border-top: 1px solid #ddd; margin: 20px 0;'>
+        <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+                   margin: 20px 0 10px 0; font-size: 18px; font-weight: 600;'>Key Message Points:</h4>
+        <ul style='color: {APEX_COLORS['charcoal']}; line-height: 1.8; margin: 10px 0;'>
+            <li>First-of-its-kind partnership between premier custody platform and global asset manager</li>
+            <li>State Street models available alongside Aptis, Franklin Templeton, and Timco and Sachs</li>
+            <li>Enables firms of all sizes to compete with institutional-quality investment solutions</li>
+            <li>Seamless integration with Apex Rebalancer platform serving 41 firms</li>
+            <li>Foundation for expanding provider network and model selection</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
 
 elif section == "✅ Client Eligibility":
     st.title("✅ Client Eligibility & Prerequisites")
