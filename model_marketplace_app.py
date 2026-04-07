@@ -1699,76 +1699,76 @@ elif section == "👥 Roles & Responsibilities":
     col_left, col_right = st.columns([1, 1], gap="large")
 
     with col_left:
-        st.markdown(f"""<div style='border: 4px dashed {APEX_COLORS['green']}; background: linear-gradient(135deg, rgba(40,167,69,0.03) 0%, rgba(0,102,204,0.03) 100%); padding: 40px; border-radius: 20px; box-shadow: 0 4px 20px rgba(40,167,69,0.15); min-height: 520px;'>
-            <div style='text-align: center; margin-bottom: 35px;'>
-                <div style='font-size: 70px; margin-bottom: 10px;'>✅</div>
-                <h3 style='color: {APEX_COLORS['green']}; margin: 0; font-size: 26px; border: none;'>You're Eligible If...</h3>
+        st.markdown(f"""<div style='border: 3px dashed {APEX_COLORS['green']}; background: linear-gradient(135deg, rgba(40,167,69,0.03) 0%, rgba(0,102,204,0.03) 100%); padding: 25px; border-radius: 15px; box-shadow: 0 4px 20px rgba(40,167,69,0.15);'>
+            <div style='text-align: center; margin-bottom: 20px;'>
+                <div style='font-size: 50px; margin-bottom: 8px;'>✅</div>
+                <h3 style='color: {APEX_COLORS['green']}; margin: 0; font-size: 22px; border: none;'>You're Eligible If...</h3>
             </div>""", unsafe_allow_html=True)
 
-        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['blue']}; border-radius: 15px; padding: 25px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(0,102,204,0.1);'>
-                <div style='display: flex; align-items: center; gap: 20px;'>
-                    <div style='font-size: 45px;'>🖥️</div>
+        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['blue']}; border-radius: 12px; padding: 18px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,102,204,0.1);'>
+                <div style='display: flex; align-items: center; gap: 15px;'>
+                    <div style='font-size: 35px;'>🖥️</div>
                     <div style='flex: 1;'>
-                        <h4 style='color: {APEX_COLORS['navy']}; margin: 0 0 5px 0; font-size: 18px;'>Ascend Client</h4>
-                        <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 14px;'>Active on Ascend platform</p>
+                        <h4 style='color: {APEX_COLORS['navy']}; margin: 0 0 3px 0; font-size: 16px;'>Ascend Client</h4>
+                        <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 13px;'>Active on Ascend platform</p>
                     </div>
                 </div>
             </div>""", unsafe_allow_html=True)
 
-        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['bright_blue']}; border-radius: 15px; padding: 25px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(59,130,246,0.1);'>
-                <div style='display: flex; align-items: center; gap: 20px;'>
-                    <div style='font-size: 45px;'>⚖️</div>
+        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['bright_blue']}; border-radius: 12px; padding: 18px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(59,130,246,0.1);'>
+                <div style='display: flex; align-items: center; gap: 15px;'>
+                    <div style='font-size: 35px;'>⚖️</div>
                     <div style='flex: 1;'>
-                        <h4 style='color: {APEX_COLORS['navy']}; margin: 0 0 5px 0; font-size: 18px;'>Rebalancer Active</h4>
-                        <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 14px;'>Current Rebalancer subscription</p>
+                        <h4 style='color: {APEX_COLORS['navy']}; margin: 0 0 3px 0; font-size: 16px;'>Rebalancer Active</h4>
+                        <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 13px;'>Current Rebalancer subscription</p>
                     </div>
                 </div>
             </div>""", unsafe_allow_html=True)
 
-        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['sky_blue']}; border-radius: 15px; padding: 25px; box-shadow: 0 2px 8px rgba(0,176,240,0.1);'>
-                <div style='display: flex; align-items: center; gap: 20px;'>
-                    <div style='font-size: 45px;'>⚙️</div>
+        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['sky_blue']}; border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(0,176,240,0.1);'>
+                <div style='display: flex; align-items: center; gap: 15px;'>
+                    <div style='font-size: 35px;'>⚙️</div>
                     <div style='flex: 1;'>
-                        <h4 style='color: {APEX_COLORS['navy']}; margin: 0 0 5px 0; font-size: 18px;'>Configured Access</h4>
-                        <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 14px;'>Enabled in Client Configurator</p>
+                        <h4 style='color: {APEX_COLORS['navy']}; margin: 0 0 3px 0; font-size: 16px;'>Configured Access</h4>
+                        <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 13px;'>Enabled in Client Configurator</p>
                     </div>
                 </div>
             </div>
         </div>""", unsafe_allow_html=True)
 
     with col_right:
-        st.markdown(f"""<div style='border: 4px dotted {APEX_COLORS['charcoal']}; background: linear-gradient(135deg, rgba(45,55,72,0.03) 0%, rgba(107,114,128,0.03) 100%); padding: 40px; border-radius: 20px; box-shadow: 0 4px 20px rgba(45,55,72,0.15); min-height: 520px;'>
-            <div style='text-align: center; margin-bottom: 35px;'>
-                <div style='font-size: 70px; margin-bottom: 10px;'>⚠️</div>
-                <h3 style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 26px; border: none;'>Not Yet Available For...</h3>
+        st.markdown(f"""<div style='border: 3px dotted {APEX_COLORS['charcoal']}; background: linear-gradient(135deg, rgba(45,55,72,0.03) 0%, rgba(107,114,128,0.03) 100%); padding: 25px; border-radius: 15px; box-shadow: 0 4px 20px rgba(45,55,72,0.15);'>
+            <div style='text-align: center; margin-bottom: 20px;'>
+                <div style='font-size: 50px; margin-bottom: 8px;'>⚠️</div>
+                <h3 style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 22px; border: none;'>Not Yet Available For...</h3>
             </div>""", unsafe_allow_html=True)
 
-        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['charcoal']}; border-radius: 15px; padding: 25px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(45,55,72,0.1);'>
-                <div style='display: flex; align-items: center; gap: 20px;'>
-                    <div style='font-size: 45px; opacity: 0.6;'>🚫</div>
+        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['charcoal']}; border-radius: 12px; padding: 18px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(45,55,72,0.1);'>
+                <div style='display: flex; align-items: center; gap: 15px;'>
+                    <div style='font-size: 35px; opacity: 0.6;'>🚫</div>
                     <div style='flex: 1;'>
-                        <h4 style='color: {APEX_COLORS['charcoal']}; margin: 0 0 5px 0; font-size: 18px;'>Classic Platform</h4>
-                        <p style='color: {APEX_COLORS['gray']}; margin: 0; font-size: 14px;'>Available after Ascend migration</p>
+                        <h4 style='color: {APEX_COLORS['charcoal']}; margin: 0 0 3px 0; font-size: 16px;'>Classic Platform</h4>
+                        <p style='color: {APEX_COLORS['gray']}; margin: 0; font-size: 13px;'>Available after Ascend migration</p>
                     </div>
                 </div>
             </div>""", unsafe_allow_html=True)
 
-        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['gray']}; border-radius: 15px; padding: 25px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(107,114,128,0.1);'>
-                <div style='display: flex; align-items: center; gap: 20px;'>
-                    <div style='font-size: 45px; opacity: 0.6;'>⛔</div>
+        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['gray']}; border-radius: 12px; padding: 18px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(107,114,128,0.1);'>
+                <div style='display: flex; align-items: center; gap: 15px;'>
+                    <div style='font-size: 35px; opacity: 0.6;'>⛔</div>
                     <div style='flex: 1;'>
-                        <h4 style='color: {APEX_COLORS['charcoal']}; margin: 0 0 5px 0; font-size: 18px;'>Non-Rebalancer Clients</h4>
-                        <p style='color: {APEX_COLORS['gray']}; margin: 0; font-size: 14px;'>Requires Rebalancer subscription</p>
+                        <h4 style='color: {APEX_COLORS['charcoal']}; margin: 0 0 3px 0; font-size: 16px;'>Non-Rebalancer Clients</h4>
+                        <p style='color: {APEX_COLORS['gray']}; margin: 0; font-size: 13px;'>Requires Rebalancer subscription</p>
                     </div>
                 </div>
             </div>""", unsafe_allow_html=True)
 
-        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['gold']}; border-radius: 15px; padding: 25px; box-shadow: 0 2px 8px rgba(251,191,36,0.1);'>
-                <div style='display: flex; align-items: center; gap: 20px;'>
-                    <div style='font-size: 45px;'>💡</div>
+        st.markdown(f"""<div style='background: white; border: 2px solid {APEX_COLORS['gold']}; border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(251,191,36,0.1);'>
+                <div style='display: flex; align-items: center; gap: 15px;'>
+                    <div style='font-size: 35px;'>💡</div>
                     <div style='flex: 1;'>
-                        <h4 style='color: {APEX_COLORS['gold']}; margin: 0 0 5px 0; font-size: 18px;'>Mid-Migration</h4>
-                        <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 14px;'>Partial access (migrated accounts only)</p>
+                        <h4 style='color: {APEX_COLORS['gold']}; margin: 0 0 3px 0; font-size: 16px;'>Mid-Migration</h4>
+                        <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 13px;'>Partial access (migrated accounts only)</p>
                     </div>
                 </div>
             </div>
