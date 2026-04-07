@@ -1509,8 +1509,15 @@ elif section == "🔄 Process Flow":
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("""
-    <div style='text-align: center; font-size: 32px; margin: 10px 0; color: #666;'>⬇️</div>
+    # Arrow 1->2
+    st.markdown(f"""
+    <div style='text-align: center; margin: 20px 0;'>
+        <div style='width: 3px; height: 30px; background: linear-gradient(180deg, {APEX_COLORS['blue']}, {APEX_COLORS['bright_blue']}); margin: 0 auto;'></div>
+        <div style='width: 0; height: 0; margin: 0 auto;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-top: 12px solid {APEX_COLORS['bright_blue']};'></div>
+    </div>
     """, unsafe_allow_html=True)
 
     # Stage 2
@@ -1531,8 +1538,15 @@ elif section == "🔄 Process Flow":
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("""
-    <div style='text-align: center; font-size: 32px; margin: 10px 0; color: #666;'>⬇️</div>
+    # Arrow 2->3
+    st.markdown(f"""
+    <div style='text-align: center; margin: 20px 0;'>
+        <div style='width: 3px; height: 30px; background: linear-gradient(180deg, {APEX_COLORS['bright_blue']}, {APEX_COLORS['green']}); margin: 0 auto;'></div>
+        <div style='width: 0; height: 0; margin: 0 auto;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-top: 12px solid {APEX_COLORS['green']};'></div>
+    </div>
     """, unsafe_allow_html=True)
 
     # Stage 3
@@ -1553,8 +1567,15 @@ elif section == "🔄 Process Flow":
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("""
-    <div style='text-align: center; font-size: 32px; margin: 10px 0; color: #666;'>⬇️</div>
+    # Arrow 3->4
+    st.markdown(f"""
+    <div style='text-align: center; margin: 20px 0;'>
+        <div style='width: 3px; height: 30px; background: linear-gradient(180deg, {APEX_COLORS['green']}, {APEX_COLORS['amethyst']}); margin: 0 auto;'></div>
+        <div style='width: 0; height: 0; margin: 0 auto;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-top: 12px solid {APEX_COLORS['amethyst']};'></div>
+    </div>
     """, unsafe_allow_html=True)
 
     # Stage 4
@@ -1577,8 +1598,15 @@ elif section == "🔄 Process Flow":
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("""
-    <div style='text-align: center; font-size: 32px; margin: 10px 0; color: #666;'>⬇️</div>
+    # Arrow 4->5
+    st.markdown(f"""
+    <div style='text-align: center; margin: 20px 0;'>
+        <div style='width: 3px; height: 30px; background: linear-gradient(180deg, {APEX_COLORS['amethyst']}, {APEX_COLORS['gold']}); margin: 0 auto;'></div>
+        <div style='width: 0; height: 0; margin: 0 auto;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-top: 12px solid {APEX_COLORS['gold']};'></div>
+    </div>
     """, unsafe_allow_html=True)
 
     # Stage 5
