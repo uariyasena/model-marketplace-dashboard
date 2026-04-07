@@ -1813,13 +1813,10 @@ elif section == "👥 Roles & Responsibilities":
         else:
             return f'color: {APEX_COLORS["charcoal"]};'
 
-    def style_activity(val):
-        # Apply gradient to Activity column text
-        return f'background: linear-gradient(135deg, {APEX_COLORS["amethyst"]}, {APEX_COLORS["amethyst_pink"]}); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'
-
-    styled_df = filtered_df.style.map(style_matrix).apply(
-        lambda x: [style_activity(v) for v in x], subset=['Activity']
-    ).set_properties(**{
+    styled_df = filtered_df.style.map(style_matrix).set_properties(**{
+        'color': APEX_COLORS["amethyst"],
+        'font-weight': '600'
+    }, subset=['Activity']).set_properties(**{
         'text-align': 'center'
     }, subset=filtered_df.columns[1:])  # Center all columns except Activity
 
