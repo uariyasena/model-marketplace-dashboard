@@ -1482,10 +1482,12 @@ elif section == "🔄 Process Flow":
 
     # Journey Stages
     st.markdown(f"""
-    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-               font-weight: 700; font-size: 24px; margin-bottom: 30px;'>
-        🛤️ Five-Stage Journey
+    <h3 style='font-weight: 700; font-size: 24px; margin-bottom: 30px;'>
+        <span style='filter: none;'>🛤️</span>
+        <span style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;'>
+            Five-Stage Journey
+        </span>
     </h3>
     """, unsafe_allow_html=True)
 
