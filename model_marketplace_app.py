@@ -839,7 +839,9 @@ elif section == "📰 Press Release Brief":
     st.markdown(f"""
     <div style='background: linear-gradient(135deg, {APEX_COLORS['navy']} 0%, {APEX_COLORS['blue']} 100%);
                 padding: 40px; border-radius: 15px; margin-bottom: 30px;'>
-        <h2 style='color: white; margin: 0 0 15px 0; font-size: 28px; border: none;'>📢 Apex Launches Model Marketplace</h2>
+        <h2 style='background: linear-gradient(135deg, white 0%, {APEX_COLORS['light_blue']} 100%);
+                   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+                   margin: 0 0 15px 0; font-size: 28px; border: none; font-weight: bold;'>📢 Apex Launches Model Marketplace</h2>
         <p style='color: white; font-size: 18px; margin: 0; opacity: 0.95;'>
             Premier custody platform partners with State Street and leading asset managers to deliver
             institutional-quality investment models to RIAs and digital advisors
