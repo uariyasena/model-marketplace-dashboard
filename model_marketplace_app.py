@@ -378,7 +378,6 @@ section = st.sidebar.radio(
         "📰 Press Release Brief",
         "📊 Why Model Marketplace",
         "✅ Client Eligibility",
-        "🗺️ Client Journey Map",
         "🔄 Process Flow",
         "👥 Roles & Responsibilities",
         "🏢 Model Providers",
@@ -1136,179 +1135,6 @@ elif section == "📊 Why Model Marketplace":
         </div>
         """, unsafe_allow_html=True)
 
-elif section == "🗺️ Client Journey Map":
-    st.title("🗺️ Client Journey Map")
-
-    st.markdown(f"""
-    <div style='background: linear-gradient(135deg, rgba(0,102,204,0.08) 0%, rgba(0,32,96,0.05) 100%);
-                padding: 30px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['blue']}; margin-bottom: 30px;'>
-        <h3 style='color: {APEX_COLORS['navy']}; margin: 0 0 10px 0;'>End-to-End Client Journey</h3>
-        <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 16px;'>
-            Visual overview of how clients go from existing Rebalancer users to actively delivering
-            institutional models to their advisors and end clients.
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # Journey Stages
-    st.markdown(f"""
-    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-               font-weight: 700; font-size: 24px; margin-bottom: 30px;'>
-        🛤️ Five-Stage Journey
-    </h3>
-    """, unsafe_allow_html=True)
-
-    # Stage 1
-    st.markdown(f"""
-    <div style='display: flex; align-items: center; margin-bottom: 25px;'>
-        <div style='background: {APEX_COLORS['blue']}; color: white; width: 60px; height: 60px; border-radius: 50%;
-                    display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold;
-                    flex-shrink: 0; margin-right: 20px; box-shadow: 0 4px 12px rgba(0,102,204,0.3);'>1</div>
-        <div style='flex-grow: 1; background: linear-gradient(135deg, rgba(0,102,204,0.1) 0%, rgba(59,130,246,0.05) 100%);
-                    padding: 20px; border-radius: 12px; border-left: 4px solid {APEX_COLORS['blue']};'>
-            <h4 style='color: {APEX_COLORS['blue']}; margin: 0 0 10px 0;'>Discovery & Enablement</h4>
-            <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
-                <strong>Who:</strong> Apex Sales/RM + Client<br>
-                <strong>What:</strong> Client learns about Model Marketplace, evaluates fit, decides to enable<br>
-                <strong>Output:</strong> Feature enabled in Client Configurator
-            </p>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # Arrow
-    st.markdown("""
-    <div style='text-align: center; font-size: 32px; margin: 10px 0; color: #666;'>⬇️</div>
-    """, unsafe_allow_html=True)
-
-    # Stage 2
-    st.markdown(f"""
-    <div style='display: flex; align-items: center; margin-bottom: 25px;'>
-        <div style='background: {APEX_COLORS['bright_blue']}; color: white; width: 60px; height: 60px; border-radius: 50%;
-                    display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold;
-                    flex-shrink: 0; margin-right: 20px; box-shadow: 0 4px 12px rgba(59,130,246,0.3);'>2</div>
-        <div style='flex-grow: 1; background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(0,176,240,0.05) 100%);
-                    padding: 20px; border-radius: 12px; border-left: 4px solid {APEX_COLORS['bright_blue']};'>
-            <h4 style='color: {APEX_COLORS['bright_blue']}; margin: 0 0 10px 0;'>Access & Permissions</h4>
-            <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
-                <strong>Who:</strong> Client Administrator + Apex Onboarding<br>
-                <strong>What:</strong> Grant subscribe permissions to authorized users, configure access<br>
-                <strong>Output:</strong> Users can access Model Marketplace in Ascend
-            </p>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
-    st.markdown("""
-    <div style='text-align: center; font-size: 32px; margin: 10px 0; color: #666;'>⬇️</div>
-    """, unsafe_allow_html=True)
-
-    # Stage 3
-    st.markdown(f"""
-    <div style='display: flex; align-items: center; margin-bottom: 25px;'>
-        <div style='background: {APEX_COLORS['green']}; color: white; width: 60px; height: 60px; border-radius: 50%;
-                    display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold;
-                    flex-shrink: 0; margin-right: 20px; box-shadow: 0 4px 12px rgba(40,167,69,0.3);'>3</div>
-        <div style='flex-grow: 1; background: linear-gradient(135deg, rgba(40,167,69,0.1) 0%, rgba(40,167,69,0.05) 100%);
-                    padding: 20px; border-radius: 12px; border-left: 4px solid {APEX_COLORS['green']};'>
-            <h4 style='color: {APEX_COLORS['green']}; margin: 0 0 10px 0;'>Browse & Subscribe</h4>
-            <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
-                <strong>Who:</strong> End Client/Advisor<br>
-                <strong>What:</strong> Browse models, review holdings/weights, subscribe to selected models, accept T&Cs<br>
-                <strong>Output:</strong> Subscribed models available in Rebalancer
-            </p>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
-    st.markdown("""
-    <div style='text-align: center; font-size: 32px; margin: 10px 0; color: #666;'>⬇️</div>
-    """, unsafe_allow_html=True)
-
-    # Stage 4
-    st.markdown(f"""
-    <div style='display: flex; align-items: center; margin-bottom: 25px;'>
-        <div style='background: {APEX_COLORS['amethyst']}; color: white; width: 60px; height: 60px; border-radius: 50%;
-                    display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold;
-                    flex-shrink: 0; margin-right: 20px; box-shadow: 0 4px 12px rgba(128,44,192,0.3);'>4</div>
-        <div style='flex-grow: 1; background: linear-gradient(135deg, rgba(128,44,192,0.1) 0%, rgba(236,0,117,0.05) 100%);
-                    padding: 20px; border-radius: 12px; border-left: 4px solid {APEX_COLORS['amethyst']};'>
-            <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-                       margin: 0 0 10px 0; font-weight: 600;'>Configure & Assign</h4>
-            <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
-                <strong>Who:</strong> Client/Advisor<br>
-                <strong>What:</strong> Verify asset class mappings, create goals, assign models to client accounts, set thresholds<br>
-                <strong>Output:</strong> Accounts ready for rebalancing with marketplace models
-            </p>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
-    st.markdown("""
-    <div style='text-align: center; font-size: 32px; margin: 10px 0; color: #666;'>⬇️</div>
-    """, unsafe_allow_html=True)
-
-    # Stage 5
-    st.markdown(f"""
-    <div style='display: flex; align-items: center; margin-bottom: 25px;'>
-        <div style='background: {APEX_COLORS['gold']}; color: white; width: 60px; height: 60px; border-radius: 50%;
-                    display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold;
-                    flex-shrink: 0; margin-right: 20px; box-shadow: 0 4px 12px rgba(251,191,36,0.3);'>5</div>
-        <div style='flex-grow: 1; background: linear-gradient(135deg, rgba(251,191,36,0.1) 0%, rgba(245,158,11,0.05) 100%);
-                    padding: 20px; border-radius: 12px; border-left: 4px solid {APEX_COLORS['gold']};'>
-            <h4 style='color: {APEX_COLORS['gold']}; margin: 0 0 10px 0;'>Rebalance & Deliver</h4>
-            <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
-                <strong>Who:</strong> Client/Advisor<br>
-                <strong>What:</strong> Initiate rebalance, review proposals, accept proposals, submit trades, deliver models to end clients<br>
-                <strong>Output:</strong> Institutional models actively managed for client accounts
-            </p>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    # Key Touchpoints
-    st.markdown(f"""
-    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-               font-weight: 700; font-size: 24px; margin-top: 40px; margin-bottom: 20px;'>
-        🎯 Key Touchpoints & Timeline
-    </h3>
-    """, unsafe_allow_html=True)
-
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.markdown(f"""
-        <div style='background: white; padding: 25px; border-radius: 12px; border: 2px solid {APEX_COLORS['blue']}; height: 100%;'>
-            <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0;'>⏱️ Typical Timeline</h4>
-            <ul style='line-height: 1.8; color: {APEX_COLORS['charcoal']};'>
-                <li><strong>Stage 1-2:</strong> 1-2 weeks (enablement + permissions)</li>
-                <li><strong>Stage 3:</strong> 5-10 minutes (browse + subscribe)</li>
-                <li><strong>Stage 4:</strong> 15-30 minutes (first-time configuration)</li>
-                <li><strong>Stage 5:</strong> Variable (ongoing rebalancing)</li>
-                <li><strong>Total Time to First Rebalance:</strong> ~2-3 weeks</li>
-            </ul>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col2:
-        st.markdown(f"""
-        <div style='background: white; padding: 25px; border-radius: 12px; border: 2px solid {APEX_COLORS['green']}; height: 100%;'>
-            <h4 style='color: {APEX_COLORS['green']}; margin-top: 0;'>✅ Success Criteria</h4>
-            <ul style='line-height: 1.8; color: {APEX_COLORS['charcoal']};'>
-                <li>Client successfully subscribed to at least 1 model</li>
-                <li>Asset class mappings verified</li>
-                <li>Models assigned to test accounts</li>
-                <li>First rebalance executed successfully</li>
-                <li>Client understands ongoing workflow</li>
-            </ul>
-        </div>
-        """, unsafe_allow_html=True)
-
 elif section == "🎯 Strategic Partner: State Street":
     st.title("🎯 Strategic Partner: State Street")
 
@@ -1641,6 +1467,178 @@ elif section == "✅ Client Eligibility":
 
 elif section == "🔄 Process Flow":
     st.title("🔄 Model Marketplace Process Flow")
+
+    # Client Journey Map Section
+    st.markdown(f"""
+    <div style='background: linear-gradient(135deg, rgba(0,102,204,0.08) 0%, rgba(0,32,96,0.05) 100%);
+                padding: 30px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['blue']}; margin-bottom: 30px;'>
+        <h3 style='color: {APEX_COLORS['navy']}; margin: 0 0 10px 0;'>End-to-End Client Journey</h3>
+        <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 16px;'>
+            Visual overview of how clients go from existing Rebalancer users to actively delivering
+            institutional models to their advisors and end clients.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Journey Stages
+    st.markdown(f"""
+    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+               font-weight: 700; font-size: 24px; margin-bottom: 30px;'>
+        🛤️ Five-Stage Journey
+    </h3>
+    """, unsafe_allow_html=True)
+
+    # Stage 1
+    st.markdown(f"""
+    <div style='display: flex; align-items: center; margin-bottom: 25px;'>
+        <div style='background: {APEX_COLORS['blue']}; color: white; width: 60px; height: 60px; border-radius: 50%;
+                    display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold;
+                    flex-shrink: 0; margin-right: 20px; box-shadow: 0 4px 12px rgba(0,102,204,0.3);'>1</div>
+        <div style='flex-grow: 1; background: linear-gradient(135deg, rgba(0,102,204,0.1) 0%, rgba(59,130,246,0.05) 100%);
+                    padding: 20px; border-radius: 12px; border-left: 4px solid {APEX_COLORS['blue']};'>
+            <h4 style='color: {APEX_COLORS['blue']}; margin: 0 0 10px 0;'>Discovery & Enablement</h4>
+            <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
+                <strong>Who:</strong> Apex Sales/RM + Client<br>
+                <strong>What:</strong> Client learns about Model Marketplace, evaluates fit, decides to enable<br>
+                <strong>Output:</strong> Feature enabled in Client Configurator
+            </p>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div style='text-align: center; font-size: 32px; margin: 10px 0; color: #666;'>⬇️</div>
+    """, unsafe_allow_html=True)
+
+    # Stage 2
+    st.markdown(f"""
+    <div style='display: flex; align-items: center; margin-bottom: 25px;'>
+        <div style='background: {APEX_COLORS['bright_blue']}; color: white; width: 60px; height: 60px; border-radius: 50%;
+                    display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold;
+                    flex-shrink: 0; margin-right: 20px; box-shadow: 0 4px 12px rgba(59,130,246,0.3);'>2</div>
+        <div style='flex-grow: 1; background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(0,176,240,0.05) 100%);
+                    padding: 20px; border-radius: 12px; border-left: 4px solid {APEX_COLORS['bright_blue']};'>
+            <h4 style='color: {APEX_COLORS['bright_blue']}; margin: 0 0 10px 0;'>Access & Permissions</h4>
+            <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
+                <strong>Who:</strong> Client Administrator + Apex Onboarding<br>
+                <strong>What:</strong> Grant subscribe permissions to authorized users, configure access<br>
+                <strong>Output:</strong> Users can access Model Marketplace in Ascend
+            </p>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div style='text-align: center; font-size: 32px; margin: 10px 0; color: #666;'>⬇️</div>
+    """, unsafe_allow_html=True)
+
+    # Stage 3
+    st.markdown(f"""
+    <div style='display: flex; align-items: center; margin-bottom: 25px;'>
+        <div style='background: {APEX_COLORS['green']}; color: white; width: 60px; height: 60px; border-radius: 50%;
+                    display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold;
+                    flex-shrink: 0; margin-right: 20px; box-shadow: 0 4px 12px rgba(40,167,69,0.3);'>3</div>
+        <div style='flex-grow: 1; background: linear-gradient(135deg, rgba(40,167,69,0.1) 0%, rgba(40,167,69,0.05) 100%);
+                    padding: 20px; border-radius: 12px; border-left: 4px solid {APEX_COLORS['green']};'>
+            <h4 style='color: {APEX_COLORS['green']}; margin: 0 0 10px 0;'>Browse & Subscribe</h4>
+            <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
+                <strong>Who:</strong> End Client/Advisor<br>
+                <strong>What:</strong> Browse models, review holdings/weights, subscribe to selected models, accept T&Cs<br>
+                <strong>Output:</strong> Subscribed models available in Rebalancer
+            </p>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div style='text-align: center; font-size: 32px; margin: 10px 0; color: #666;'>⬇️</div>
+    """, unsafe_allow_html=True)
+
+    # Stage 4
+    st.markdown(f"""
+    <div style='display: flex; align-items: center; margin-bottom: 25px;'>
+        <div style='background: {APEX_COLORS['amethyst']}; color: white; width: 60px; height: 60px; border-radius: 50%;
+                    display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold;
+                    flex-shrink: 0; margin-right: 20px; box-shadow: 0 4px 12px rgba(128,44,192,0.3);'>4</div>
+        <div style='flex-grow: 1; background: linear-gradient(135deg, rgba(128,44,192,0.1) 0%, rgba(236,0,117,0.05) 100%);
+                    padding: 20px; border-radius: 12px; border-left: 4px solid {APEX_COLORS['amethyst']};'>
+            <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+                       margin: 0 0 10px 0; font-weight: 600;'>Configure & Assign</h4>
+            <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
+                <strong>Who:</strong> Client/Advisor<br>
+                <strong>What:</strong> Verify asset class mappings, create goals, assign models to client accounts, set thresholds<br>
+                <strong>Output:</strong> Accounts ready for rebalancing with marketplace models
+            </p>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div style='text-align: center; font-size: 32px; margin: 10px 0; color: #666;'>⬇️</div>
+    """, unsafe_allow_html=True)
+
+    # Stage 5
+    st.markdown(f"""
+    <div style='display: flex; align-items: center; margin-bottom: 25px;'>
+        <div style='background: {APEX_COLORS['gold']}; color: white; width: 60px; height: 60px; border-radius: 50%;
+                    display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold;
+                    flex-shrink: 0; margin-right: 20px; box-shadow: 0 4px 12px rgba(251,191,36,0.3);'>5</div>
+        <div style='flex-grow: 1; background: linear-gradient(135deg, rgba(251,191,36,0.1) 0%, rgba(245,158,11,0.05) 100%);
+                    padding: 20px; border-radius: 12px; border-left: 4px solid {APEX_COLORS['gold']};'>
+            <h4 style='color: {APEX_COLORS['gold']}; margin: 0 0 10px 0;'>Rebalance & Deliver</h4>
+            <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
+                <strong>Who:</strong> Client/Advisor<br>
+                <strong>What:</strong> Initiate rebalance, review proposals, accept proposals, submit trades, deliver models to end clients<br>
+                <strong>Output:</strong> Institutional models actively managed for client accounts
+            </p>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # Key Touchpoints
+    st.markdown(f"""
+    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+               font-weight: 700; font-size: 24px; margin-top: 40px; margin-bottom: 20px;'>
+        🎯 Key Touchpoints & Timeline
+    </h3>
+    """, unsafe_allow_html=True)
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.markdown(f"""
+        <div style='background: white; padding: 25px; border-radius: 12px; border: 2px solid {APEX_COLORS['blue']}; height: 100%;'>
+            <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0;'>⏱️ Typical Timeline</h4>
+            <ul style='line-height: 1.8; color: {APEX_COLORS['charcoal']};'>
+                <li><strong>Stage 1-2:</strong> 1-2 weeks (enablement + permissions)</li>
+                <li><strong>Stage 3:</strong> 5-10 minutes (browse + subscribe)</li>
+                <li><strong>Stage 4:</strong> 15-30 minutes (first-time configuration)</li>
+                <li><strong>Stage 5:</strong> Variable (ongoing rebalancing)</li>
+                <li><strong>Total Time to First Rebalance:</strong> ~2-3 weeks</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col2:
+        st.markdown(f"""
+        <div style='background: white; padding: 25px; border-radius: 12px; border: 2px solid {APEX_COLORS['green']}; height: 100%;'>
+            <h4 style='color: {APEX_COLORS['green']}; margin-top: 0;'>✅ Success Criteria</h4>
+            <ul style='line-height: 1.8; color: {APEX_COLORS['charcoal']};'>
+                <li>Client successfully subscribed to at least 1 model</li>
+                <li>Asset class mappings verified</li>
+                <li>Models assigned to test accounts</li>
+                <li>First rebalance executed successfully</li>
+                <li>Client understands ongoing workflow</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("---")
 
     st.markdown("### 8-Step Implementation Process")
 

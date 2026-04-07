@@ -1,0 +1,640 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: letter;
+            margin: 0.5in;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            color: #2D3748;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .page-break {
+            page-break-after: always;
+        }
+
+        .gradient-header {
+            background: linear-gradient(135deg, #002060 0%, #0066CC 50%, #00B0F0 100%);
+            padding: 60px 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #802CC0 0%, #EC0075 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+
+        .gradient-box {
+            background: linear-gradient(135deg, #28A745 0%, #00B0F0 100%);
+            padding: 25px;
+            border-radius: 12px;
+            color: white;
+            margin: 20px 0;
+        }
+
+        .gradient-box-blue {
+            background: linear-gradient(135deg, #0066CC 0%, #3B82F6 100%);
+            padding: 25px;
+            border-radius: 12px;
+            color: white;
+            margin: 20px 0;
+        }
+
+        .gradient-box-amethyst {
+            background: linear-gradient(135deg, #802CC0 0%, #EC0075 100%);
+            padding: 25px;
+            border-radius: 12px;
+            color: white;
+            margin: 20px 0;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        h2 {
+            color: #002060;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .version {
+            font-size: 12px;
+            color: #999;
+            margin-top: 50px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 11px;
+        }
+
+        th {
+            background: #002060;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .step-card {
+            border-left: 4px solid #802CC0;
+            padding: 15px;
+            margin: 15px 0;
+            background: #F8F9FA;
+            border-radius: 8px;
+        }
+
+        .step-title {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .step-detail {
+            font-size: 11px;
+            margin: 4px 0;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- PAGE 1: Cover -->
+<div class="gradient-header" style="height: 600px; display: flex; flex-direction: column; justify-content: center;">
+    <h1 style="font-size: 48px; margin-bottom: 20px;">APEX CLEARING</h1>
+    <div style="font-size: 36px; margin-bottom: 30px;">
+        <span class="gradient-text" style="-webkit-text-fill-color: white;">Model Marketplace</span>
+    </div>
+    <div class="subtitle">Business Framework & Implementation Guide</div>
+    <div class="version">Version 1.1 | March 2026</div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- PAGE 2: What is Model Marketplace -->
+<h2>What is Model Marketplace?</h2>
+<p style="font-size: 13px;">
+    <strong>Model Marketplace</strong> is Apex Clearing's centralized platform that enables investment advisors to
+    discover, subscribe to, and implement third-party investment models directly within Ascend Workstation.
+</p>
+
+<div class="gradient-box">
+    <h3 style="color: white; margin-top: 0;">Core Functionality</h3>
+    <ul style="font-size: 13px; line-height: 1.8;">
+        <li>Provides a curated marketplace of vetted investment models from institutional providers</li>
+        <li>Enables one-click subscription to professional asset allocation strategies</li>
+        <li>Automatically delivers model updates from providers to subscribed clients</li>
+        <li>Integrates subscribed models directly into Apex Rebalancer as ready-to-use portfolio goals</li>
+    </ul>
+</div>
+
+<h3 class="gradient-text">How Model Marketplace Connects to Rebalancer</h3>
+<p style="font-size: 12px;">
+    Model Marketplace and Rebalancer work as an <strong>integrated ecosystem</strong>. When an advisor subscribes to
+    a model in Model Marketplace, that model automatically becomes available as a 'Goal' in Rebalancer.
+</p>
+
+<table style="margin-top: 20px;">
+    <tr>
+        <th style="background: linear-gradient(135deg, #0066CC 0%, #3B82F6 100%);">Step</th>
+        <th style="background: linear-gradient(135deg, #0066CC 0%, #3B82F6 100%);">Action</th>
+        <th style="background: linear-gradient(135deg, #0066CC 0%, #3B82F6 100%);">Result</th>
+    </tr>
+    <tr>
+        <td><strong>1. Subscribe</strong></td>
+        <td>Subscribe in Model Marketplace</td>
+        <td>Model appears in Rebalancer Goals list</td>
+    </tr>
+    <tr>
+        <td><strong>2. Configure</strong></td>
+        <td>Assign goal to client accounts in Rebalancer</td>
+        <td>Portfolio linked to model allocation</td>
+    </tr>
+    <tr>
+        <td><strong>3. Rebalance</strong></td>
+        <td>Generate buy/sell orders in Rebalancer</td>
+        <td>Portfolio matches model targets</td>
+    </tr>
+    <tr>
+        <td><strong>4. Auto-Update</strong></td>
+        <td>Provider updates model</td>
+        <td>Rebalancer goal updates automatically</td>
+    </tr>
+</table>
+
+<div class="gradient-box-blue" style="margin-top: 30px;">
+    <h3 style="color: white; margin-top: 0;">Current Status (Q1 2026)</h3>
+    <p style="font-size: 13px; margin: 5px 0;"><strong>Total Providers:</strong> 4 (Franklin Templeton, Morningstar, Vanguard, BlackRock)</p>
+    <p style="font-size: 13px; margin: 5px 0;"><strong>Models Available:</strong> 12+</p>
+    <p style="font-size: 13px; margin: 5px 0;"><strong>Target Clients:</strong> 38 existing Rebalancer firms</p>
+    <p style="font-size: 13px; margin: 5px 0;"><strong>Phase:</strong> Marketing launch & press release (Q2 2026)</p>
+</div>
+
+<div class="page-break"></div>
+
+<!-- PAGE 3: 8-Step Process (Part 1) -->
+<h2>How Users Access & Use Model Marketplace</h2>
+<p style="font-size: 13px;">This 8-step process shows the complete client journey from initial setup through active portfolio management.</p>
+
+<div class="step-card">
+    <div class="step-title"><span class="gradient-text">Step 1: Initial Access Setup</span></div>
+    <div class="step-detail"><strong>WHO:</strong> Apex Onboarding Team / Client Configurator Team</div>
+    <div class="step-detail"><strong>WHAT:</strong> Enable Model Marketplace at correspondent level</div>
+    <div class="step-detail"><strong>WHERE:</strong> Client Configurator → Experience Settings → Enable Model Marketplace</div>
+    <div class="step-detail"><strong>TIMELINE:</strong> Completed during client onboarding</div>
+</div>
+
+<div class="step-card">
+    <div class="step-title"><span class="gradient-text">Step 2: User Permission Configuration</span></div>
+    <div class="step-detail"><strong>WHO:</strong> Client Administrator / Apex Client Services</div>
+    <div class="step-detail"><strong>WHAT:</strong> Grant subscribe permissions to specific users</div>
+    <div class="step-detail"><strong>WHERE:</strong> User management interface</div>
+    <div class="step-detail"><strong>TIMELINE:</strong> Before first use</div>
+</div>
+
+<div class="step-card">
+    <div class="step-title"><span class="gradient-text">Step 3: Client Acceptance & Discovery</span></div>
+    <div class="step-detail"><strong>WHO:</strong> End Client/Advisor</div>
+    <div class="step-detail"><strong>WHAT:</strong> Sign in to Ascend Workstation → Trading → Model Marketplace</div>
+    <div class="step-detail"><strong>WHERE:</strong> Accept Apex Terms & Conditions (one-time, all providers)</div>
+    <div class="step-detail"><strong>TIMELINE:</strong> 5-10 minutes (one-time setup)</div>
+</div>
+
+<div class="step-card">
+    <div class="step-title"><span class="gradient-text">Step 4: Model Evaluation</span></div>
+    <div class="step-detail"><strong>WHO:</strong> Client/Advisor</div>
+    <div class="step-detail"><strong>WHAT:</strong> Review model details: Holdings, Target Weights, Summary, Resources</div>
+    <div class="step-detail"><strong>WHERE:</strong> Columns: Provider | Model | Investment Vehicle | Status</div>
+    <div class="step-detail"><strong>TIMELINE:</strong> Variable - depends on research depth</div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- PAGE 4: 8-Step Process (Part 2) -->
+<h2>How Users Access & Use Model Marketplace (continued)</h2>
+
+<div class="step-card">
+    <div class="step-title"><span class="gradient-text">Step 5: Model Subscription</span></div>
+    <div class="step-detail"><strong>WHO:</strong> Authorized Client User (with subscribe permission)</div>
+    <div class="step-detail"><strong>WHAT:</strong> Click Subscribe → Accept Provider-Specific T&Cs</div>
+    <div class="step-detail"><strong>WHERE:</strong> Status changes: AVAILABLE → SUBSCRIBED, Button: Green → Red</div>
+    <div class="step-detail"><strong>TIMELINE:</strong> 2-3 minutes per model</div>
+</div>
+
+<div class="step-card">
+    <div class="step-title"><span class="gradient-text">Step 6: Post-Subscription Configuration in Rebalancer</span></div>
+    <div class="step-detail"><strong>WHO:</strong> Client/Advisor</div>
+    <div class="step-detail"><strong>WHAT:</strong> CRITICAL - Verify asset class assignments for each security</div>
+    <div class="step-detail"><strong>WHERE:</strong> Rebalancer → Settings → Models → Create Goals → Assign to Accounts</div>
+    <div class="step-detail"><strong>TIMELINE:</strong> 15-30 minutes for first model</div>
+</div>
+
+<div class="step-card">
+    <div class="step-title"><span class="gradient-text">Step 7: Portfolio Rebalancing</span></div>
+    <div class="step-detail"><strong>WHO:</strong> Client/Advisor</div>
+    <div class="step-detail"><strong>WHAT:</strong> Initiate rebalance → Review generated buy/sell orders → Submit trades</div>
+    <div class="step-detail"><strong>WHERE:</strong> Review compliance disclosures before submission</div>
+    <div class="step-detail"><strong>TIMELINE:</strong> Variable based on portfolio size</div>
+</div>
+
+<div class="step-card">
+    <div class="step-title"><span class="gradient-text">Step 8: Unsubscribe (Optional)</span></div>
+    <div class="step-detail"><strong>WHO:</strong> Client/Advisor</div>
+    <div class="step-detail"><strong>WHAT:</strong> Stops automatic updates but retains last subscribed weights</div>
+    <div class="step-detail"><strong>WHERE:</strong> To fully discontinue: Delete model from Rebalancer</div>
+    <div class="step-detail"><strong>TIMELINE:</strong> Immediate</div>
+</div>
+
+<div class="warning-box">
+    <strong>⚠️ KEY LIMITATION:</strong> Apex does NOT automatically execute trades. Automatic scheduled rebalancing
+    planned for Q3 2026. Clients must currently review and submit all trade orders manually.
+</div>
+
+<div class="page-break"></div>
+
+<!-- PAGE 5: Success Metrics -->
+<h2>Success Metrics & Targets (2026)</h2>
+
+<div class="gradient-box-amethyst">
+    <h3 style="color: white; margin-top: 0;">Adoption Targets</h3>
+    <table style="background: white; margin-top: 15px;">
+        <tr>
+            <th style="background: #002060;">Metric</th>
+            <th style="background: #002060;">Current (Q1)</th>
+            <th style="background: #002060;">Target (2026)</th>
+        </tr>
+        <tr>
+            <td>Total Rebalancer Clients</td>
+            <td>500</td>
+            <td>38 enabled</td>
+        </tr>
+        <tr>
+            <td>MM Enabled Clients</td>
+            <td>38</td>
+            <td>30 (80%)</td>
+        </tr>
+        <tr>
+            <td>Users with Subscribe Permission</td>
+            <td>TBD</td>
+            <td>100+</td>
+        </tr>
+        <tr>
+            <td>Active Model Subscriptions</td>
+            <td>Growing</td>
+            <td>200+</td>
+        </tr>
+    </table>
+</div>
+
+<h3 class="gradient-text">Business Impact Targets</h3>
+<table>
+    <tr>
+        <th style="background: linear-gradient(135deg, #0066CC 0%, #3B82F6 100%);">Metric</th>
+        <th style="background: linear-gradient(135deg, #0066CC 0%, #3B82F6 100%);">Target</th>
+    </tr>
+    <tr>
+        <td>AUM in Models</td>
+        <td>$500M+ by EOY 2026</td>
+    </tr>
+    <tr>
+        <td>Revenue per Model</td>
+        <td>$50K average annual</td>
+    </tr>
+    <tr>
+        <td>Client Retention Impact</td>
+        <td>+15% for MM users</td>
+    </tr>
+    <tr>
+        <td>New Correspondent Wins</td>
+        <td>MM cited in 25% of pitches</td>
+    </tr>
+</table>
+
+<div class="page-break"></div>
+
+<!-- PAGE 6: Client Communication Strategy -->
+<h2>Client Communication & Marketing Strategy</h2>
+
+<h3 class="gradient-text">Target Audiences</h3>
+<table>
+    <tr>
+        <th style="background: #0066CC; color: white;">Audience</th>
+        <th style="background: #0066CC; color: white;">Count</th>
+        <th style="background: #0066CC; color: white;">Approach</th>
+    </tr>
+    <tr>
+        <td>Existing Rebalancer Clients</td>
+        <td>38 firms</td>
+        <td>Direct outreach, already using platform</td>
+    </tr>
+    <tr>
+        <td>Ascend Classic Clients Post-Migration</td>
+        <td>TBD</td>
+        <td>Will have Rebalancer access after conversion</td>
+    </tr>
+    <tr>
+        <td>New Rebalancer Prospects</td>
+        <td>Market</td>
+        <td>Model Marketplace as differentiator</td>
+    </tr>
+</table>
+
+<div class="gradient-box" style="margin-top: 30px;">
+    <h3 style="color: white; margin-top: 0;">Communication Channels</h3>
+    <ul style="font-size: 13px; line-height: 1.8;">
+        <li><strong>Direct Outreach:</strong> Personalized emails to 38 existing Rebalancer clients highlighting immediate value</li>
+        <li><strong>Documentation & Resources:</strong> Service Center articles, video tutorials, quick-start guides</li>
+        <li><strong>Press Release:</strong> Q2 2026 announcement targeting industry publications and fintech media</li>
+        <li><strong>Internal Enablement:</strong> Sales team training, demo environment, objection handling scripts</li>
+    </ul>
+</div>
+
+<div class="page-break"></div>
+
+<!-- PAGE 7: Provider Integration -->
+<h2>Provider Integration & Management</h2>
+
+<h3 class="gradient-text">Current Providers</h3>
+<table>
+    <tr>
+        <th style="background: linear-gradient(135deg, #802CC0 0%, #EC0075 100%);">Provider</th>
+        <th style="background: linear-gradient(135deg, #802CC0 0%, #EC0075 100%);">Models</th>
+        <th style="background: linear-gradient(135deg, #802CC0 0%, #EC0075 100%);">Integration Method</th>
+    </tr>
+    <tr>
+        <td>Franklin Templeton</td>
+        <td>Multiple ETF models</td>
+        <td>SFTP (daily updates)</td>
+    </tr>
+    <tr>
+        <td>Morningstar</td>
+        <td>Asset allocation models</td>
+        <td>API integration</td>
+    </tr>
+    <tr>
+        <td>Vanguard</td>
+        <td>Target-date & balanced</td>
+        <td>API integration</td>
+    </tr>
+    <tr>
+        <td>BlackRock</td>
+        <td>iShares-based models</td>
+        <td>API integration</td>
+    </tr>
+</table>
+
+<div class="gradient-box-blue" style="margin-top: 30px;">
+    <h3 style="color: white; margin-top: 0;">Provider Acquisition Strategy</h3>
+    <p style="font-size: 13px;">
+        Q3 2026 roadmap includes dedicated Business Development resource for provider acquisition.
+        <strong>Target: 10+ providers by EOY 2026.</strong> Focus on asset managers with established ETF/mutual fund
+        models and strong brand recognition among RIAs.
+    </p>
+</div>
+
+<h3 class="gradient-text" style="margin-top: 30px;">Technical Requirements for New Providers</h3>
+<ul style="font-size: 12px;">
+    <li>API or SFTP integration capability for model updates</li>
+    <li>Legal agreement for terms & conditions display</li>
+    <li>Model metadata: holdings, target weights, rebalancing frequency</li>
+    <li>Compliance documentation and disclosures</li>
+    <li>Dedicated support contact for client inquiries</li>
+</ul>
+
+<div class="page-break"></div>
+
+<!-- PAGE 8: Rebalancer Integration -->
+<h2>Rebalancer Capabilities & Integration</h2>
+
+<div class="gradient-box-amethyst">
+    <h3 style="color: white; margin-top: 0;">What is Rebalancer?</h3>
+    <p style="font-size: 13px;">
+        Rebalancer is Apex's portfolio management tool that enables advisors to create target asset allocations
+        (goals), assign them to accounts, and generate buy/sell orders to align portfolios with those targets.
+        <strong>Model Marketplace subscriptions automatically populate as available goals within Rebalancer.</strong>
+    </p>
+</div>
+
+<h3 class="gradient-text" style="margin-top: 25px;">Core Rebalancer Features</h3>
+<table>
+    <tr>
+        <th style="background: #002060; width: 30%;">Feature</th>
+        <th style="background: #002060;">Description</th>
+    </tr>
+    <tr>
+        <td>Goals Management</td>
+        <td>Create custom asset allocation targets or use subscribed models</td>
+    </tr>
+    <tr>
+        <td>Account Assignment</td>
+        <td>Link goals to individual or household accounts</td>
+    </tr>
+    <tr>
+        <td>Drift Monitoring</td>
+        <td>Track portfolio deviation from target allocation</td>
+    </tr>
+    <tr>
+        <td>Order Generation</td>
+        <td>Automated buy/sell recommendations to rebalance</td>
+    </tr>
+    <tr>
+        <td>Tax Optimization</td>
+        <td>Tax-loss harvesting and gain/loss awareness</td>
+    </tr>
+    <tr>
+        <td>Compliance Checks</td>
+        <td>Pre-trade compliance rules and disclosures</td>
+    </tr>
+</table>
+
+<div class="warning-box" style="margin-top: 25px;">
+    <strong>⚠️ Critical Post-Subscription Step:</strong> After subscribing to a model, clients MUST verify that each
+    security in the model has the correct asset class assignment in Rebalancer. Incorrect assignments will cause
+    rebalancing errors. This is a one-time setup per model but is frequently missed by new users.
+</div>
+
+<div class="page-break"></div>
+
+<!-- PAGE 9: Roadmap -->
+<h2>Roadmap & Future Enhancements</h2>
+
+<h3 class="gradient-text">2026 Roadmap</h3>
+<table>
+    <tr>
+        <th style="background: linear-gradient(135deg, #0066CC 0%, #3B82F6 100%); width: 15%;">Quarter</th>
+        <th style="background: linear-gradient(135deg, #0066CC 0%, #3B82F6 100%); width: 60%;">Initiative</th>
+        <th style="background: linear-gradient(135deg, #0066CC 0%, #3B82F6 100%); width: 25%;">Status</th>
+    </tr>
+    <tr>
+        <td>Q2 2026</td>
+        <td>Marketing Launch & Press Release</td>
+        <td><strong style="color: #28A745;">IN PROGRESS</strong></td>
+    </tr>
+    <tr>
+        <td>Q2 2026</td>
+        <td>Enhanced Provider Onboarding Process</td>
+        <td><strong style="color: #28A745;">IN PROGRESS</strong></td>
+    </tr>
+    <tr>
+        <td>Q3 2026</td>
+        <td>Automatic Scheduled Rebalancing</td>
+        <td><strong style="color: #0066CC;">PLANNED</strong></td>
+    </tr>
+    <tr>
+        <td>Q3 2026</td>
+        <td>Dedicated BD Resource for Provider Acquisition</td>
+        <td><strong style="color: #0066CC;">PLANNED</strong></td>
+    </tr>
+    <tr>
+        <td>Q4 2026</td>
+        <td>Advanced Filtering & Search (ESG, risk level)</td>
+        <td><strong style="color: #0066CC;">PLANNED</strong></td>
+    </tr>
+    <tr>
+        <td>Q4 2026</td>
+        <td>Model Performance Analytics Dashboard</td>
+        <td><strong style="color: #0066CC;">PLANNED</strong></td>
+    </tr>
+</table>
+
+<div class="gradient-box" style="margin-top: 30px;">
+    <h3 style="color: white; margin-top: 0;">🚀 Top Priority: Automatic Scheduled Rebalancing</h3>
+    <p style="font-size: 13px;">
+        Currently, clients must manually initiate rebalancing and submit trades. <strong>Q3 2026 will introduce
+        automatic scheduled rebalancing</strong> where clients can set recurring rebalance schedules (weekly, monthly, quarterly).
+        This removes manual overhead and ensures portfolios stay aligned with model updates.
+    </p>
+</div>
+
+<h3 class="gradient-text" style="margin-top: 25px;">Long-Term Vision (2027+)</h3>
+<ul style="font-size: 12px;">
+    <li>Direct indexing integration for tax-optimized model implementation</li>
+    <li>AI-powered model recommendations based on client risk profiles</li>
+    <li>White-label option for correspondents to feature their own models</li>
+    <li>Integration with proposal generation tools for new business pitches</li>
+</ul>
+
+<div class="page-break"></div>
+
+<!-- PAGE 10: Q&A and Contact -->
+<h2>Common Questions & Contact Information</h2>
+
+<h3 class="gradient-text">Frequently Asked Questions</h3>
+
+<div style="margin: 15px 0;">
+    <p style="font-size: 12px; margin: 5px 0;"><strong>Q: What if a client unsubscribes from a model?</strong></p>
+    <p style="font-size: 11px; margin-left: 15px;">The model remains in Rebalancer with the last subscribed weights. The client stops receiving automatic updates. To fully remove, they must delete the goal in Rebalancer.</p>
+</div>
+
+<div style="margin: 15px 0;">
+    <p style="font-size: 12px; margin: 5px 0;"><strong>Q: Can clients customize subscribed models?</strong></p>
+    <p style="font-size: 11px; margin-left: 15px;">No. Models are delivered as-is from providers. Clients can create custom goals separately in Rebalancer if they need customization.</p>
+</div>
+
+<div style="margin: 15px 0;">
+    <p style="font-size: 12px; margin: 5px 0;"><strong>Q: Is there a cost to clients for Model Marketplace?</strong></p>
+    <p style="font-size: 11px; margin-left: 15px;">No platform fee from Apex. Some providers may charge advisory fees directly - this is disclosed in provider T&Cs before subscription.</p>
+</div>
+
+<div style="margin: 15px 0;">
+    <p style="font-size: 12px; margin: 5px 0;"><strong>Q: How often do models update?</strong></p>
+    <p style="font-size: 11px; margin-left: 15px;">Varies by provider. Franklin Templeton updates daily via SFTP. Most others update monthly or quarterly. Update frequency is shown in model details.</p>
+</div>
+
+<div style="margin: 15px 0;">
+    <p style="font-size: 12px; margin: 5px 0;"><strong>Q: What if a client doesn't have Rebalancer enabled?</strong></p>
+    <p style="font-size: 11px; margin-left: 15px;">Model Marketplace requires Rebalancer access. This is a bundled feature discussion for Sales team during correspondent onboarding.</p>
+</div>
+
+<div class="gradient-box-amethyst" style="margin-top: 35px;">
+    <h3 style="color: white; margin-top: 0;">📞 Key Contacts</h3>
+    <table style="background: white; margin-top: 15px;">
+        <tr>
+            <th style="background: #002060; width: 35%;">Role</th>
+            <th style="background: #002060;">Contact</th>
+        </tr>
+        <tr>
+            <td>Product Owner</td>
+            <td>Neema Raphael - neema.raphael@apexclearing.com</td>
+        </tr>
+        <tr>
+            <td>Technical Support</td>
+            <td>Ascend Support - support@apexclearing.com</td>
+        </tr>
+        <tr>
+            <td>Sales Inquiries</td>
+            <td>Business Development - bd@apexclearing.com</td>
+        </tr>
+        <tr>
+            <td>Provider Partnerships</td>
+            <td>BD Team - partnerships@apexclearing.com</td>
+        </tr>
+    </table>
+</div>
+
+<div style="text-align: center; margin-top: 50px; font-size: 10px; color: #999;">
+    <p><strong>Document Version:</strong> 1.1 | <strong>Last Updated:</strong> March 2026</p>
+    <p><strong>Confidential:</strong> For internal Apex use and authorized correspondents only</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,2019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Marketplace Business Framework</title>
+    <style>
+        @page {
+            size: letter;
+            margin: 0.75in;
+        }
+
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #2D3748;
+            max-width: 8.5in;
+            margin: 0 auto;
+            background: white;
+        }
+
+        /* Apex Color Palette */
+        :root {
+            --apex-navy: #002060;
+            --apex-blue: #0066CC;
+            --apex-bright-blue: #3B82F6;
+            --apex-sky-blue: #00B0F0;
+            --apex-light-blue: #87CEFA;
+            --apex-charcoal: #2D3748;
+            --apex-gray: #6B7280;
+            --apex-light-gray: #F0F0F0;
+            --apex-lighter-gray: #F8F9FA;
+            --apex-green: #28A745;
+            --apex-red: #EF4444;
+            --apex-gold: #FBBF24;
+            --apex-purple: #7030A0;
+        }
+
+        /* Cover Page */
+        .cover-page {
+            page-break-after: always;
+            text-align: center;
+            background: white;
+            margin: -0.75in;
+            padding: 1.5in 0.75in 2in 0.75in;
+            min-height: 10in;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .cover-page .logo-container {
+            margin-top: 0.5in;
+            margin-bottom: 1.5in;
+        }
+
+        .cover-page .logo-container img {
+            max-width: 450px;
+            height: auto;
+        }
+
+        .cover-page .title-section {
+            margin: 0.5in 0 2in 0;
+        }
+
+        .cover-page h1 {
+            font-size: 56px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: var(--apex-navy);
+            letter-spacing: -1px;
+        }
+
+        .cover-page .subtitle {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--apex-blue);
+            font-weight: 500;
+        }
+
+        .cover-page .description {
+            font-size: 20px;
+            color: var(--apex-charcoal);
+            margin: 30px auto;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .cover-page .date {
+            font-size: 16px;
+            margin-top: auto;
+            padding-top: 1in;
+            color: var(--apex-gray);
+            border-top: 2px solid var(--apex-light-gray);
+        }
+
+        /* Headers */
+        h1 {
+            color: var(--apex-navy);
+            font-size: 32px;
+            border-bottom: 4px solid var(--apex-blue);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: var(--apex-blue);
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 5px solid var(--apex-sky-blue);
+        }
+
+        h3 {
+            color: var(--apex-navy);
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        h4 {
+            color: var(--apex-charcoal);
+            font-size: 16px;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        /* Callout Boxes */
+        .callout {
+            background: var(--apex-lighter-gray);
+            border-left: 5px solid var(--apex-blue);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .callout-success {
+            background: #E8F5E9;
+            border-left-color: var(--apex-green);
+        }
+
+        .callout-warning {
+            background: #FFF3E0;
+            border-left-color: var(--apex-gold);
+        }
+
+        .callout-important {
+            background: #FFEBEE;
+            border-left-color: var(--apex-red);
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        thead {
+            background: var(--apex-navy);
+            color: white;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--apex-light-gray);
+        }
+
+        tr:nth-child(even) {
+            background: var(--apex-lighter-gray);
+        }
+
+        tr:hover {
+            background: #E3F2FD;
+        }
+
+        /* Process Flow Boxes */
+        .process-flow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .process-step {
+            flex: 1;
+            min-width: 200px;
+            background: white;
+            border: 2px solid var(--apex-blue);
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .process-step-number {
+            position: absolute;
+            top: -15px;
+            left: 15px;
+            background: var(--apex-blue);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .process-step h4 {
+            color: var(--apex-navy);
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .process-step p {
+            font-size: 14px;
+            color: var(--apex-charcoal);
+            margin: 5px 0;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+
+        .checkmark-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checkmark-list li:before {
+            content: "✓";
+            color: var(--apex-blue);
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        .cross-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .cross-list li:before {
+            content: "✗";
+            color: var(--apex-charcoal);
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        /* Info Boxes */
+        .info-box {
+            background: white;
+            border: 2px solid var(--apex-light-gray);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .info-box-header {
+            background: var(--apex-blue);
+            color: white;
+            padding: 10px 20px;
+            margin: -20px -20px 15px -20px;
+            border-radius: 6px 6px 0 0;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Stats Cards */
+        .stats-container {
+            display: flex;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            flex: 1;
+            min-width: 200px;
+            background: linear-gradient(135deg, var(--apex-blue) 0%, var(--apex-bright-blue) 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Page Breaks */
+        .page-break {
+            page-break-after: always;
+        }
+
+        /* Roles Matrix */
+        .role-indicator {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .role-primary {
+            background: var(--apex-blue);
+            color: white;
+        }
+
+        .role-supporting {
+            background: var(--apex-light-blue);
+            color: var(--apex-navy);
+        }
+
+        /* Provider Cards */
+        .provider-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .provider-card {
+            background: white;
+            border: 2px solid var(--apex-light-gray);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .provider-card:hover {
+            border-color: var(--apex-blue);
+            box-shadow: 0 4px 12px rgba(0,102,204,0.2);
+        }
+
+        .provider-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--apex-navy);
+            margin-bottom: 10px;
+        }
+
+        .provider-status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .status-live {
+            background: #E8F5E9;
+            color: var(--apex-green);
+        }
+
+        .status-pending {
+            background: #FFF3E0;
+            color: var(--apex-gold);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            margin: 30px 0;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--apex-blue);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--apex-blue);
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--apex-blue);
+        }
+
+        .timeline-content {
+            background: var(--apex-lighter-gray);
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .timeline-date {
+            color: var(--apex-blue);
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        /* Flowchart Arrows */
+        .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 20px solid var(--apex-blue);
+            margin: 10px auto;
+        }
+
+        /* Q&A Styling */
+        .qa-item {
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--apex-lighter-gray);
+            border-radius: 5px;
+        }
+
+        .question {
+            font-weight: bold;
+            color: var(--apex-navy);
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .answer {
+            color: var(--apex-charcoal);
+            padding-left: 20px;
+        }
+
+        /* Use Case Cards */
+        .use-case {
+            background: white;
+            border-left: 5px solid var(--apex-blue);
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+
+        .use-case-title {
+            color: var(--apex-navy);
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .use-case-section {
+            margin: 15px 0;
+        }
+
+        .use-case-section strong {
+            color: var(--apex-blue);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Footer */
+        .document-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid var(--apex-light-gray);
+            font-size: 12px;
+            color: var(--apex-gray);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="cover-page">
+    <div class="logo-container">
+        <img src="file:///C:/Users/uariyasena/Desktop/logos/APEX_LOGO_AFS_Color_Wide_RGB.png" alt="Apex Fintech Solutions">
+    </div>
+    <div class="title-section">
+        <h1>Model Marketplace</h1>
+        <div class="subtitle">Business Framework for Client Engagement</div>
+        <div class="description">
+            <p style="margin-bottom: 15px;">Investment Model Distribution Platform</p>
+            <p>Integrated with Apex Rebalancer</p>
+        </div>
+    </div>
+    <div class="date">March 24, 2026 | Version 1.1</div>
+</div>
+
+<!-- EXECUTIVE SUMMARY -->
+<div style="margin-top: 80px;"></div>
+<h1>Executive Summary</h1>
+
+<div class="callout callout-success">
+    <h3 style="margin-top: 0;">What is Model Marketplace?</h3>
+    <p>Model Marketplace is Apex's investment model distribution platform integrated within Ascend Rebalancer, allowing advisors to subscribe to professionally managed models from leading investment management providers. Models generate trade proposals based on market activity that realign investment portfolios according to a defined set of holdings and their weight. Subscribed models receive <strong>automatic updates and adjustments</strong> from the provider, enabling efficient model updates, allocation changes, and compliance monitoring.</p>
+</div>
+
+<h3>Key Value Proposition</h3>
+<ul class="checkmark-list">
+    <li>Access to institutional-grade investment models from top providers</li>
+    <li><strong>Automatic updates</strong> from providers when models are rebalanced or adjusted</li>
+    <li>Seamless integration with Apex Rebalancer for portfolio construction and ongoing management</li>
+    <li>Simplified subscription and implementation process</li>
+    <li>No subscription fees for clients (free access to marketplace)</li>
+    <li>Available models support efficient portfolio management with automatic weight adjustments</li>
+</ul>
+
+<h3>Current Model Providers</h3>
+<div class="provider-grid">
+    <div class="provider-card">
+        <div class="provider-name">Aptis</div>
+        <span class="provider-status status-live">LIVE</span>
+    </div>
+    <div class="provider-card">
+        <div class="provider-name">Franklin Templeton</div>
+        <span class="provider-status status-live">LIVE</span>
+    </div>
+    <div class="provider-card">
+        <div class="provider-name">Timco and Sachs</div>
+        <span class="provider-status status-live">LIVE</span>
+    </div>
+    <div class="provider-card">
+        <div class="provider-name">State Street</div>
+        <span class="provider-status status-pending">COMING SOON</span>
+    </div>
+</div>
+
+<h3>Current Market Size</h3>
+<div class="stats-container">
+    <div class="stat-card">
+        <div class="stat-number">38</div>
+        <div class="stat-label">Active Rebalancer Clients</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">~50K</div>
+        <div class="stat-label">Accounts on Rebalancer</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">4</div>
+        <div class="stat-label">Model Providers Live</div>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- CLIENT ELIGIBILITY -->
+<h1>1. Client Eligibility & Prerequisites</h1>
+
+<h2>Who Can Use Model Marketplace?</h2>
+
+<div style="display: flex; gap: 30px; margin: 30px 0;">
+    <div style="flex: 1;">
+        <div class="info-box" style="border-color: var(--apex-blue); border-width: 3px;">
+            <div class="info-box-header" style="background: var(--apex-blue);">✓ Required</div>
+            <ul class="checkmark-list">
+                <li>Must be an <strong>Ascend client</strong> (not available on Classic platform)</li>
+                <li>Must be an <strong>active Rebalancer client</strong></li>
+                <li>Correspondent must be configured for Model Marketplace access</li>
+            </ul>
+        </div>
+    </div>
+    <div style="flex: 1;">
+        <div class="info-box" style="border-color: var(--apex-gray); border-width: 3px;">
+            <div class="info-box-header" style="background: var(--apex-charcoal);">✗ Not Eligible</div>
+            <ul class="cross-list">
+                <li>Classic platform clients (until Ascend migration complete)</li>
+                <li>Non-Rebalancer clients</li>
+                <li>Clients mid-migration (unless willing to rebalance partial accounts)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- PROCESS FLOW -->
+<h1>2. Model Marketplace Process Flow</h1>
+
+<div class="process-flow">
+    <div class="process-step">
+        <div class="process-step-number">1</div>
+        <h4>Initial Access Setup</h4>
+        <p><strong>WHO:</strong> Apex Onboarding Team</p>
+        <p><strong>WHAT:</strong> Enable Model Marketplace in Client Configurator</p>
+        <p><strong>WHERE:</strong> Experience Settings → Enable Model Marketplace</p>
+    </div>
+
+    <div class="process-step">
+        <div class="process-step-number">2</div>
+        <h4>User Permissions</h4>
+        <p><strong>WHO:</strong> Client Administrator</p>
+        <p><strong>WHAT:</strong> Grant subscribe permissions to authorized users</p>
+        <p><strong>ACCESS:</strong> View vs. Subscribe rights</p>
+    </div>
+
+    <div class="process-step">
+        <div class="process-step-number">3</div>
+        <h4>Client Discovery</h4>
+        <p><strong>WHO:</strong> End Client/Advisor</p>
+        <p><strong>WHAT:</strong> Sign in → Trading → Model Marketplace</p>
+        <p><strong>ACCEPT:</strong> Apex Terms & Conditions (one-time)</p>
+    </div>
+</div>
+
+<div class="arrow-down"></div>
+
+<div class="process-flow">
+    <div class="process-step">
+        <div class="process-step-number">4</div>
+        <h4>Model Evaluation</h4>
+        <p>Review holdings, target weights, summary, resources, fact sheets</p>
+        <p><strong>COLUMNS:</strong> Provider | Model | Investment Vehicle | Status</p>
+    </div>
+
+    <div class="process-step">
+        <div class="process-step-number">5</div>
+        <h4>Model Subscription</h4>
+        <p>Click Subscribe → Accept Provider T&Cs</p>
+        <p><strong>RESULT:</strong> Status changes to SUBSCRIBED</p>
+        <p>Button: Green → Red (Unsubscribe)</p>
+    </div>
+
+    <div class="process-step">
+        <div class="process-step-number">6</div>
+        <h4>Rebalancer Configuration</h4>
+        <p><strong>CRITICAL:</strong> Verify asset class assignments</p>
+        <p>Create goals → Assign to accounts</p>
+    </div>
+</div>
+
+<div class="arrow-down"></div>
+
+<div class="process-flow">
+    <div class="process-step">
+        <div class="process-step-number">7</div>
+        <h4>Portfolio Rebalancing</h4>
+        <p>Initiate rebalance → Review proposals</p>
+        <p>Review compliance disclosures</p>
+        <p><strong>ACTION:</strong> Submit trades for execution</p>
+    </div>
+
+    <div class="process-step">
+        <div class="process-step-number">8</div>
+        <h4>Unsubscribe (Optional)</h4>
+        <p>Stops automatic updates</p>
+        <p>Retains last subscribed weights</p>
+        <p><strong>TO DISCONTINUE:</strong> Delete model from Rebalancer</p>
+    </div>
+</div>
+
+<div class="callout callout-important">
+    <strong>⚠️ KEY LIMITATION:</strong> Apex does NOT automatically execute trades. Automatic scheduled rebalancing planned for Q3 2026. Clients must currently review and submit all trade orders manually.
+</div>
+
+<div class="page-break"></div>
+
+<!-- ROLES & RESPONSIBILITIES -->
+<h1>3. Roles & Responsibilities Matrix</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Activity</th>
+            <th>Client</th>
+            <th>Apex RM/Sales</th>
+            <th>Apex Onboarding</th>
+            <th>Client Services</th>
+            <th>Engineering/PM</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="background: #E3F2FD;">
+            <td colspan="6"><strong>Pre-Sales & Discovery</strong></td>
+        </tr>
+        <tr>
+            <td>Identify Rebalancer prospects</td>
+            <td><span class="role-indicator role-supporting">○</span></td>
+            <td><span class="role-indicator role-primary">●</span></td>
+            <td><span class="role-indicator role-supporting">○</span></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Present Model Marketplace value</td>
+            <td></td>
+            <td><span class="role-indicator role-primary">●</span></td>
+            <td><span class="role-indicator role-primary">●</span></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Validate Ascend migration status</td>
+            <td></td>
+            <td><span class="role-indicator role-primary">●</span></td>
+            <td><span class="role-indicator role-primary">●</span></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr style="background: #E3F2FD;">
+            <td colspan="6"><strong>Onboarding</strong></td>
+        </tr>
+        <tr>
+            <td>Enable Model Marketplace (Client Configurator)</td>
+            <td></td>
+            <td></td>
+            <td><span class="role-indicator role-primary">●</span></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Configure user subscribe permissions</td>
+            <td><span class="role-indicator role-primary">●</span></td>
+            <td></td>
+            <td><span class="role-indicator role-primary">●</span></td>
+            <td><span class="role-indicator role-supporting">○</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Provide training/documentation</td>
+            <td></td>
+            <td><span class="role-indicator role-supporting">○</span></td>
+            <td><span class="role-indicator role-primary">●</span></td>
+            <td><span class="role-indicator role-supporting">○</span></td>
+            <td></td>
+        </tr>
+        <tr style="background: #E3F2FD;">
+            <td colspan="6"><strong>Ongoing Usage</strong></td>
+        </tr>
+        <tr>
+            <td>Accept Apex T&Cs</td>
+            <td><span class="role-indicator role-primary">●</span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Browse and evaluate models</td>
+            <td><span class="role-indicator role-primary">●</span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Subscribe to models</td>
+            <td><span class="role-indicator role-primary">●</span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Assign models to accounts</td>
+            <td><span class="role-indicator role-primary">●</span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Initiate rebalancing</td>
+            <td><span class="role-indicator role-primary">●</span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Submit trade orders</td>
+            <td><span class="role-indicator role-primary">●</span></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr style="background: #E3F2FD;">
+            <td colspan="6"><strong>Support</strong></td>
+        </tr>
+        <tr>
+            <td>Handle usage questions</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><span class="role-indicator role-primary">●</span></td>
+            <td><span class="role-indicator role-supporting">○</span></td>
+        </tr>
+        <tr>
+            <td>Troubleshoot technical issues</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><span class="role-indicator role-primary">●</span></td>
+            <td><span class="role-indicator role-primary">●</span></td>
+        </tr>
+        <tr>
+            <td>Bug fixes and enhancements</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><span class="role-indicator role-primary">●</span></td>
+        </tr>
+    </tbody>
+</table>
+
+<p style="margin-top: 10px;"><strong>Legend:</strong> <span class="role-indicator role-primary">●</span> = Primary Owner | <span class="role-indicator role-supporting">○</span> = Supporting Role</p>
+
+<div class="page-break"></div>
+
+<!-- MODEL PROVIDER ONBOARDING -->
+<h1>4. Model Provider Onboarding Process</h1>
+
+<div class="callout">
+    <strong>WHO DRIVES:</strong> Apex Business Development / Product Team<br>
+    <strong>CURRENT CONTACT:</strong> Rich or Larry
+</div>
+
+<div class="timeline">
+    <div class="timeline-item">
+        <div class="timeline-content">
+            <div class="timeline-date">STEP 1: Sourcing & Outreach</div>
+            <ul>
+                <li>Identify potential model providers</li>
+                <li>Initial business discussions</li>
+                <li>Validate provider credibility and model quality</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-content">
+            <div class="timeline-date">STEP 2: Legal & Compliance</div>
+            <ul>
+                <li>Contract negotiation</li>
+                <li>Provider terms & conditions review</li>
+                <li>Compliance approval</li>
+            </ul>
+            <div class="callout callout-warning" style="margin-top: 10px;">
+                <strong>⚠️ CURRENT BOTTLENECK:</strong> No dedicated resource for this process
+            </div>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-content">
+            <div class="timeline-date">STEP 3: Technical Integration</div>
+            <ul>
+                <li>Provider submits model holdings data</li>
+                <li>Data format validation (holdings, weights, metadata)</li>
+                <li>SFTP setup if required (for ongoing updates)</li>
+                <li><strong>Example:</strong> Franklin Templeton daily ETF performance reporting</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-content">
+            <div class="timeline-date">STEP 4: Testing & Validation</div>
+            <ul>
+                <li>UAT environment testing</li>
+                <li>Data accuracy verification</li>
+                <li>User acceptance testing</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-content">
+            <div class="timeline-date">STEP 5: Go-Live</div>
+            <ul>
+                <li>Upload models to production</li>
+                <li>Provider models appear in marketplace</li>
+                <li>Internal announcement to sales team</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- REVENUE MODEL -->
+<h1>5. Revenue Model & Pricing Strategy</h1>
+
+<h2>Current State (2026)</h2>
+<div style="display: flex; gap: 20px; margin: 20px 0;">
+    <div class="info-box" style="flex: 1;">
+        <div class="info-box-header">Client Fees</div>
+        <div style="text-align: center; padding: 20px;">
+            <div style="font-size: 48px; font-weight: bold; color: var(--apex-green);">$0</div>
+            <div style="color: var(--apex-gray);">Free access to Model Marketplace</div>
+        </div>
+    </div>
+    <div class="info-box" style="flex: 1;">
+        <div class="info-box-header">Provider Fees</div>
+        <div style="text-align: center; padding: 20px;">
+            <div style="font-size: 48px; font-weight: bold; color: var(--apex-green);">$0</div>
+            <div style="color: var(--apex-gray);">No charges currently</div>
+        </div>
+    </div>
+    <div class="info-box" style="flex: 1;">
+        <div class="info-box-header">Revenue Source</div>
+        <div style="text-align: center; padding: 20px;">
+            <div style="font-size: 24px; font-weight: bold; color: var(--apex-blue);">Indirect</div>
+            <div style="color: var(--apex-gray);">Custody fees + Rebalancer subscription</div>
+        </div>
+    </div>
+</div>
+
+<h2>Future State Recommendations</h2>
+
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 30px 0;">
+    <div class="use-case" style="border-left-color: var(--apex-blue);">
+        <div style="text-align: center; font-size: 18px; font-weight: bold; color: var(--apex-blue); margin-bottom: 15px;">Option A</div>
+        <h4>Charge Model Providers</h4>
+        <ul>
+            <li>Marketplace listing fees</li>
+            <li>Distribution platform value</li>
+            <li>Based on Etsy/Facebook model</li>
+        </ul>
+        <div style="margin-top: 15px; padding: 10px; background: #E8F5E9; border-radius: 5px; font-size: 12px;">
+            <strong style="color: var(--apex-green);">✓ Recommended:</strong> Once adoption grows
+        </div>
+    </div>
+
+    <div class="use-case" style="border-left-color: var(--apex-gold);">
+        <div style="text-align: center; font-size: 18px; font-weight: bold; color: var(--apex-gold); margin-bottom: 15px;">Option B</div>
+        <h4>Tiered Client Pricing</h4>
+        <ul>
+            <li>Free tier: Limited access</li>
+            <li>Premium tier: Full catalog</li>
+            <li>Subscription model</li>
+        </ul>
+        <div style="margin-top: 15px; padding: 10px; background: #FFF3E0; border-radius: 5px; font-size: 12px;">
+            <strong style="color: var(--apex-gold);">⚠️ Challenge:</strong> Limited current adoption
+        </div>
+    </div>
+
+    <div class="use-case" style="border-left-color: var(--apex-purple);">
+        <div style="text-align: center; font-size: 18px; font-weight: bold; color: var(--apex-purple); margin-bottom: 15px;">Option C</div>
+        <h4>Hybrid Model</h4>
+        <ul>
+            <li>Free for clients</li>
+            <li>Revenue share with providers</li>
+            <li>Platform fees for premium</li>
+        </ul>
+        <div style="margin-top: 15px; padding: 10px; background: #F3E5F5; border-radius: 5px; font-size: 12px;">
+            <strong style="color: var(--apex-purple);">◆ Future:</strong> Q4 2026+ consideration
+        </div>
+    </div>
+</div>
+
+<div class="callout callout-success">
+    <strong>Recommended Approach:</strong> Wait for marketplace adoption to grow, then implement provider fees (Q4 2026+). Current focus is on building user base and proving marketplace value.
+</div>
+
+<div class="page-break"></div>
+
+<!-- CLIENT COMMUNICATION STRATEGY -->
+<h1>6. Client Communication & Marketing Strategy</h1>
+
+<h2>Target Audience Priority</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Priority</th>
+            <th>Audience</th>
+            <th>Size</th>
+            <th>Rationale</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><span style="background: var(--apex-green); color: white; padding: 5px 10px; border-radius: 3px; font-weight: bold;">1</span></td>
+            <td><strong>Existing Rebalancer Clients on Ascend</strong></td>
+            <td>38 firms</td>
+            <td>Already using platform, easiest adoption</td>
+        </tr>
+        <tr>
+            <td><span style="background: var(--apex-blue); color: white; padding: 5px 10px; border-radius: 3px; font-weight: bold;">2</span></td>
+            <td><strong>Classic Clients Post-Migration</strong></td>
+            <td>TBD</td>
+            <td>Will have Rebalancer access after conversion</td>
+        </tr>
+        <tr>
+            <td><span style="background: var(--apex-gold); color: white; padding: 5px 10px; border-radius: 3px; font-weight: bold;">3</span></td>
+            <td><strong>New Rebalancer Prospects</strong></td>
+            <td>Market</td>
+            <td>Model Marketplace as differentiator</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Key Messaging</h2>
+
+<div style="display: flex; gap: 20px; margin: 30px 0;">
+    <div class="info-box" style="flex: 1;">
+        <div class="info-box-header">For Advisors</div>
+        <ul>
+            <li>Access institutional-quality models from Franklin Templeton, Aptis, Timco and Sachs, and State Street</li>
+            <li><strong>Models automatically update</strong> when providers rebalance—no manual intervention</li>
+            <li>Reduce time on portfolio construction by 70%</li>
+            <li>Seamlessly integrates with existing Rebalancer workflow</li>
+            <li>Combine marketplace + proprietary strategies</li>
+            <li>Full tax-loss harvesting and optimization</li>
+        </ul>
+    </div>
+
+    <div class="info-box" style="flex: 1;">
+        <div class="info-box-header">For Firms</div>
+        <ul>
+            <li>Launch managed portfolios without hiring investment team</li>
+            <li>Scale to thousands of accounts with automated updates</li>
+            <li><strong>Free access</strong> for all Rebalancer clients</li>
+            <li>Compete with larger firms using institutional models</li>
+            <li>Choose from multiple providers</li>
+            <li>Maintain compliance with automatic updates</li>
+        </ul>
+    </div>
+</div>
+
+<div class="callout" style="background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); border-left-color: var(--apex-bright-blue);">
+    <h4 style="margin-top: 0; color: var(--apex-navy);">For Model Providers</h4>
+    <ul>
+        <li><strong>Distribution reach:</strong> 38 RIA firms managing 50,000+ accounts</li>
+        <li><strong>Automated platform:</strong> Upload once, update automatically propagates</li>
+        <li><strong>Growing ecosystem:</strong> Reach Apex's digital advisors and wealth managers</li>
+        <li><strong>Partnership opportunity</strong> with premier fintech custody platform</li>
+    </ul>
+</div>
+
+<h2>Communication Channels</h2>
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 30px 0;">
+    <div class="info-box">
+        <div class="info-box-header">1. Direct Outreach</div>
+        <ul>
+            <li>RM/Sales team → existing Rebalancer clients</li>
+            <li>Email campaign highlighting providers</li>
+            <li>One-on-one demos</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <div class="info-box-header">2. Documentation & Resources</div>
+        <ul>
+            <li>Developer portal documentation</li>
+            <li>This framework document</li>
+            <li>Video tutorials (recommended)</li>
+            <li>Provider fact sheets</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <div class="info-box-header">3. Press Release</div>
+        <ul>
+            <li>Announce Model Marketplace availability</li>
+            <li>Highlight provider partnerships</li>
+            <li>Include client testimonials</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <div class="info-box-header">4. Internal Enablement</div>
+        <ul>
+            <li>Sales team training</li>
+            <li>RM playbook for conversations</li>
+            <li>FAQ document for objections</li>
+        </ul>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- USE CASES -->
+<h1>7. Client Use Cases & Value Stories</h1>
+
+<div class="use-case">
+    <div class="use-case-title">🏢 Use Case 1: RIA Scaling Portfolio Management</div>
+
+    <div class="use-case-section">
+        <strong>Client Profile:</strong>
+        <p>Mid-sized RIA with 500 client accounts, limited in-house investment research team</p>
+    </div>
+
+    <div class="use-case-section">
+        <strong>Challenge:</strong>
+        <p>Advisors spend 15+ hours weekly constructing and maintaining custom portfolios, limiting client acquisition capacity</p>
+    </div>
+
+    <div class="use-case-section">
+        <strong>Solution with Model Marketplace:</strong>
+        <ol>
+            <li>Subscribe to Franklin Templeton and Aptis ETF models aligned with firm's investment philosophy</li>
+            <li>Create goal-based frameworks using marketplace models (conservative, balanced, growth)</li>
+            <li>Assign models to client segments based on risk tolerance</li>
+            <li>Rebalancer generates trade proposals automatically as markets drift</li>
+            <li>Marketplace models receive automatic provider updates</li>
+        </ol>
+    </div>
+
+    <div class="use-case-section">
+        <strong>Results:</strong>
+        <ul class="checkmark-list">
+            <li><strong>70% reduction</strong> in portfolio construction time</li>
+            <li>Consistent investment quality across all accounts</li>
+            <li>Scalable to 1000+ accounts without additional investment staff</li>
+            <li>Tax-loss harvesting and optimization built-in</li>
+        </ul>
+    </div>
+</div>
+
+<div class="use-case">
+    <div class="use-case-title">📱 Use Case 2: Digital Advisor Launching New Product</div>
+
+    <div class="use-case-section">
+        <strong>Client Profile:</strong>
+        <p>Digital investment platform adding managed portfolios to self-directed offering</p>
+    </div>
+
+    <div class="use-case-section">
+        <strong>Challenge:</strong>
+        <p>Need institutional-quality models quickly without building in-house model management team</p>
+    </div>
+
+    <div class="use-case-section">
+        <strong>Solution with Model Marketplace:</strong>
+        <ol>
+            <li>Subscribe to multiple provider models across risk spectrums</li>
+            <li>White-label models as platform investment strategies</li>
+            <li>Use Rebalancer API to automate account rebalancing</li>
+            <li>Leverage direct indexing for tax-optimized versions</li>
+        </ol>
+    </div>
+
+    <div class="use-case-section">
+        <strong>Results:</strong>
+        <ul class="checkmark-list">
+            <li>Launch managed portfolios in <strong>weeks vs. months</strong></li>
+            <li>Professional-grade investment models with automatic updates</li>
+            <li>Scalable to 50,000+ accounts</li>
+            <li>Differentiated tax optimization features</li>
+        </ul>
+    </div>
+</div>
+
+<div class="use-case">
+    <div class="use-case-title">💼 Use Case 3: Existing Rebalancer Client Enhancing Offering</div>
+
+    <div class="use-case-section">
+        <strong>Client Profile:</strong>
+        <p>Wealth management firm already using Apex Rebalancer with custom models</p>
+    </div>
+
+    <div class="use-case-section">
+        <strong>Challenge:</strong>
+        <p>Clients requesting access to specific institutional strategies (thematic ETFs, ESG models)</p>
+    </div>
+
+    <div class="use-case-section">
+        <strong>Solution with Model Marketplace:</strong>
+        <ol>
+            <li>Subscribe to complementary marketplace models alongside existing custom models</li>
+            <li>Create blended goals using both custom and marketplace models</li>
+            <li>Offer clients choice between proprietary and third-party strategies</li>
+            <li>Use asset class management to optimize across all models</li>
+        </ol>
+    </div>
+
+    <div class="use-case-section">
+        <strong>Results:</strong>
+        <ul class="checkmark-list">
+            <li>Expanded investment menu <strong>without research overhead</strong></li>
+            <li>Client retention through broader product suite</li>
+            <li>Flexibility to compete with larger firms</li>
+            <li>Maintained use of proprietary models where differentiated</li>
+        </ul>
+    </div>
+</div>
+
+<div class="use-case">
+    <div class="use-case-title">🏦 Use Case 4: Sub-Advisory Relationship (Provider Perspective)</div>
+
+    <div class="use-case-section">
+        <strong>Provider Profile:</strong>
+        <p>Large asset manager (like Voya Investment Management) distributing models to advisor network</p>
+    </div>
+
+    <div class="use-case-section">
+        <strong>Challenge:</strong>
+        <p>Need scalable distribution platform for model portfolios to reach more advisors</p>
+    </div>
+
+    <div class="use-case-section">
+        <strong>Solution with Model Marketplace:</strong>
+        <ol>
+            <li>Partner with Apex as Model Marketplace provider</li>
+            <li>Upload model portfolios to marketplace</li>
+            <li>Apex advisors subscribe and implement across client accounts</li>
+            <li>Provider updates models as market conditions change</li>
+            <li>Automatic propagation to all subscribed accounts</li>
+        </ol>
+    </div>
+
+    <div class="use-case-section">
+        <strong>Results:</strong>
+        <ul class="checkmark-list">
+            <li>Distribution to <strong>38 RIA firms and 50,000+ accounts</strong></li>
+            <li>Automated model updates across entire advisor network</li>
+            <li>Reduced operational burden of individual advisor feeds</li>
+            <li>Analytics on model adoption and usage</li>
+        </ul>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- REBALANCER CAPABILITIES -->
+<h1>8. Rebalancer Capabilities & Integration</h1>
+
+<div class="callout">
+    <h3 style="margin-top: 0;">What is Apex Rebalancer?</h3>
+    <p>Rebalancing is the process of adjusting a portfolio's asset allocations to align with levels advisors specify in an investment plan. Apex's Rebalancer allows advisors to manage portfolios based on asset types, expected returns, and risk levels. The Rebalancer creates trade proposals that realign investment portfolios to targets and ranges that match the desired portfolio models as markets move and asset values shift.</p>
+    <p style="margin-top: 15px;"><strong>Model Marketplace Integration:</strong> Subscribed models from the marketplace become available in Rebalancer for portfolio construction, rebalancing proposals, and ongoing management.</p>
+</div>
+
+<h2>Key Rebalancer Features</h2>
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 30px 0;">
+    <div class="info-box">
+        <div class="info-box-header">1. Firm-Level Settings</div>
+        <ul>
+            <li>Minimum trade size constraints</li>
+            <li>Trade-off preferences (drift vs. tax)</li>
+            <li>Tax-loss harvesting configuration</li>
+            <li>Organization API keys</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <div class="info-box-header">2. Asset Class Management</div>
+        <ul>
+            <li>Create asset class trees</li>
+            <li>Map securities to classes</li>
+            <li><strong>Required for Model Marketplace</strong></li>
+            <li>Equities, fixed income, commodities, etc.</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <div class="info-box-header">3. Models, Frameworks & Goals</div>
+        <ul>
+            <li>Custom models (in-house)</li>
+            <li><strong>Model Marketplace subscribed models</strong></li>
+            <li>Goal-based investing automation</li>
+            <li>Direct indexing</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <div class="info-box-header">4. Threshold Management</div>
+        <ul>
+            <li>Asset class thresholds</li>
+            <li>Securities thresholds</li>
+            <li>Model target cash & mandatory cash</li>
+            <li>Absolute & relative difference %</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <div class="info-box-header">5. Client & Investor Settings</div>
+        <ul>
+            <li>Security restrictions (add/lift)</li>
+            <li>Wash sale restrictions</li>
+            <li>Optimization preferences</li>
+            <li>Minimum cash settings</li>
+            <li>Account quarantine</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <div class="info-box-header">6. Direct Indexing</div>
+        <ul>
+            <li>Replicate index fund performance</li>
+            <li>Own individual securities outright</li>
+            <li>Portfolio customization & exclusions</li>
+            <li>Tax-loss harvesting optimization</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <div class="info-box-header">7. Trade Management</div>
+        <ul>
+            <li>Generate proposals from SOD files</li>
+            <li>Review and submit trades</li>
+            <li>Trade blotter analysis</li>
+            <li>Historical trade exploration</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <div class="info-box-header">8. Advanced Features</div>
+        <ul>
+            <li>Completion portfolios</li>
+            <li>Cash generation via min cash</li>
+            <li>Position liquidation</li>
+            <li>Compliance monitoring</li>
+        </ul>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- TECHNICAL ARCHITECTURE -->
+<h1>9. Technical Architecture Overview</h1>
+
+<div style="background: var(--apex-lighter-gray); padding: 30px; border-radius: 10px; margin: 30px 0;">
+    <h3 style="text-align: center; color: var(--apex-navy); margin-bottom: 30px;">Platform Components</h3>
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+        <div style="background: white; padding: 20px; border-radius: 8px; border: 2px solid var(--apex-blue); width: 80%; text-align: center;">
+            <strong>Client Browser</strong><br>
+            <span style="color: var(--apex-gray); font-size: 14px;">Ascend Workstation</span>
+        </div>
+
+        <div class="arrow-down"></div>
+
+        <div style="background: white; padding: 20px; border-radius: 8px; border: 2px solid var(--apex-blue); width: 80%; text-align: center;">
+            <strong>Model Marketplace UI</strong><br>
+            <span style="color: var(--apex-gray); font-size: 14px;">Ascend Platform</span>
+        </div>
+
+        <div class="arrow-down"></div>
+
+        <div style="background: white; padding: 20px; border-radius: 8px; border: 2px solid var(--apex-blue); width: 80%; text-align: center;">
+            <strong>Apex GraphQL Gateway</strong><br>
+            <span style="color: var(--apex-gray); font-size: 14px;">apex-grql</span>
+        </div>
+
+        <div class="arrow-down"></div>
+
+        <div style="background: white; padding: 20px; border-radius: 8px; border: 2px solid var(--apex-blue); width: 80%; text-align: center;">
+            <strong>Model Marketplace Service</strong><br>
+            <span style="color: var(--apex-gray); font-size: 14px;">MMP gRPC Service</span>
+        </div>
+
+        <div class="arrow-down"></div>
+
+        <div style="background: white; padding: 20px; border-radius: 8px; border: 2px solid var(--apex-blue); width: 80%; text-align: center;">
+            <strong>Rebalancer API</strong><br>
+            <span style="color: var(--apex-gray); font-size: 14px;">AdvisorArch</span>
+        </div>
+
+        <div class="arrow-down"></div>
+
+        <div style="background: white; padding: 20px; border-radius: 8px; border: 2px solid var(--apex-green); width: 80%; text-align: center;">
+            <strong>Model Data & Holdings</strong><br>
+            <span style="color: var(--apex-gray); font-size: 14px;">Provider SFTP Feeds</span>
+        </div>
+    </div>
+</div>
+
+<h2>Key Integration Points</h2>
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 30px 0;">
+    <div class="info-box">
+        <div class="info-box-header">Client Configurator</div>
+        <p>Controls correspondent-level access to Model Marketplace. Onboarding team enables via Experience Settings.</p>
+    </div>
+
+    <div class="info-box">
+        <div class="info-box-header">User Permissions</div>
+        <p>Controls subscribe access per user. Not all users can subscribe—only authorized personnel.</p>
+    </div>
+
+    <div class="info-box">
+        <div class="info-box-header">Rebalancer</div>
+        <p>Receives subscribed models automatically. Models appear in settings alongside custom models.</p>
+    </div>
+
+    <div class="info-box">
+        <div class="info-box-header">SFTP Feeds</div>
+        <p>Provider data feeds for ongoing updates. Example: Franklin Templeton daily ETF performance reporting.</p>
+    </div>
+</div>
+
+<h2>Monitoring & Support</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Component</th>
+            <th>Description</th>
+            <th>Owner</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>24/7 Monitoring</strong></td>
+            <td>Slack alerts for service issues, automated monitoring</td>
+            <td>Engineering</td>
+        </tr>
+        <tr>
+            <td><strong>Start-of-Day Files</strong></td>
+            <td>Automated monitoring for data freshness across all clients</td>
+            <td>Engineering</td>
+        </tr>
+        <tr>
+            <td><strong>PagerDuty</strong></td>
+            <td>Escalation for production and sandbox issues</td>
+            <td>Engineering/Support</td>
+        </tr>
+        <tr>
+            <td><strong>Client Service Tickets</strong></td>
+            <td>Tracked through standard support flow</td>
+            <td>Park (primary), Steven Glenn (backup)</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<!-- ONBOARDING CHECKLIST -->
+<h1>10. Client Onboarding Checklist</h1>
+
+<h2>Pre-Onboarding</h2>
+<div class="info-box">
+    <ul style="list-style: none; padding-left: 0;">
+        <li style="margin: 10px 0;">☐ Confirm client is Rebalancer customer</li>
+        <li style="margin: 10px 0;">☐ Confirm client is on Ascend (not Classic)</li>
+        <li style="margin: 10px 0;">☐ If mid-migration, confirm client acceptance of partial rebalancing</li>
+        <li style="margin: 10px 0;">☐ Identify which users need subscribe permissions</li>
+    </ul>
+</div>
+
+<h2>Technical Setup</h2>
+<div class="info-box">
+    <ul style="list-style: none; padding-left: 0;">
+        <li style="margin: 10px 0;">☐ Onboarding team enables Model Marketplace in Client Configurator</li>
+        <li style="margin: 10px 0;">☐ Configure subscribe permissions for authorized users</li>
+        <li style="margin: 10px 0;">☐ Validate access in Ascend environment</li>
+    </ul>
+</div>
+
+<h2>Client Enablement</h2>
+<div class="info-box">
+    <ul style="list-style: none; padding-left: 0;">
+        <li style="margin: 10px 0;">☐ Share Model Marketplace documentation</li>
+        <li style="margin: 10px 0;">☐ Provide this framework document</li>
+        <li style="margin: 10px 0;">☐ Schedule walkthrough/demo (if needed)</li>
+        <li style="margin: 10px 0;">☐ Share provider fact sheets</li>
+    </ul>
+</div>
+
+<h2>First Use</h2>
+<div class="info-box">
+    <ul style="list-style: none; padding-left: 0;">
+        <li style="margin: 10px 0;">☐ Client accepts Apex T&Cs (User Agreement)</li>
+        <li style="margin: 10px 0;">☐ Client browses available models (sort/search by Provider, Model, Investment Vehicle, Status)</li>
+        <li style="margin: 10px 0;">☐ Client reviews model details (holdings, weights, summary, resources)</li>
+        <li style="margin: 10px 0;">☐ Client subscribes to first model</li>
+        <li style="margin: 10px 0;">☐ Accept provider-specific T&Cs</li>
+        <li style="margin: 10px 0;">☐ Verify status changes to SUBSCRIBED</li>
+        <li style="margin: 10px 0; background: #FFF3E0; padding: 10px; border-radius: 5px;"><strong>☐ CRITICAL: Verify each security in model is assigned to correct asset class in Rebalancer</strong></li>
+        <li style="margin: 10px 0;">☐ Create goals using subscribed model</li>
+        <li style="margin: 10px 0;">☐ Assign model to fund goals in test account</li>
+        <li style="margin: 10px 0;">☐ Configure thresholds and optimization preferences</li>
+        <li style="margin: 10px 0;">☐ Execute test rebalance</li>
+        <li style="margin: 10px 0;">☐ Review trade proposals</li>
+        <li style="margin: 10px 0;">☐ Submit trade orders</li>
+    </ul>
+</div>
+
+<h2>Go-Live</h2>
+<div class="info-box">
+    <ul style="list-style: none; padding-left: 0;">
+        <li style="margin: 10px 0;">☐ Roll out to additional users/accounts</li>
+        <li style="margin: 10px 0;">☐ Monitor for issues in first 30 days</li>
+        <li style="margin: 10px 0;">☐ Collect feedback for improvements</li>
+    </ul>
+</div>
+
+<div class="page-break"></div>
+
+<!-- Q&A -->
+<h1>11. Common Questions & Objections</h1>
+
+<div class="qa-item">
+    <div class="question">Q: What if we're still on Classic?</div>
+    <div class="answer">Model Marketplace is Ascend-only. Let's discuss your Ascend migration timeline and prioritize Model Marketplace access post-migration.</div>
+</div>
+
+<div class="qa-item">
+    <div class="question">Q: We're not Rebalancer clients. Can we still use Model Marketplace?</div>
+    <div class="answer">No, Model Marketplace requires Rebalancer subscription. Let's explore if Rebalancer is right for your firm first.</div>
+</div>
+
+<div class="qa-item">
+    <div class="question">Q: Do we have to pay for Model Marketplace?</div>
+    <div class="answer">No, access is currently free for all Rebalancer clients. You only pay the standard fees embedded in the ETFs/securities within the models.</div>
+</div>
+
+<div class="qa-item">
+    <div class="question">Q: Can we customize the models after subscribing?</div>
+    <div class="answer">Subscribed models from providers cannot be edited, but you can create custom models in Rebalancer and use marketplace models as a starting point/reference.</div>
+</div>
+
+<div class="qa-item">
+    <div class="question">Q: How often are models updated?</div>
+    <div class="answer">Providers update their models on their own schedule. Franklin Templeton provides daily performance reporting. Model composition updates vary by provider.</div>
+</div>
+
+<div class="qa-item">
+    <div class="question">Q: Does Apex automatically rebalance our accounts?</div>
+    <div class="answer">Not currently. You must manually initiate rebalancing or call our API. Automatic scheduled rebalancing is planned for Q3 2026.</div>
+</div>
+
+<div class="qa-item">
+    <div class="question">Q: What if we want a specific provider added?</div>
+    <div class="answer">Contact your RM. We're actively seeking new provider partnerships (current bottleneck: no dedicated BD resource).</div>
+</div>
+
+<div class="qa-item">
+    <div class="question">Q: Are there regulatory/compliance concerns?</div>
+    <div class="answer">Each provider has their own T&Cs that clients accept. Apex provides disclosure language on all trade orders. Clients maintain full responsibility for trade execution.</div>
+</div>
+
+<div class="qa-item">
+    <div class="question">Q: What happens if a model provider leaves the marketplace?</div>
+    <div class="answer">You would be notified in advance. Already-assigned accounts would continue with the last known model composition, but new subscriptions would not be available.</div>
+</div>
+
+<div class="qa-item">
+    <div class="question">Q: What happens if I unsubscribe from a model?</div>
+    <div class="answer">Unsubscribing stops automatic updates from the provider, but your portfolios continue using the last subscribed weights. To fully discontinue, you must delete the model from Rebalancer. Your T&C acceptance is retained for future re-subscription.</div>
+</div>
+
+<div class="qa-item">
+    <div class="question">Q: Do I need to configure anything after subscribing?</div>
+    <div class="answer">Yes, two critical steps: (1) Verify each security in the model is assigned to the correct asset class in Rebalancer for optimal performance, and (2) Create goals and assign the model to fund those goals in your client accounts.</div>
+</div>
+
+<div class="qa-item">
+    <div class="question">Q: What if I have issues or questions?</div>
+    <div class="answer">Open an Apex Service Center ticket and navigate to the Rebalancer category. Provide as much detail as possible about your issue. Support is handled by Park (primary) with engineering escalation available.</div>
+</div>
+
+<div class="qa-item">
+    <div class="question">Q: What Rebalancer features work with Model Marketplace models?</div>
+    <div class="answer">All standard Rebalancer features apply: firm settings, thresholds, tax-loss harvesting, optimization between drift reduction and tax sensitivity, direct indexing, asset class management, and trade blotter analysis.</div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- SUCCESS METRICS -->
+<h1>12. Success Metrics & KPIs</h1>
+
+<h2>Adoption Metrics</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Metric</th>
+            <th>Description</th>
+            <th>Target (2026)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Correspondents with Model Marketplace enabled</td>
+            <td>Number of firms with access configured</td>
+            <td>30+</td>
+        </tr>
+        <tr>
+            <td>Users with subscribe permissions</td>
+            <td>Authorized users who can subscribe to models</td>
+            <td>100+</td>
+        </tr>
+        <tr>
+            <td>Active model subscriptions</td>
+            <td>Total number of model subscriptions across all clients</td>
+            <td>500+</td>
+        </tr>
+        <tr>
+            <td>Accounts utilizing marketplace models</td>
+            <td>Client accounts with marketplace model assignments</td>
+            <td>10,000+</td>
+        </tr>
+        <tr>
+            <td>Subscription conversion rate</td>
+            <td>Browsers → subscribers conversion</td>
+            <td>40%</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Usage Metrics</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Metric</th>
+            <th>Description</th>
+            <th>Insight</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Models subscribed per client (average)</td>
+            <td>Average number of models each client subscribes to</td>
+            <td>Product stickiness</td>
+        </tr>
+        <tr>
+            <td>Most popular providers</td>
+            <td>Provider ranking by subscription count</td>
+            <td>Provider value to users</td>
+        </tr>
+        <tr>
+            <td>Most popular models</td>
+            <td>Top 10 models by adoption</td>
+            <td>Strategy preferences</td>
+        </tr>
+        <tr>
+            <td>Rebalance frequency using marketplace models</td>
+            <td>How often clients rebalance with marketplace models</td>
+            <td>Active usage</td>
+        </tr>
+        <tr>
+            <td>AUM in marketplace-model-based accounts</td>
+            <td>Total assets under management using marketplace models</td>
+            <td>Business impact</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Business Impact</h2>
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 30px 0;">
+    <div class="stat-card">
+        <div class="stat-label">Incremental AUM from Model Marketplace Clients</div>
+        <div class="stat-number" style="font-size: 24px; margin-top: 15px;">Track Growth</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Client Retention Rate (Marketplace vs. Non-Users)</div>
+        <div class="stat-number" style="font-size: 24px; margin-top: 15px;">Compare Cohorts</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">Time-to-Value for New Rebalancer Clients</div>
+        <div class="stat-number" style="font-size: 24px; margin-top: 15px;">Reduce Onboarding</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-label">NPS for Marketplace Users</div>
+        <div class="stat-number" style="font-size: 24px; margin-top: 15px;">Measure Satisfaction</div>
+    </div>
+</div>
+
+<h2>Current Baseline (March 2026)</h2>
+<div class="callout">
+    <ul>
+        <li><strong>Live clients using Rebalancer:</strong> 38</li>
+        <li><strong>Accounts on Rebalancer:</strong> ~50,000</li>
+        <li><strong>Model providers:</strong> 4 (Aptis, Franklin Templeton, Timco and Sachs, State Street pending)</li>
+        <li><strong>Known marketplace users:</strong> Public, plus others (specific count TBD)</li>
+    </ul>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ROADMAP -->
+<h1>13. Roadmap & Future Enhancements</h1>
+
+<div class="timeline">
+    <div class="timeline-item">
+        <div class="timeline-content">
+            <div class="timeline-date">Q2 2026 (Current Focus)</div>
+            <ul>
+                <li>Onboard Titan, Range Finance, and other new Rebalancer clients</li>
+                <li>Add State Street models (pending holdings data)</li>
+                <li>Stabilize current functionality</li>
+                <li><strong>Marketing launch and press release</strong></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-content">
+            <div class="timeline-date">Q3 2026 (Planned)</div>
+            <ul>
+                <li><strong>🎯 Automatic Scheduled Rebalancing (Top Priority)</strong>
+                    <ul>
+                        <li>Clients configure rebalance frequency (daily, weekly, monthly, quarterly)</li>
+                        <li>System automatically generates orders</li>
+                        <li>Still requires client review before execution</li>
+                    </ul>
+                </li>
+                <li>Enhanced provider onboarding process</li>
+                <li>Dedicated BD resource for provider acquisition</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="timeline-item">
+        <div class="timeline-content">
+            <div class="timeline-date">Q4 2026 & Beyond (Roadmap)</div>
+            <ul>
+                <li>Revenue model implementation (provider fees)</li>
+                <li>Expanded provider catalog (target: 10+ providers)</li>
+                <li>Model performance analytics dashboard</li>
+                <li>Advanced filtering and search</li>
+                <li>Model comparison tools</li>
+                <li>Automated trade execution (pending compliance approval)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- NEXT STEPS -->
+<h1>14. Next Steps & Action Items</h1>
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 30px 0;">
+    <div class="use-case" style="border-left-color: var(--apex-blue);">
+        <div class="use-case-title">For Apex Sales/RM Team</div>
+        <ol>
+            <li>Review this framework and provide feedback</li>
+            <li>Identify top 10 Rebalancer clients for Model Marketplace outreach</li>
+            <li>Schedule training session on Model Marketplace positioning</li>
+            <li>Develop client pitch deck using this framework</li>
+        </ol>
+    </div>
+
+    <div class="use-case" style="border-left-color: var(--apex-green);">
+        <div class="use-case-title">For Apex Marketing</div>
+        <ol>
+            <li>Finalize press release using this framework</li>
+            <li>Create visual assets (screenshots, diagrams, videos)</li>
+            <li>Develop email campaign for Rebalancer client base</li>
+            <li>Coordinate with Provider Relations on joint marketing</li>
+        </ol>
+    </div>
+
+    <div class="use-case" style="border-left-color: var(--apex-purple);">
+        <div class="use-case-title">For Apex Product/Engineering</div>
+        <ol>
+            <li>Prioritize automatic rebalancing for Q3 2026</li>
+            <li>Assign dedicated resource for provider BD and onboarding</li>
+            <li>Enhance documentation with client screenshots</li>
+            <li>Implement usage analytics dashboard</li>
+        </ol>
+    </div>
+
+    <div class="use-case" style="border-left-color: var(--apex-gold);">
+        <div class="use-case-title">For Prospects/Clients</div>
+        <ol>
+            <li>Validate eligibility (Ascend + Rebalancer)</li>
+            <li>Review provider and model catalog</li>
+            <li>Schedule demo with RM</li>
+            <li>Submit onboarding request</li>
+        </ol>
+    </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- APPENDICES -->
+<h1>Appendix A: Quick Reference Guide</h1>
+
+<div class="info-box">
+    <div class="info-box-header">Access Model Marketplace</div>
+    <p style="font-size: 18px; text-align: center; margin: 15px 0;">
+        <strong>Ascend Workstation → Trading → Model Marketplace</strong>
+    </p>
+</div>
+
+<h2>Prerequisites</h2>
+<ul class="checkmark-list">
+    <li>Ascend client</li>
+    <li>Rebalancer client</li>
+    <li>Correspondent enabled in Client Configurator</li>
+    <li>User has subscribe permission (for subscribing)</li>
+</ul>
+
+<h2>Two Sets of T&Cs</h2>
+<div style="display: flex; gap: 20px; margin: 20px 0;">
+    <div class="info-box" style="flex: 1;">
+        <div class="info-box-header">1. Apex T&Cs</div>
+        <p>One-time acceptance covers all providers. Appears on first visit to Model Marketplace.</p>
+    </div>
+    <div class="info-box" style="flex: 1;">
+        <div class="info-box-header">2. Provider T&Cs</div>
+        <p>One-time per provider. Appears when subscribing to first model from each provider.</p>
+    </div>
+</div>
+
+<h2>Cost & Support</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Cost</strong></td>
+            <td>Free</td>
+        </tr>
+        <tr>
+            <td><strong>Support Process</strong></td>
+            <td>Open Apex Service Center ticket → Category: Rebalancer → Provide detailed information</td>
+        </tr>
+        <tr>
+            <td><strong>Support Team</strong></td>
+            <td>Primary: Park | Engineering escalation as needed</td>
+        </tr>
+        <tr>
+            <td><strong>Documentation</strong></td>
+            <td>support.apexfintechsolutions.com + Developer Portal + This Framework</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<!-- CONTACT DIRECTORY -->
+<h1>Appendix B: Contact Directory</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Role</th>
+            <th>Contact</th>
+            <th>Responsibility</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Product Management</strong></td>
+            <td>Model Marketplace & Rebalancer PM</td>
+            <td>Product strategy, roadmap, feature prioritization</td>
+        </tr>
+        <tr>
+            <td><strong>Sales/RM Coordination</strong></td>
+            <td>Rich or Larry</td>
+            <td>Provider business development, new provider sourcing</td>
+        </tr>
+        <tr>
+            <td><strong>Onboarding</strong></td>
+            <td>Client Configurator Team</td>
+            <td>Enable Model Marketplace via standard onboarding process</td>
+        </tr>
+        <tr>
+            <td><strong>Client Services</strong></td>
+            <td>Park (Primary)<br>Steven Glenn (Backup)</td>
+            <td>Client support, issue resolution, ticket management</td>
+        </tr>
+        <tr>
+            <td><strong>Technical Escalation</strong></td>
+            <td>Engineering</td>
+            <td>Via PagerDuty or Client Service escalation</td>
+        </tr>
+        <tr>
+            <td><strong>Provider Relations</strong></td>
+            <td>Jennifer Zmarzly (Franklin Templeton)<br>Jennifer.Zmarzly@franklintempleton.com</td>
+            <td>Franklin Templeton partnership, SFTP coordination</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<!-- SCREENSHOTS PLACEHOLDER -->
+<h1>Appendix C: Screenshots & Visual Aids</h1>
+
+<div class="callout callout-warning">
+    <strong>Note:</strong> Screenshots to be inserted from actual Ascend Workstation and Rebalancer environments.
+</div>
+
+<h2>Model Marketplace Flow</h2>
+
+<div class="info-box">
+    <div class="info-box-header">1. Ascend Workstation Home → Trading Section</div>
+    <div style="height: 200px; background: var(--apex-lighter-gray); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--apex-gray); border-radius: 5px; margin: 15px 0;">
+        <span style="color: var(--apex-gray);">[Screenshot: Navigation to Model Marketplace]</span>
+    </div>
+</div>
+
+<div class="info-box">
+    <div class="info-box-header">2. First Visit: User Agreement Dialog</div>
+    <div style="height: 200px; background: var(--apex-lighter-gray); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--apex-gray); border-radius: 5px; margin: 15px 0;">
+        <span style="color: var(--apex-gray);">[Screenshot: Apex Terms & Conditions acceptance screen]</span>
+    </div>
+</div>
+
+<div class="info-box">
+    <div class="info-box-header">3. Model Marketplace Home Screen</div>
+    <div style="height: 250px; background: var(--apex-lighter-gray); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--apex-gray); border-radius: 5px; margin: 15px 0;">
+        <span style="color: var(--apex-gray);">[Screenshot: Grid with Provider | Model | Investment Vehicle | Status columns]</span>
+    </div>
+</div>
+
+<div class="info-box">
+    <div class="info-box-header">4. Model Detail Page</div>
+    <div style="height: 300px; background: var(--apex-lighter-gray); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--apex-gray); border-radius: 5px; margin: 15px 0;">
+        <span style="color: var(--apex-gray);">[Screenshot: Holdings, Summary, Resources sections + Subscribe button]</span>
+    </div>
+</div>
+
+<div class="info-box">
+    <div class="info-box-header">5. Provider Terms & Conditions Dialog</div>
+    <div style="height: 200px; background: var(--apex-lighter-gray); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--apex-gray); border-radius: 5px; margin: 15px 0;">
+        <span style="color: var(--apex-gray);">[Screenshot: Provider-specific T&C acceptance]</span>
+    </div>
+</div>
+
+<div class="info-box">
+    <div class="info-box-header">6. Subscription Success</div>
+    <div style="height: 200px; background: var(--apex-lighter-gray); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--apex-gray); border-radius: 5px; margin: 15px 0;">
+        <span style="color: var(--apex-gray);">[Screenshot: Status AVAILABLE→SUBSCRIBED, Green→Red button]</span>
+    </div>
+</div>
+
+<h2>Rebalancer Integration</h2>
+
+<div class="info-box">
+    <div class="info-box-header">7. Rebalancer Settings → Models</div>
+    <div style="height: 250px; background: var(--apex-lighter-gray); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--apex-gray); border-radius: 5px; margin: 15px 0;">
+        <span style="color: var(--apex-gray);">[Screenshot: Custom + Model Marketplace subscribed models list]</span>
+    </div>
+</div>
+
+<div class="info-box">
+    <div class="info-box-header">8. Asset Class Management</div>
+    <div style="height: 250px; background: var(--apex-lighter-gray); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--apex-gray); border-radius: 5px; margin: 15px 0;">
+        <span style="color: var(--apex-gray);">[Screenshot: Security-to-asset-class mapping, e.g., GLD→Commodity]</span>
+    </div>
+</div>
+
+<div class="info-box">
+    <div class="info-box-header">9. Goals Creation</div>
+    <div style="height: 250px; background: var(--apex-lighter-gray); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--apex-gray); border-radius: 5px; margin: 15px 0;">
+        <span style="color: var(--apex-gray);">[Screenshot: Creating goals with Model Marketplace models]</span>
+    </div>
+</div>
+
+<div class="info-box">
+    <div class="info-box-header">10. Rebalance Proposals</div>
+    <div style="height: 250px; background: var(--apex-lighter-gray); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--apex-gray); border-radius: 5px; margin: 15px 0;">
+        <span style="color: var(--apex-gray);">[Screenshot: Buy/sell orders + compliance disclosures + Submit button]</span>
+    </div>
+</div>
+
+<h2>Configuration</h2>
+
+<div class="info-box">
+    <div class="info-box-header">11. Client Configurator</div>
+    <div style="height: 200px; background: var(--apex-lighter-gray); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--apex-gray); border-radius: 5px; margin: 15px 0;">
+        <span style="color: var(--apex-gray);">[Screenshot: Experience Settings → Model Marketplace toggle]</span>
+    </div>
+</div>
+
+<div class="info-box">
+    <div class="info-box-header">12. User Permissions</div>
+    <div style="height: 200px; background: var(--apex-lighter-gray); display: flex; align-items: center; justify-content: center; border: 2px dashed var(--apex-gray); border-radius: 5px; margin: 15px 0;">
+        <span style="color: var(--apex-gray);">[Screenshot: Subscribe permission configuration]</span>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="document-footer">
+    <p><strong>Document Version:</strong> 1.1 | <strong>Last Updated:</strong> March 24, 2026</p>
+    <p><strong>Owner:</strong> Product Marketing / Business Development</p>
+    <p><strong>Review Cycle:</strong> Quarterly or as material changes occur</p>
+    <p style="margin-top: 20px; font-style: italic;">This framework is intended for internal Apex use and approved client/prospect sharing.<br>Not for public distribution without Marketing approval.</p>
+</div>
+
+</body>
+</html>
