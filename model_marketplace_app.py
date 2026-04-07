@@ -854,97 +854,45 @@ elif section == "📰 Press Release Brief":
     """, unsafe_allow_html=True)
 
     # Key Announcement Points
+    st.subheader("📋 Key Announcement Points")
+
     st.markdown(f"""
-    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-               font-weight: 700; font-size: 24px; margin-bottom: 30px; text-align: center;'>
-        📋 Key Announcement Points
-    </h3>
+    <div style='text-align: center; margin: 40px 0;'>
+        <span style='font-size: 100px;'>🎯</span>
+        <h2 style='color: {APEX_COLORS['blue']}; font-size: 60px; font-weight: 900; margin: 10px 0;'>01</h2>
+        <h3 style='color: {APEX_COLORS['navy']}; margin: 15px 0;'>What We're Launching</h3>
+        <p style='font-size: 16px; line-height: 2.0; max-width: 600px; margin: 0 auto;'>
+            Model Marketplace platform • Institutional-quality models • Aptis, Franklin Templeton, Timco & Sachs • <strong style='color: {APEX_COLORS['blue']};'>State Street Partnership</strong>
+        </p>
+    </div>
+
+    <div style='text-align: center; margin: 40px 0;'>
+        <span style='font-size: 100px;'>✨</span>
+        <h2 style='color: {APEX_COLORS['amethyst']}; font-size: 60px; font-weight: 900; margin: 10px 0;'>02</h2>
+        <h3 style='color: {APEX_COLORS['amethyst']}; margin: 15px 0;'>Key Benefits</h3>
+        <p style='font-size: 16px; line-height: 2.0; max-width: 600px; margin: 0 auto;'>
+            <strong style='color: {APEX_COLORS['amethyst']};'>70% time reduction</strong> • Automatic model updates • Seamless workflow integration • Tax optimization ready
+        </p>
+    </div>
+
+    <div style='text-align: center; margin: 40px 0;'>
+        <span style='font-size: 100px;'>💰</span>
+        <h2 style='color: {APEX_COLORS['green']}; font-size: 60px; font-weight: 900; margin: 10px 0;'>03</h2>
+        <h3 style='color: {APEX_COLORS['green']}; margin: 15px 0;'>Market Opportunity</h3>
+        <p style='font-size: 16px; line-height: 2.0; max-width: 600px; margin: 0 auto;'>
+            <strong style='color: {APEX_COLORS['green']};'>41 Rebalancer clients</strong> • <strong style='color: {APEX_COLORS['green']};'>33,080 accounts</strong> • Growing demand for models • Democratizing strategies
+        </p>
+    </div>
+
+    <div style='text-align: center; margin: 40px 0;'>
+        <span style='font-size: 100px;'>🚀</span>
+        <h2 style='color: {APEX_COLORS['gold']}; font-size: 60px; font-weight: 900; margin: 10px 0;'>04</h2>
+        <h3 style='color: {APEX_COLORS['gold']}; margin: 15px 0;'>Future Vision</h3>
+        <p style='font-size: 16px; line-height: 2.0; max-width: 600px; margin: 0 auto;'>
+            Expanding provider network • Enhanced analytics • Growing advisor ecosystem • Dedicated BD resources
+        </p>
+    </div>
     """, unsafe_allow_html=True)
-
-    # Row 1
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.markdown(f"""
-        <div style='background: white; padding: 30px; border-radius: 16px;
-                    box-shadow: 0 8px 24px rgba(0,102,204,0.15);
-                    border: 3px solid {APEX_COLORS['blue']};
-                    margin-bottom: 20px;'>
-            <div style='display: flex; align-items: center; margin-bottom: 20px;'>
-                <div style='font-size: 48px; margin-right: 15px;'>🎯</div>
-                <h4 style='color: {APEX_COLORS['blue']}; margin: 0; font-size: 20px; font-weight: 700;'>What We're Launching</h4>
-            </div>
-            <ul style='line-height: 2; color: {APEX_COLORS['charcoal']}; margin: 0; padding-left: 20px; font-size: 15px;'>
-                <li>Model Marketplace platform integrated with Apex Rebalancer</li>
-                <li>Access to institutional-quality investment models</li>
-                <li>Initial partners: Aptis, Franklin Templeton, Timco and Sachs</li>
-                <li><strong style='color: {APEX_COLORS['navy']};'>Strategic Partnership with State Street</strong></li>
-            </ul>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col2:
-        st.markdown(f"""
-        <div style='background: white; padding: 30px; border-radius: 16px;
-                    box-shadow: 0 8px 24px rgba(128,44,192,0.15);
-                    border: 3px solid {APEX_COLORS['amethyst']};
-                    margin-bottom: 20px;'>
-            <div style='display: flex; align-items: center; margin-bottom: 20px;'>
-                <div style='font-size: 48px; margin-right: 15px;'>✨</div>
-                <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                           -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-                           margin: 0; font-size: 20px; font-weight: 700;'>Key Benefits</h4>
-            </div>
-            <ul style='line-height: 2; color: {APEX_COLORS['charcoal']}; margin: 0; padding-left: 20px; font-size: 15px;'>
-                <li><strong>Reduce portfolio construction time by 70%</strong></li>
-                <li>Automatic model updates from providers</li>
-                <li>Seamless integration with existing workflows</li>
-                <li>Tax-loss harvesting and direct indexing ready</li>
-            </ul>
-        </div>
-        """, unsafe_allow_html=True)
-
-    # Row 2
-    col3, col4 = st.columns(2)
-
-    with col3:
-        st.markdown(f"""
-        <div style='background: white; padding: 30px; border-radius: 16px;
-                    box-shadow: 0 8px 24px rgba(40,167,69,0.15);
-                    border: 3px solid {APEX_COLORS['green']};
-                    margin-bottom: 20px;'>
-            <div style='display: flex; align-items: center; margin-bottom: 20px;'>
-                <div style='font-size: 48px; margin-right: 15px;'>💰</div>
-                <h4 style='color: {APEX_COLORS['green']}; margin: 0; font-size: 20px; font-weight: 700;'>Market Opportunity</h4>
-            </div>
-            <ul style='line-height: 2; color: {APEX_COLORS['charcoal']}; margin: 0; padding-left: 20px; font-size: 15px;'>
-                <li><strong>41 Rebalancer clients</strong> representing significant AUM</li>
-                <li><strong>33,080 accounts</strong> on platform</li>
-                <li>Growing demand for turnkey model solutions</li>
-                <li>Democratizing institutional strategies for smaller RIAs</li>
-            </ul>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col4:
-        st.markdown(f"""
-        <div style='background: white; padding: 30px; border-radius: 16px;
-                    box-shadow: 0 8px 24px rgba(251,191,36,0.15);
-                    border: 3px solid {APEX_COLORS['gold']};
-                    margin-bottom: 20px;'>
-            <div style='display: flex; align-items: center; margin-bottom: 20px;'>
-                <div style='font-size: 48px; margin-right: 15px;'>🚀</div>
-                <h4 style='color: {APEX_COLORS['gold']}; margin: 0; font-size: 20px; font-weight: 700;'>Future Vision</h4>
-            </div>
-            <ul style='line-height: 2; color: {APEX_COLORS['charcoal']}; margin: 0; padding-left: 20px; font-size: 15px;'>
-                <li>Expanding provider network</li>
-                <li>Enhanced model analytics and performance tracking</li>
-                <li>Growing ecosystem of digital advisors</li>
-                <li>Dedicated BD resource for provider acquisition</li>
-            </ul>
-        </div>
-        """, unsafe_allow_html=True)
 
     st.markdown("---")
 
