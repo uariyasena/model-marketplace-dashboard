@@ -479,7 +479,7 @@ if section == "🏠 Home":
                         background: linear-gradient(135deg, white 0%, {APEX_COLORS['light_blue']} 100%);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
-                        background-clip: text;'>4</div>
+                        background-clip: text;'>5</div>
             <div style='color: white; font-size: 16px; font-weight: 500; opacity: 0.9;'>Model Providers Live</div>
         </div>
         """, unsafe_allow_html=True)
@@ -798,7 +798,7 @@ elif section == "📊 Executive Summary":
         """, unsafe_allow_html=True)
 
     with col3:
-        st.plotly_chart(create_metric_chart(4, "Model Providers Live", 'blue'), use_container_width=True)
+        st.plotly_chart(create_metric_chart(5, "Model Providers Live", 'blue'), use_container_width=True)
 
 elif section == "📰 Press Release Brief":
     st.title("📰 Press Release Brief")
