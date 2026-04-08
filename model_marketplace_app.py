@@ -571,10 +571,16 @@ if section == "🏠 Home":
                 box-shadow: 0 4px 12px rgba(0,102,204,0.3);
                 border-left: 6px solid {APEX_COLORS['gold']};'>
         <h3 style='margin-top: 0; color: white; border: none;'>📢 Important Updates</h3>
-        <p style='font-size: 17px; line-height: 1.8; margin: 0;'>
-            <strong>New Providers Available:</strong> We're excited to announce that all 5 institutional model providers
-            are now live and available for subscription. Access high-quality models from Aptus Capital Advisors,
-            Franklin Templeton, PIMCO, State Street Investment Management, and Zacks Investment Management.
+        <p style='font-size: 17px; line-height: 1.8; margin: 0; color: white;'>
+            <strong style='background: linear-gradient(135deg, white 0%, {APEX_COLORS['light_blue']} 100%);
+                           -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;'>
+                New Providers Available:
+            </strong>
+            <span style='color: white;'>
+                We're excited to announce that all 5 institutional model providers
+                are now live and available for subscription. Access high-quality models from Aptus Capital Advisors,
+                Franklin Templeton, PIMCO, State Street Investment Management, and Zacks Investment Management.
+            </span>
         </p>
     </div>
     """, unsafe_allow_html=True)
