@@ -383,11 +383,9 @@ section = st.sidebar.radio(
         "🎯 Strategic Partner: State Street",
         "💰 Revenue Model",
         "📢 Marketing Strategy",
-        "💼 Use Cases",
         "🔧 Rebalancer Integration",
         "📝 Onboarding Checklist",
-        "❓ Q&A",
-        "📈 Success Metrics"
+        "❓ Q&A"
     ]
 )
 
@@ -564,47 +562,22 @@ if section == "🏠 Home":
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # What's New Section - Side by Side
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {APEX_COLORS['green']} 0%, {APEX_COLORS['sky_blue']} 100%);
-                    padding: 30px;
-                    border-radius: 15px;
-                    color: white;
-                    box-shadow: 0 4px 12px rgba(40,167,69,0.3);
-                    height: 280px;
-                    display: flex;
-                    flex-direction: column;'>
-            <h3 style='margin-top: 0; color: white; border: none;'>✅ Recently Completed</h3>
-            <ul style='line-height: 2; font-size: 17px; margin: 0; padding-left: 20px; flex: 1;'>
-                <li>Franklin Templeton SFTP integration (daily ETF reporting)</li>
-                <li>Correspondent-scoped API endpoints</li>
-                <li>Feature flag implementation</li>
-                <li>Documentation published to Service Center</li>
-            </ul>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col2:
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {APEX_COLORS['blue']} 0%, {APEX_COLORS['bright_blue']} 100%);
-                    padding: 30px;
-                    border-radius: 15px;
-                    color: white;
-                    box-shadow: 0 4px 12px rgba(0,102,204,0.3);
-                    height: 280px;
-                    display: flex;
-                    flex-direction: column;'>
-            <h3 style='margin-top: 0; color: white; border: none;'>🚀 Coming Soon</h3>
-            <ul style='line-height: 2; font-size: 17px; margin: 0; padding-left: 20px; flex: 1;'>
-                <li><strong>Enhanced Model Analytics</strong></li>
-                <li>Dedicated BD resource for provider acquisition</li>
-                <li>Enhanced provider onboarding process</li>
-            </ul>
-        </div>
-        """, unsafe_allow_html=True)
+    # Important Updates Section
+    st.markdown(f"""
+    <div style='background: linear-gradient(135deg, {APEX_COLORS['blue']} 0%, {APEX_COLORS['bright_blue']} 100%);
+                padding: 30px;
+                border-radius: 15px;
+                color: white;
+                box-shadow: 0 4px 12px rgba(0,102,204,0.3);
+                border-left: 6px solid {APEX_COLORS['gold']};'>
+        <h3 style='margin-top: 0; color: white; border: none;'>📢 Important Updates</h3>
+        <p style='font-size: 17px; line-height: 1.8; margin: 0;'>
+            <strong>New Providers Available:</strong> We're excited to announce that all 5 institutional model providers
+            are now live and available for subscription. Access high-quality models from Aptus Capital Advisors,
+            Franklin Templeton, PIMCO, State Street Investment Management, and Zacks Investment Management.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
 
     st.markdown("<br><br>", unsafe_allow_html=True)
 
@@ -789,13 +762,14 @@ elif section == "📊 Executive Summary":
     # Providers
     st.markdown("### 🏢 Current Model Providers")
 
-    col1, col2, col3, col4 = st.columns(4)
+    col1, col2, col3, col4, col5 = st.columns(5)
 
     providers_info = [
-        ("Aptis", "LIVE", col1),
+        ("Aptus Capital Advisors", "LIVE", col1),
         ("Franklin Templeton", "LIVE", col2),
-        ("Timco and Sachs", "LIVE", col3),
-        ("State Street", "COMING SOON", col4)
+        ("PIMCO", "LIVE", col3),
+        ("State Street Investment Management", "LIVE", col4),
+        ("Zacks Investment Management", "LIVE", col5)
     ]
 
     for provider, status, col in providers_info:
@@ -938,7 +912,7 @@ elif section == "📰 Press Release Brief":
     </h3>
     """, unsafe_allow_html=True)
 
-    col1, col2, col3, col4 = st.columns(4)
+    col1, col2, col3 = st.columns(3)
 
     with col1:
         st.markdown(f"""
@@ -962,17 +936,8 @@ elif section == "📰 Press Release Brief":
         st.markdown(f"""
         <div style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
                     padding: 25px; border-radius: 12px; text-align: center;'>
-            <div style='font-size: 36px; font-weight: bold; color: white;'>4</div>
+            <div style='font-size: 36px; font-weight: bold; color: white;'>5</div>
             <div style='color: white; font-size: 14px; opacity: 0.9; margin-top: 8px;'>Model Providers</div>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col4:
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, {APEX_COLORS['green']} 0%, {APEX_COLORS['sky_blue']} 100%);
-                    padding: 25px; border-radius: 12px; text-align: center;'>
-            <div style='font-size: 36px; font-weight: bold; color: white;'>70%</div>
-            <div style='color: white; font-size: 14px; opacity: 0.9; margin-top: 8px;'>Time Savings</div>
         </div>
         """, unsafe_allow_html=True)
 
@@ -1412,7 +1377,7 @@ elif section == "🔄 Process Flow":
                     padding: 20px; border-radius: 12px; border-left: 4px solid {APEX_COLORS['green']};'>
             <h4 style='color: {APEX_COLORS['green']}; margin: 0 0 10px 0;'>Browse & Subscribe</h4>
             <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
-                <strong>Who:</strong> End Client/Advisor<br>
+                <strong>Who:</strong> Advisor<br>
                 <strong>What:</strong> Browse models, review holdings/weights, subscribe to selected models, accept T&Cs<br>
                 <strong>Output:</strong> Subscribed models available in Rebalancer
             </p>
@@ -1470,10 +1435,10 @@ elif section == "🔄 Process Flow":
                     flex-shrink: 0; margin-right: 20px; box-shadow: 0 4px 12px rgba(251,191,36,0.3);'>5</div>
         <div style='flex-grow: 1; background: linear-gradient(135deg, rgba(251,191,36,0.1) 0%, rgba(245,158,11,0.05) 100%);
                     padding: 20px; border-radius: 12px; border-left: 4px solid {APEX_COLORS['gold']};'>
-            <h4 style='color: {APEX_COLORS['gold']}; margin: 0 0 10px 0;'>Rebalance & Deliver</h4>
+            <h4 style='color: {APEX_COLORS['gold']}; margin: 0 0 10px 0;'>Assign Models</h4>
             <p style='margin: 0; color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
                 <strong>Who:</strong> Client/Advisor<br>
-                <strong>What:</strong> Initiate rebalance, review proposals, accept proposals, submit trades, deliver models to end clients<br>
+                <strong>What:</strong> Initiate rebalance, review proposals, accept proposals, submit trades, assign models to accounts<br>
                 <strong>Output:</strong> Institutional models actively managed for client accounts
             </p>
         </div>
@@ -1481,46 +1446,6 @@ elif section == "🔄 Process Flow":
     """, unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
-
-    # Key Touchpoints
-    st.markdown(f"""
-    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-               font-weight: 700; font-size: 24px; margin-top: 40px; margin-bottom: 20px;'>
-        🎯 Key Touchpoints & Timeline
-    </h3>
-    """, unsafe_allow_html=True)
-
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.markdown(f"""
-        <div style='background: white; padding: 25px; border-radius: 12px; border: 2px solid {APEX_COLORS['blue']}; height: 100%;'>
-            <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0;'>⏱️ Typical Timeline</h4>
-            <ul style='line-height: 1.8; color: {APEX_COLORS['charcoal']};'>
-                <li><strong>Stage 1-2:</strong> 1-2 weeks (enablement + permissions)</li>
-                <li><strong>Stage 3:</strong> 5-10 minutes (browse + subscribe)</li>
-                <li><strong>Stage 4:</strong> 15-30 minutes (first-time configuration)</li>
-                <li><strong>Stage 5:</strong> Variable (ongoing rebalancing)</li>
-                <li><strong>Total Time to First Rebalance:</strong> ~2-3 weeks</li>
-            </ul>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col2:
-        st.markdown(f"""
-        <div style='background: white; padding: 25px; border-radius: 12px; border: 2px solid {APEX_COLORS['green']}; height: 100%;'>
-            <h4 style='color: {APEX_COLORS['green']}; margin-top: 0;'>✅ Success Criteria</h4>
-            <ul style='line-height: 1.8; color: {APEX_COLORS['charcoal']};'>
-                <li>Client successfully subscribed to at least 1 model</li>
-                <li>Asset class mappings verified</li>
-                <li>Models assigned to test accounts</li>
-                <li>First rebalance executed successfully</li>
-                <li>Client understands ongoing workflow</li>
-            </ul>
-        </div>
-        """, unsafe_allow_html=True)
-
     st.markdown("---")
 
     st.markdown("### 8-Step Implementation Process")
@@ -1548,7 +1473,7 @@ elif section == "🔄 Process Flow":
         },
         {
             "title": "Step 3: Client Acceptance & Discovery",
-            "who": "End Client/Advisor",
+            "who": "Advisor",
             "what": "Sign in to Ascend Workstation → Trading → Model Marketplace",
             "where": "Accept Apex Terms & Conditions (one-time, all providers)",
             "timeline": "5-10 minutes (one-time setup)",
@@ -2269,210 +2194,6 @@ elif section == "📢 Marketing Strategy":
         </details>
         """, unsafe_allow_html=True)
 
-elif section == "💼 Use Cases":
-    st.title("💼 Client Use Cases & Value Stories")
-
-    # Large custom heading for use case selection
-    st.markdown(f"""
-    <h3 style='color: {APEX_COLORS['navy']}; font-size: 24px; margin-bottom: 10px; margin-top: 20px;'>
-        📋 Select a use case scenario:
-    </h3>
-    """, unsafe_allow_html=True)
-
-    use_case = st.selectbox(
-        "Choose scenario:",
-        [
-            "RIA Scaling Portfolio Management",
-            "Digital Advisor Launching New Product",
-            "Existing Client Enhancing Offering",
-            "Sub-Advisory Relationship (Provider View)"
-        ],
-        label_visibility="collapsed"
-    )
-
-    if use_case == "RIA Scaling Portfolio Management":
-        st.markdown("### 🏢 Use Case 1: RIA Scaling Portfolio Management")
-
-        col1, col2 = st.columns([2, 1])
-
-        with col1:
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, rgba(0,102,204,0.1) 0%, rgba(59,130,246,0.1) 100%);
-                        padding: 20px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['blue']}; margin-bottom: 15px;'>
-                <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0; font-size: 18px;'>👤 Client Profile</h4>
-                <p style='margin: 0;'>Mid-sized RIA with 500 client accounts, limited in-house investment research team</p>
-            </div>
-            """, unsafe_allow_html=True)
-
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, rgba(251,191,36,0.1) 0%, rgba(245,158,11,0.1) 100%);
-                        padding: 20px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['gold']}; margin-bottom: 15px;'>
-                <h4 style='color: {APEX_COLORS['gold']}; margin-top: 0; font-size: 18px;'>⚡ Challenge</h4>
-                <p style='margin: 0;'>Advisors spend 15+ hours weekly constructing and maintaining custom portfolios, limiting client acquisition capacity</p>
-            </div>
-            """, unsafe_allow_html=True)
-
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, rgba(128,44,192,0.05) 0%, rgba(236,0,117,0.05) 100%);
-                        padding: 20px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['amethyst']}; margin-bottom: 15px;'>
-                <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                           -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-                           margin-top: 0; font-size: 18px; font-weight: 700;'>💡 Solution with Model Marketplace</h4>
-                <ol style='margin: 5px 0 0 0; padding-left: 20px;'>
-                    <li>Subscribe to Franklin Templeton and Aptis ETF models aligned with firm's investment philosophy</li>
-                    <li>Create goal-based frameworks using marketplace models (conservative, balanced, growth)</li>
-                    <li>Assign models to client segments based on risk tolerance</li>
-                    <li>Rebalancer generates trade proposals automatically as markets drift</li>
-                    <li>Marketplace models receive automatic provider updates</li>
-                </ol>
-            </div>
-            """, unsafe_allow_html=True)
-
-        with col2:
-            st.markdown("**Results:**")
-            st.metric("Time Savings", "70%", delta="Construction time reduction")
-            st.metric("Scalability", "1000+", delta="accounts without new staff")
-
-            st.success("✅ Consistent investment quality across all accounts")
-            st.success("✅ Tax-loss harvesting built-in")
-
-    elif use_case == "Digital Advisor Launching New Product":
-        st.markdown("### 📱 Use Case 2: Digital Advisor Launching New Product")
-
-        col1, col2 = st.columns([2, 1])
-
-        with col1:
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, rgba(0,102,204,0.1) 0%, rgba(59,130,246,0.1) 100%);
-                        padding: 20px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['blue']}; margin-bottom: 15px;'>
-                <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0; font-size: 18px;'>👤 Client Profile</h4>
-                <p style='margin: 0;'>Digital investment platform adding managed portfolios to self-directed offering</p>
-            </div>
-            """, unsafe_allow_html=True)
-
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, rgba(251,191,36,0.1) 0%, rgba(245,158,11,0.1) 100%);
-                        padding: 20px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['gold']}; margin-bottom: 15px;'>
-                <h4 style='color: {APEX_COLORS['gold']}; margin-top: 0; font-size: 18px;'>⚡ Challenge</h4>
-                <p style='margin: 0;'>Need institutional-quality models quickly without building in-house model management team</p>
-            </div>
-            """, unsafe_allow_html=True)
-
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, rgba(128,44,192,0.05) 0%, rgba(236,0,117,0.05) 100%);
-                        padding: 20px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['amethyst']}; margin-bottom: 15px;'>
-                <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                           -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-                           margin-top: 0; font-size: 18px; font-weight: 700;'>💡 Solution with Model Marketplace</h4>
-                <ol style='margin: 5px 0 0 0; padding-left: 20px;'>
-                    <li>Subscribe to multiple provider models across risk spectrums</li>
-                    <li>White-label models as platform investment strategies</li>
-                    <li>Use Rebalancer API to automate account rebalancing</li>
-                    <li>Leverage direct indexing for tax-optimized versions</li>
-                </ol>
-            </div>
-            """, unsafe_allow_html=True)
-
-        with col2:
-            st.markdown("**Results:**")
-            st.metric("Launch Time", "Weeks", delta="vs. months")
-            st.metric("Scale", "33,080", delta="accounts supported")
-
-            st.success("✅ Professional-grade models")
-            st.success("✅ Tax optimization features")
-
-    elif use_case == "Existing Client Enhancing Offering":
-        st.markdown("### 💼 Use Case 3: Existing Rebalancer Client Enhancing Offering")
-
-        col1, col2 = st.columns([2, 1])
-
-        with col1:
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, rgba(0,102,204,0.1) 0%, rgba(59,130,246,0.1) 100%);
-                        padding: 20px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['blue']}; margin-bottom: 15px;'>
-                <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0; font-size: 18px;'>👤 Client Profile</h4>
-                <p style='margin: 0;'>Wealth management firm already using Apex Rebalancer with custom models</p>
-            </div>
-            """, unsafe_allow_html=True)
-
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, rgba(251,191,36,0.1) 0%, rgba(245,158,11,0.1) 100%);
-                        padding: 20px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['gold']}; margin-bottom: 15px;'>
-                <h4 style='color: {APEX_COLORS['gold']}; margin-top: 0; font-size: 18px;'>⚡ Challenge</h4>
-                <p style='margin: 0;'>Clients requesting access to specific institutional strategies (thematic ETFs, ESG models)</p>
-            </div>
-            """, unsafe_allow_html=True)
-
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, rgba(128,44,192,0.05) 0%, rgba(236,0,117,0.05) 100%);
-                        padding: 20px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['amethyst']}; margin-bottom: 15px;'>
-                <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                           -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-                           margin-top: 0; font-size: 18px; font-weight: 700;'>💡 Solution with Model Marketplace</h4>
-                <ol style='margin: 5px 0 0 0; padding-left: 20px;'>
-                    <li>Subscribe to complementary marketplace models alongside existing custom models</li>
-                    <li>Create blended goals using both custom and marketplace models</li>
-                    <li>Offer clients choice between proprietary and third-party strategies</li>
-                    <li>Use asset class management to optimize across all models</li>
-                </ol>
-            </div>
-            """, unsafe_allow_html=True)
-
-        with col2:
-            st.markdown("**Results:**")
-
-            st.success("✅ Expanded investment menu")
-            st.success("✅ No research overhead")
-            st.success("✅ Client retention")
-            st.success("✅ Competitive advantage")
-
-    else:  # Sub-Advisory
-        st.markdown("### 🏦 Use Case 4: Sub-Advisory Relationship (Provider Perspective)")
-
-        col1, col2 = st.columns([2, 1])
-
-        with col1:
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, rgba(0,102,204,0.1) 0%, rgba(59,130,246,0.1) 100%);
-                        padding: 20px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['blue']}; margin-bottom: 15px;'>
-                <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0; font-size: 18px;'>👤 Provider Profile</h4>
-                <p style='margin: 0;'>Large asset manager (like Voya Investment Management) distributing models to advisor network</p>
-            </div>
-            """, unsafe_allow_html=True)
-
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, rgba(251,191,36,0.1) 0%, rgba(245,158,11,0.1) 100%);
-                        padding: 20px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['gold']}; margin-bottom: 15px;'>
-                <h4 style='color: {APEX_COLORS['gold']}; margin-top: 0; font-size: 18px;'>⚡ Challenge</h4>
-                <p style='margin: 0;'>Need scalable distribution platform for model portfolios to reach more advisors</p>
-            </div>
-            """, unsafe_allow_html=True)
-
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, rgba(128,44,192,0.05) 0%, rgba(236,0,117,0.05) 100%);
-                        padding: 20px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['amethyst']}; margin-bottom: 15px;'>
-                <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                           -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-                           margin-top: 0; font-size: 18px; font-weight: 700;'>💡 Solution with Model Marketplace</h4>
-                <ol style='margin: 5px 0 0 0; padding-left: 20px;'>
-                    <li>Partner with Apex as Model Marketplace provider</li>
-                    <li>Upload model portfolios to marketplace</li>
-                    <li>Apex advisors subscribe and implement across client accounts</li>
-                    <li>Provider updates models as market conditions change</li>
-                    <li>Automatic propagation to all subscribed accounts</li>
-                </ol>
-            </div>
-            """, unsafe_allow_html=True)
-
-        with col2:
-            st.markdown("**Results:**")
-            st.metric("Distribution", "41", delta="RIA firms")
-            st.metric("Accounts", "33,080", delta="potential reach")
-
-            st.success("✅ Automated updates")
-            st.success("✅ Reduced operational burden")
-            st.success("✅ Usage analytics")
-
 elif section == "🔧 Rebalancer Integration":
     st.title("🔧 Rebalancer Capabilities & Integration")
 
@@ -2926,309 +2647,6 @@ elif section == "❓ Q&A":
     for i, (question, answer) in enumerate(filtered_qa):
         with st.expander(f"Q: {question}"):
             st.markdown(f"**A:** {answer}")
-
-elif section == "📈 Success Metrics":
-    st.title("📈 Success Metrics & KPIs")
-
-    # Adoption Journey Chart
-    st.markdown(f"""
-    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-               font-weight: 700; font-size: 22px; margin-bottom: 15px;'>
-        📊 Adoption Journey
-    </h3>
-    """, unsafe_allow_html=True)
-
-    # Custom gradient bar chart
-    import streamlit.components.v1 as components
-
-    html_content = f"""
-    <div style='background: white; padding: 20px; border-radius: 12px;'>
-        <h4 style='color: {APEX_COLORS['navy']}; margin-top: 0; margin-bottom: 25px; font-size: 20px;'>Adoption Journey (Target 2026)</h4>
-
-        <div style='margin-bottom: 20px;'>
-            <div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;'>
-                <span style='font-weight: 600; color: {APEX_COLORS['charcoal']}; font-size: 14px;'>Total Rebalancer Clients</span>
-                <span style='font-weight: 700; color: {APEX_COLORS['navy']}; font-size: 16px;'>41</span>
-            </div>
-            <div style='background: #E0E0E0; border-radius: 8px; height: 35px; position: relative; overflow: hidden;'>
-                <div style='background: linear-gradient(90deg, {APEX_COLORS['navy']} 0%, {APEX_COLORS['blue']} 100%); height: 100%; width: 7.6%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-start; padding-left: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);'></div>
-            </div>
-        </div>
-
-        <div style='margin-bottom: 20px;'>
-            <div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;'>
-                <span style='font-weight: 600; color: {APEX_COLORS['charcoal']}; font-size: 14px;'>MM Enabled</span>
-                <span style='font-weight: 700; color: {APEX_COLORS['navy']}; font-size: 16px;'>30</span>
-            </div>
-            <div style='background: #E0E0E0; border-radius: 8px; height: 35px; position: relative; overflow: hidden;'>
-                <div style='background: linear-gradient(90deg, {APEX_COLORS['bright_blue']} 0%, {APEX_COLORS['sky_blue']} 100%); height: 100%; width: 6%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-start; padding-left: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);'></div>
-            </div>
-        </div>
-
-        <div style='margin-bottom: 20px;'>
-            <div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;'>
-                <span style='font-weight: 600; color: {APEX_COLORS['charcoal']}; font-size: 14px;'>Users with Subscribe</span>
-                <span style='font-weight: 700; color: {APEX_COLORS['navy']}; font-size: 16px;'>100</span>
-            </div>
-            <div style='background: #E0E0E0; border-radius: 8px; height: 35px; position: relative; overflow: hidden;'>
-                <div style='background: linear-gradient(90deg, {APEX_COLORS['blue']} 0%, {APEX_COLORS['bright_blue']} 100%); height: 100%; width: 20%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-start; padding-left: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);'></div>
-            </div>
-        </div>
-
-        <div style='margin-bottom: 20px;'>
-            <div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;'>
-                <span style='font-weight: 600; color: {APEX_COLORS['charcoal']}; font-size: 14px;'>Active Subscriptions</span>
-                <span style='font-weight: 700; color: {APEX_COLORS['navy']}; font-size: 16px;'>500</span>
-            </div>
-            <div style='background: #E0E0E0; border-radius: 8px; height: 35px; position: relative; overflow: hidden;'>
-                <div style='background: linear-gradient(90deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%); height: 100%; width: 100%; border-radius: 8px; display: flex; align-items: center; justify-content: flex-start; padding-left: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);'></div>
-            </div>
-        </div>
-    </div>
-    """
-
-    components.html(html_content, height=400)
-
-    st.markdown("<br>", unsafe_allow_html=True)
-
-    # Gradient styling for tabs
-    st.markdown(f"""
-    <style>
-        button[data-baseweb="tab"] div {{
-            background: linear-gradient(135deg, {APEX_COLORS['blue']} 0%, {APEX_COLORS['navy']} 100%) !important;
-            -webkit-background-clip: text !important;
-            -webkit-text-fill-color: transparent !important;
-            background-clip: text !important;
-            font-weight: 600 !important;
-            font-size: 15px !important;
-        }}
-    </style>
-    """, unsafe_allow_html=True)
-
-    # Metrics categories in tabs
-    tab1, tab2, tab3 = st.tabs(["📊 Adoption Metrics", "📈 Usage Metrics", "💼 Business Impact"])
-
-    with tab1:
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, rgba(0,102,204,0.05) 0%, rgba(0,32,96,0.03) 100%);
-                    padding: 20px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['blue']}; margin-bottom: 20px;'>
-            <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0;'>Adoption Metrics</h4>
-            <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 14px;'>Track how clients are discovering and adopting Model Marketplace</p>
-        </div>
-
-        <table style='width: 100%; border-collapse: collapse; margin: 20px 0;'>
-            <thead>
-                <tr style='background: {APEX_COLORS['navy']}; color: white;'>
-                    <th style='padding: 12px; text-align: left; border: 1px solid #ddd;'>Metric</th>
-                    <th style='padding: 12px; text-align: left; border: 1px solid #ddd;'>Description</th>
-                    <th style='padding: 12px; text-align: left; border: 1px solid #ddd;'>Target (2026)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr style='background: white;'>
-                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['blue']} 0%, {APEX_COLORS['navy']} 100%);
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                        Correspondents with Model Marketplace enabled
-                    </td>
-                    <td style='padding: 12px; border: 1px solid #ddd; color: {APEX_COLORS['charcoal']};'>
-                        Number of firms with access configured
-                    </td>
-                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                        30+
-                    </td>
-                </tr>
-                <tr style='background: #f9f9f9;'>
-                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['blue']} 0%, {APEX_COLORS['navy']} 100%);
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                        Users with subscribe permissions
-                    </td>
-                    <td style='padding: 12px; border: 1px solid #ddd; color: {APEX_COLORS['charcoal']};'>
-                        Authorized users who can subscribe to models
-                    </td>
-                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                        100+
-                    </td>
-                </tr>
-                <tr style='background: white;'>
-                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['blue']} 0%, {APEX_COLORS['navy']} 100%);
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                        Active model subscriptions
-                    </td>
-                    <td style='padding: 12px; border: 1px solid #ddd; color: {APEX_COLORS['charcoal']};'>
-                        Total number of model subscriptions across all clients
-                    </td>
-                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                        500+
-                    </td>
-                </tr>
-                <tr style='background: #f9f9f9;'>
-                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['blue']} 0%, {APEX_COLORS['navy']} 100%);
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                        Accounts utilizing marketplace models
-                    </td>
-                    <td style='padding: 12px; border: 1px solid #ddd; color: {APEX_COLORS['charcoal']};'>
-                        Client accounts with marketplace model assignments
-                    </td>
-                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                        10,000+
-                    </td>
-                </tr>
-                <tr style='background: white;'>
-                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['blue']} 0%, {APEX_COLORS['navy']} 100%);
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                        Subscription conversion rate
-                    </td>
-                    <td style='padding: 12px; border: 1px solid #ddd; color: {APEX_COLORS['charcoal']};'>
-                        Browsers → subscribers conversion
-                    </td>
-                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                        40%
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        """, unsafe_allow_html=True)
-
-    with tab2:
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, rgba(40,167,69,0.05) 0%, rgba(40,167,69,0.03) 100%);
-                    padding: 20px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['green']}; margin-bottom: 20px;'>
-            <h4 style='color: {APEX_COLORS['green']}; margin-top: 0;'>Usage Metrics</h4>
-            <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 14px;'>Measure active engagement and product stickiness</p>
-        </div>
-
-        <table style='width: 100%; border-collapse: collapse; margin: 20px 0;'>
-            <thead>
-                <tr style='background: {APEX_COLORS['navy']}; color: white;'>
-                    <th style='padding: 12px; text-align: left; border: 1px solid #ddd;'>Metric</th>
-                    <th style='padding: 12px; text-align: left; border: 1px solid #ddd;'>Description</th>
-                    <th style='padding: 12px; text-align: left; border: 1px solid #ddd;'>Insight</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr style='background: white;'>
-                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['green']} 0%, {APEX_COLORS['blue']} 100%);
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                        Models subscribed per client (average)
-                    </td>
-                    <td style='padding: 12px; border: 1px solid #ddd; color: {APEX_COLORS['charcoal']};'>
-                        Average number of models each client subscribes to
-                    </td>
-                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                        Product stickiness
-                    </td>
-                </tr>
-                <tr style='background: #f9f9f9;'>
-                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['green']} 0%, {APEX_COLORS['blue']} 100%);
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                        Most popular providers
-                    </td>
-                    <td style='padding: 12px; border: 1px solid #ddd; color: {APEX_COLORS['charcoal']};'>
-                        Provider ranking by subscription count
-                    </td>
-                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                        Provider value to users
-                    </td>
-                </tr>
-                <tr style='background: white;'>
-                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['green']} 0%, {APEX_COLORS['blue']} 100%);
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                        Most popular models
-                    </td>
-                    <td style='padding: 12px; border: 1px solid #ddd; color: {APEX_COLORS['charcoal']};'>
-                        Top 10 models by adoption
-                    </td>
-                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                        Strategy preferences
-                    </td>
-                </tr>
-                <tr style='background: #f9f9f9;'>
-                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['green']} 0%, {APEX_COLORS['blue']} 100%);
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                        Rebalance frequency using marketplace models
-                    </td>
-                    <td style='padding: 12px; border: 1px solid #ddd; color: {APEX_COLORS['charcoal']};'>
-                        How often clients rebalance with marketplace models
-                    </td>
-                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                        Active usage
-                    </td>
-                </tr>
-                <tr style='background: white;'>
-                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['green']} 0%, {APEX_COLORS['blue']} 100%);
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                        AUM in marketplace-model-based accounts
-                    </td>
-                    <td style='padding: 12px; border: 1px solid #ddd; color: {APEX_COLORS['charcoal']};'>
-                        Total assets under management using marketplace models
-                    </td>
-                    <td style='padding: 12px; border: 1px solid #ddd; background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 600;'>
-                        Business impact
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        """, unsafe_allow_html=True)
-
-    with tab3:
-        st.markdown(f"""
-        <div style='background: linear-gradient(135deg, rgba(128,44,192,0.05) 0%, rgba(236,0,117,0.03) 100%);
-                    padding: 20px; border-radius: 12px; border-left: 5px solid {APEX_COLORS['amethyst']}; margin-bottom: 20px;'>
-            <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-                       margin-top: 0; font-weight: 600;'>Business Impact</h4>
-            <p style='color: {APEX_COLORS['charcoal']}; margin: 0; font-size: 14px;'>Quantify the value created by Model Marketplace</p>
-        </div>
-        """, unsafe_allow_html=True)
-
-        col1, col2 = st.columns(2)
-
-        with col1:
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, rgba(0,102,204,0.08) 0%, rgba(0,32,96,0.05) 100%);
-                        padding: 25px; border-radius: 12px; border: 2px solid {APEX_COLORS['blue']}; margin-bottom: 20px;'>
-                <h5 style='color: {APEX_COLORS['blue']}; margin-top: 0; font-size: 16px;'>💰 Incremental AUM</h5>
-                <div style='font-size: 14px; color: {APEX_COLORS['charcoal']}; margin-top: 10px;'>Track AUM growth from Model Marketplace adoption</div>
-            </div>
-            """, unsafe_allow_html=True)
-
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, rgba(40,167,69,0.08) 0%, rgba(40,167,69,0.05) 100%);
-                        padding: 25px; border-radius: 12px; border: 2px solid {APEX_COLORS['green']};'>
-                <h5 style='color: {APEX_COLORS['green']}; margin-top: 0; font-size: 16px;'>⚡ Time-to-Value</h5>
-                <div style='font-size: 14px; color: {APEX_COLORS['charcoal']}; margin-top: 10px;'>Reduce onboarding time for new clients</div>
-            </div>
-            """, unsafe_allow_html=True)
-
-        with col2:
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, rgba(128,44,192,0.08) 0%, rgba(236,0,117,0.05) 100%);
-                        padding: 25px; border-radius: 12px; border: 2px solid {APEX_COLORS['amethyst']}; margin-bottom: 20px;'>
-                <h5 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-                           -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-                           margin-top: 0; font-size: 16px; font-weight: 600;'>🔄 Client Retention</h5>
-                <div style='font-size: 14px; color: {APEX_COLORS['charcoal']}; margin-top: 10px;'>Compare retention across cohorts</div>
-            </div>
-            """, unsafe_allow_html=True)
-
-            st.markdown(f"""
-            <div style='background: linear-gradient(135deg, rgba(251,191,36,0.08) 0%, rgba(245,158,11,0.05) 100%);
-                        padding: 25px; border-radius: 12px; border: 2px solid {APEX_COLORS['gold']};'>
-                <h5 style='color: {APEX_COLORS['gold']}; margin-top: 0; font-size: 16px;'>⭐ NPS Score</h5>
-                <div style='font-size: 14px; color: {APEX_COLORS['charcoal']}; margin-top: 10px;'>Measure user satisfaction for marketplace</div>
-            </div>
-            """, unsafe_allow_html=True)
 
 # ============================================================
 # FOOTER
