@@ -597,9 +597,6 @@ if section == "🏠 Home":
                 <strong style='color: {APEX_COLORS['blue']};'>📋 Process Flow</strong>
             </div>
             <div style='background: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'>
-                <strong style='color: {APEX_COLORS['blue']};'>💼 Use Cases</strong>
-            </div>
-            <div style='background: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'>
                 <strong style='color: {APEX_COLORS['blue']};'>❓ Q&A</strong>
             </div>
             <div style='background: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);'>
@@ -1078,7 +1075,7 @@ elif section == "📊 Why Model Marketplace":
             <p style='font-weight: 600; color: {APEX_COLORS['navy']};'>Marketplace Only</p>
             <p style='font-size: 14px; line-height: 1.6; color: {APEX_COLORS['charcoal']};'>
                 Digital advisor launching managed portfolios. No in-house research team. Subscribes to
-                Franklin Templeton and Aptis models. Scales to 10,000+ accounts quickly.
+                Franklin Templeton and PIMCO models. Scales to 10,000+ accounts quickly.
             </p>
         </div>
         """, unsafe_allow_html=True)
@@ -1829,22 +1826,22 @@ elif section == "🏢 Model Providers":
 
         st.success("✅ **Status:** Live in production with daily data feeds")
 
-    elif provider == "State Street":
-        st.markdown("### State Street")
+    elif provider == "State Street Investment Management":
+        st.markdown("### State Street Investment Management")
 
         st.markdown(f"""
         <div class='provider-card' style='text-align: left;'>
-            <div class='provider-name'>State Street</div>
-            <span class='status-pending'>COMING SOON</span>
+            <div class='provider-name'>State Street Investment Management</div>
+            <span class='status-live'>LIVE</span>
             <hr>
-            <p><strong>Status:</strong> Awaiting holdings data</p>
-            <p><strong>Timeline:</strong> TBD</p>
+            <p><strong>Status:</strong> Live in production</p>
+            <p><strong>Models Available:</strong> Multiple investment strategies</p>
         </div>
         """, unsafe_allow_html=True)
 
-        st.info("📋 **Next Steps:** Waiting for State Street to submit model holdings data for upload to production")
+        st.success("✅ **State Street Investment Management** models are live and available to all Rebalancer clients")
 
-    else:  # Aptis or Timco and Sachs
+    else:  # Aptus Capital Advisors, PIMCO, or Zacks Investment Management
         st.markdown(f"### {provider}")
 
         st.markdown(f"""
