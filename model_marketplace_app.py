@@ -273,7 +273,7 @@ def create_provider_status_chart():
     fig = go.Figure(data=[
         go.Pie(
             labels=labels,
-            values=[1, 1, 1, 1],  # Equal sizes for all providers - balanced!
+            values=[1, 1, 1, 1, 1],  # Equal sizes for all 5 providers - balanced!
             hole=0.5,  # Creates donut effect (0.5 = 50% hole)
             marker=dict(
                 colors=colors,
@@ -281,7 +281,7 @@ def create_provider_status_chart():
             ),
             textfont=dict(size=14, color='white', family='Calibri', weight='bold'),
             hovertemplate='<b>%{label}</b><br>Provider in Marketplace<extra></extra>',
-            pull=[0, 0, 0, 0]  # All balanced - no pull
+            pull=[0, 0, 0, 0, 0]  # All balanced - no pull
         )
     ])
 
