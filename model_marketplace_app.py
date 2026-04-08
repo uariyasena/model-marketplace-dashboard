@@ -255,16 +255,16 @@ def create_metric_chart(value, label, color='blue'):
 
 def create_provider_status_chart():
     """Create provider status visualization as a donut chart"""
-    providers = ['Aptis', 'Franklin Templeton', 'Timco and Sachs', 'State Street']
-    status = ['Live', 'Live', 'Live', 'Coming Soon']
+    providers = ['Aptus Capital Advisors', 'Franklin Templeton', 'PIMCO', 'State Street Investment Management', 'Zacks Investment Management']
+    status = ['Live', 'Live', 'Live', 'Live', 'Live']
 
-    # Aptis uses a teal color from the green-to-blue gradient (like $0 FREE! card)
-    # Others keep their original blue gradient colors
+    # Color coding for each provider
     colors = [
-        '#1BAA7E',  # Aptis: Teal from the green→blue gradient
-        '#3B82F6',  # Franklin Templeton: Bright Blue (original)
-        '#00B0F0',  # Timco and Sachs: Sky Blue (original)
-        '#7030A0'   # State Street: Purple (Coming Soon)
+        '#1BAA7E',  # Aptus: Teal from the green→blue gradient
+        '#3B82F6',  # Franklin Templeton: Bright Blue
+        '#0066CC',  # PIMCO: Navy Blue
+        '#7030A0',  # State Street: Purple
+        '#00B0F0'   # Zacks: Sky Blue
     ]
 
     # Create labels with provider name and status
@@ -520,7 +520,7 @@ if section == "🏠 Home":
             <div style='font-size: 40px; margin-bottom: 15px;'>🎯</div>
             <h4 style='color: {APEX_COLORS['navy']}; margin-top: 0;'>Institutional Quality</h4>
             <p style='color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
-                Access professionally managed models from Franklin Templeton, Aptis, Timco and Sachs, and State Street
+                Access professionally managed models from Aptus Capital Advisors, Franklin Templeton, PIMCO, State Street Investment Management, and Zacks Investment Management
             </p>
         </div>
         """, unsafe_allow_html=True)
@@ -688,7 +688,7 @@ elif section == "📊 Executive Summary":
                 Institutional-Grade Investment Models
             </h4>
             <p style='color: {APEX_COLORS['charcoal']}; margin: 0; line-height: 1.7; font-size: 16px;'>
-                Access professionally managed models from Franklin Templeton, Aptis, Timco and Sachs, and State Street—
+                Access professionally managed models from Aptus Capital Advisors, Franklin Templeton, PIMCO, State Street Investment Management, and Zacks Investment Management—
                 the same institutional-quality strategies used by large wealth managers
             </p>
         </div>
@@ -858,7 +858,7 @@ elif section == "📰 Press Release Brief":
         <h2 style='color: {APEX_COLORS['blue']}; font-size: 60px; font-weight: 900; margin: 10px 0;'>01</h2>
         <h3 style='color: {APEX_COLORS['navy']}; margin: 15px 0;'>What We're Launching</h3>
         <p style='font-size: 16px; line-height: 2.0; max-width: 600px; margin: 0 auto;'>
-            Model Marketplace platform • Institutional-quality models • Aptis, Franklin Templeton, Timco & Sachs • <strong style='color: {APEX_COLORS['blue']};'>State Street Partnership</strong>
+            Model Marketplace platform • Institutional-quality models • Aptus Capital Advisors, Franklin Templeton, PIMCO, State Street Investment Management, Zacks Investment Management
         </p>
     </div>
 
@@ -1839,7 +1839,7 @@ elif section == "🏢 Model Providers":
     # Provider selection
     provider = st.selectbox(
         "Select a provider to learn more:",
-        ["Overview", "Aptis", "Franklin Templeton", "Timco and Sachs", "State Street"]
+        ["Overview", "Aptus Capital Advisors", "Franklin Templeton", "PIMCO", "State Street Investment Management", "Zacks Investment Management"]
     )
 
     if provider == "Overview":
@@ -2143,7 +2143,7 @@ elif section == "📢 Marketing Strategy":
         <div style='background-color: #E3F2FD; padding: 20px; border-radius: 10px;'>
         <h4 style='color: {APEX_COLORS['blue']};'>Messaging for Advisors</h4>
         <ul>
-            <li>Access institutional-quality models from Franklin Templeton, Aptis, Timco and Sachs, and State Street</li>
+            <li>Access institutional-quality models from Aptus Capital Advisors, Franklin Templeton, PIMCO, State Street Investment Management, and Zacks Investment Management</li>
             <li><strong>Models automatically update</strong> when providers rebalance—no manual intervention</li>
             <li>Reduce time on portfolio construction by 70%</li>
             <li>Seamlessly integrates with existing Rebalancer workflow</li>
