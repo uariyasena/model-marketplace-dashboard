@@ -844,7 +844,7 @@ elif section == "📰 Press Release Brief":
         <h2 style='color: {APEX_COLORS['amethyst']}; font-size: 60px; font-weight: 900; margin: 10px 0;'>02</h2>
         <h3 style='color: {APEX_COLORS['amethyst']}; margin: 15px 0;'>Key Benefits</h3>
         <p style='font-size: 16px; line-height: 2.0; max-width: 600px; margin: 0 auto;'>
-            <strong style='color: {APEX_COLORS['amethyst']};'>70% time reduction</strong> • Automatic model updates • Seamless workflow integration • Tax optimization ready
+            <strong style='color: {APEX_COLORS['amethyst']};'>Access to institutional-quality models</strong> • Automatic model updates • Seamless workflow integration • Tax optimization ready
         </p>
     </div>
 
@@ -2081,7 +2081,7 @@ elif section == "📢 Marketing Strategy":
         <ul>
             <li>Access institutional-quality models from Aptus Capital Advisors, Franklin Templeton, PIMCO, State Street Investment Management, and Zacks Investment Management</li>
             <li><strong>Models automatically update</strong> when providers rebalance—no manual intervention</li>
-            <li>Reduce time on portfolio construction by 70%</li>
+            <li>Streamline portfolio construction with professional model management</li>
             <li>Seamlessly integrates with existing Rebalancer workflow</li>
             <li>Combine marketplace + proprietary strategies</li>
             <li>Full tax-loss harvesting and optimization</li>
