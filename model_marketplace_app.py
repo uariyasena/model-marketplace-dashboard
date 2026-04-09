@@ -2251,7 +2251,7 @@ elif section == "🔧 Rebalancer Integration":
         ("👥 5. Client & Investor Settings", "Security restrictions (add/lift), wash sale restrictions, optimization preferences, minimum cash settings, account quarantine"),
         ("📈 6. Direct Indexing", "Replicate index fund performance, own individual securities outright, portfolio customization & exclusions, tax-loss harvesting optimization"),
         ("💼 7. Trade Management", "Generate proposals from SOD files, review and submit trades, trade blotter analysis, historical trade exploration"),
-        ("⭐ 8. Advanced Features", "Completion portfolios, cash generation via min cash, position liquidation, compliance monitoring")
+        ("⭐ 8. Advanced Features", "Tax-loss harvesting")
     ]
 
     col1, col2 = st.columns(2)
