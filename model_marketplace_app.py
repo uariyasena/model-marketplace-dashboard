@@ -2306,7 +2306,7 @@ elif section == "🔧 Rebalancer Integration":
 
         with col1:
             st.markdown(f"""
-            <div style='background: white; padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['light_gray']}; height: 100%;'>
+            <div style='background: white; padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['light_gray']}; min-height: 260px;'>
                 <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0;'>📋 How it works</h4>
                 <ol style='line-height: 1.8;'>
                     <li>Create asset class tree (e.g., Equities → US Equities → Large Cap)</li>
@@ -2320,7 +2320,7 @@ elif section == "🔧 Rebalancer Integration":
         with col2:
             st.markdown(f"""
             <div style='background: linear-gradient(135deg, rgba(0,102,204,0.05) 0%, rgba(0,32,96,0.05) 100%);
-                        padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['blue']}; height: 100%;'>
+                        padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['blue']}; min-height: 260px;'>
                 <h4 style='color: {APEX_COLORS['navy']}; margin-top: 0;'>✨ Benefits</h4>
                 <ul style='line-height: 1.8;'>
                     <li>Proper portfolio optimization</li>
@@ -2346,7 +2346,7 @@ elif section == "🔧 Rebalancer Integration":
 
         with col1:
             st.markdown(f"""
-            <div style='background: white; padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['light_gray']}; height: 100%;'>
+            <div style='background: white; padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['light_gray']}; min-height: 280px;'>
                 <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0;'>⚙️ How it works</h4>
                 <ul style='line-height: 1.8;'>
                     <li>Configure at firm or client level</li>
@@ -2361,7 +2361,7 @@ elif section == "🔧 Rebalancer Integration":
         with col2:
             st.markdown(f"""
             <div style='background: linear-gradient(135deg, rgba(40,167,69,0.05) 0%, rgba(40,167,69,0.02) 100%);
-                        padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['green']}; height: 100%;'>
+                        padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['green']}; min-height: 280px;'>
                 <h4 style='color: {APEX_COLORS['green']}; margin-top: 0;'>✅ Benefits</h4>
                 <ul style='line-height: 1.8;'>
                     <li>Improved after-tax returns</li>
@@ -2389,7 +2389,7 @@ elif section == "🔧 Rebalancer Integration":
 
         with col1:
             st.markdown(f"""
-            <div style='background: white; padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['light_gray']}; height: 100%;'>
+            <div style='background: white; padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['light_gray']}; min-height: 280px;'>
                 <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0;'>⚙️ How it works</h4>
                 <ul style='line-height: 1.8;'>
                     <li>Replicate index fund performance with individual securities</li>
@@ -2404,7 +2404,7 @@ elif section == "🔧 Rebalancer Integration":
         with col2:
             st.markdown(f"""
             <div style='background: linear-gradient(135deg, rgba(128,44,192,0.05) 0%, rgba(236,0,117,0.02) 100%);
-                        padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['amethyst']}; height: 100%;'>
+                        padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['amethyst']}; min-height: 280px;'>
                 <h4 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
                            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
                            margin-top: 0; font-weight: 600;'>✅ Benefits</h4>
@@ -2432,7 +2432,7 @@ elif section == "🔧 Rebalancer Integration":
 
         with col1:
             st.markdown(f"""
-            <div style='background: white; padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['light_gray']}; height: 100%;'>
+            <div style='background: white; padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['light_gray']}; min-height: 280px;'>
                 <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0;'>⚙️ How it works</h4>
                 <ul style='line-height: 1.8;'>
                     <li>Set asset class thresholds (e.g., ±5% drift tolerance)</li>
@@ -2447,7 +2447,7 @@ elif section == "🔧 Rebalancer Integration":
         with col2:
             st.markdown(f"""
             <div style='background: linear-gradient(135deg, rgba(0,102,204,0.05) 0%, rgba(59,130,246,0.02) 100%);
-                        padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['blue']}; height: 100%;'>
+                        padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['blue']}; min-height: 280px;'>
                 <h4 style='color: {APEX_COLORS['navy']}; margin-top: 0;'>✅ Benefits</h4>
                 <ul style='line-height: 1.8;'>
                     <li>Reduce unnecessary trading</li>
@@ -2473,7 +2473,7 @@ elif section == "🔧 Rebalancer Integration":
 
         with col1:
             st.markdown(f"""
-            <div style='background: white; padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['light_gray']}; height: 100%;'>
+            <div style='background: white; padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['light_gray']}; min-height: 360px;'>
                 <h4 style='color: {APEX_COLORS['blue']}; margin-top: 0;'>⚙️ How it works</h4>
                 <ul style='line-height: 1.8;'>
                     <li>Generate proposals from SOD (Start of Day) files</li>
@@ -2490,7 +2490,7 @@ elif section == "🔧 Rebalancer Integration":
         with col2:
             st.markdown(f"""
             <div style='background: linear-gradient(135deg, rgba(0,32,96,0.05) 0%, rgba(0,102,204,0.02) 100%);
-                        padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['navy']}; height: 100%;'>
+                        padding: 20px; border-radius: 10px; border: 2px solid {APEX_COLORS['navy']}; min-height: 360px;'>
                 <h4 style='color: {APEX_COLORS['navy']}; margin-top: 0;'>✅ Benefits</h4>
                 <ul style='line-height: 1.8;'>
                     <li>Streamlined rebalancing workflow</li>
