@@ -2284,6 +2284,13 @@ elif section == "🔧 Rebalancer Integration":
             Feature Deep Dive
         </span>
     </h3>
+    <style>
+        .stSelectbox label {{
+            font-size: 18px !important;
+            font-weight: 600 !important;
+            color: {APEX_COLORS['navy']} !important;
+        }}
+    </style>
     """, unsafe_allow_html=True)
 
     selected_feature = st.selectbox(
