@@ -2206,9 +2206,7 @@ elif section == "🔧 Rebalancer Integration":
                 padding: 25px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid {APEX_COLORS['blue']};'>
         <h3 style='color: {APEX_COLORS['navy']}; margin-top: 0; font-size: 20px; font-weight: 600;'>What is Apex Rebalancer?</h3>
         <p style='color: {APEX_COLORS['charcoal']}; font-size: 15px; line-height: 1.6; margin-bottom: 15px;'>
-            Rebalancing is the process of adjusting a portfolio's asset allocations to align with levels advisors
-            specify in an investment plan. Apex's Rebalancer allows advisors to manage portfolios based on asset types,
-            expected returns, and risk levels.
+            Rebalancing is the process of adjusting a portfolio's asset allocations to align with levels advisors specify in an investment plan. Apex's Rebalancer allows advisors to manage portfolios based on asset types, expected returns, and risk levels. The rebalancer creates trade proposals that realign investment portfolios to targets and ranges that match the desired portfolio models as markets move and asset values shift. Within the rebalancer, advisors can submit trade proposals to the market and seamlessly manage their investor's portfolios.
         </p>
         <div style='background: white; padding: 18px; border-radius: 8px; border-left: 4px solid {APEX_COLORS['amethyst']};'>
             <p style='margin: 0; font-size: 14px; color: {APEX_COLORS['charcoal']};'>
