@@ -871,10 +871,12 @@ elif section == "📰 Press Release Brief":
 
     # Sample Messaging
     st.markdown(f"""
-    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-               font-weight: 700; font-size: 24px; margin-bottom: 20px; margin-top: 30px;'>
-        💬 Sample Messaging & Quotes
+    <h3 style='font-weight: 700; font-size: 24px; margin-bottom: 20px; margin-top: 30px;'>
+        <span style='filter: none;'>💬</span>
+        <span style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;'>
+            Sample Messaging & Quotes
+        </span>
     </h3>
     """, unsafe_allow_html=True)
 
@@ -908,10 +910,12 @@ elif section == "📰 Press Release Brief":
 
     # Quick Stats Box
     st.markdown(f"""
-    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-               font-weight: 700; font-size: 24px; margin-bottom: 20px; margin-top: 30px;'>
-        📊 Press Release Stats
+    <h3 style='font-weight: 700; font-size: 24px; margin-bottom: 20px; margin-top: 30px;'>
+        <span style='filter: none;'>📊</span>
+        <span style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;'>
+            Press Release Stats
+        </span>
     </h3>
     """, unsafe_allow_html=True)
 
@@ -967,10 +971,12 @@ elif section == "📊 Why Model Marketplace":
 
     # Comparison Table
     st.markdown(f"""
-    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-               font-weight: 700; font-size: 24px; margin-bottom: 20px;'>
-        🔄 Comparison: Custom vs Marketplace vs Hybrid
+    <h3 style='font-weight: 700; font-size: 24px; margin-bottom: 20px;'>
+        <span style='filter: none;'>🔄</span>
+        <span style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;'>
+            Comparison: Custom vs Marketplace vs Hybrid
+        </span>
     </h3>
     """, unsafe_allow_html=True)
 
@@ -1053,10 +1059,12 @@ elif section == "📊 Why Model Marketplace":
 
     # Use Case Examples
     st.markdown(f"""
-    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-               font-weight: 700; font-size: 24px; margin-top: 40px; margin-bottom: 20px;'>
-        💡 Real-World Scenarios
+    <h3 style='font-weight: 700; font-size: 24px; margin-top: 40px; margin-bottom: 20px;'>
+        <span style='filter: none;'>💡</span>
+        <span style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;'>
+            Real-World Scenarios
+        </span>
     </h3>
     """, unsafe_allow_html=True)
 
@@ -2221,10 +2229,12 @@ elif section == "🔧 Rebalancer Integration":
 
     # Features Section Header
     st.markdown(f"""
-    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-               font-weight: 700; font-size: 24px; margin-bottom: 20px;'>
-        🎯 Key Rebalancer Features
+    <h3 style='font-weight: 700; font-size: 24px; margin-bottom: 20px;'>
+        <span style='filter: none;'>🎯</span>
+        <span style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;'>
+            Key Rebalancer Features
+        </span>
     </h3>
     """, unsafe_allow_html=True)
 
@@ -2267,10 +2277,12 @@ elif section == "🔧 Rebalancer Integration":
 
     # Feature Deep Dive Section
     st.markdown(f"""
-    <h3 style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
-               -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-               font-weight: 700; font-size: 24px; margin-top: 40px; margin-bottom: 20px;'>
-        🔍 Feature Deep Dive
+    <h3 style='font-weight: 700; font-size: 24px; margin-top: 40px; margin-bottom: 20px;'>
+        <span style='filter: none;'>🔍</span>
+        <span style='background: linear-gradient(135deg, {APEX_COLORS['amethyst']} 0%, {APEX_COLORS['amethyst_pink']} 100%);
+                     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;'>
+            Feature Deep Dive
+        </span>
     </h3>
     """, unsafe_allow_html=True)
 
