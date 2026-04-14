@@ -532,9 +532,9 @@ if section == "🏠 Home":
                     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
                     height: 100%;'>
             <div style='font-size: 40px; margin-bottom: 15px;'>🔄</div>
-            <h4 style='color: {APEX_COLORS['navy']}; margin-top: 0;'>Automatic Updates</h4>
+            <h4 style='color: {APEX_COLORS['navy']}; margin-top: 0;'>Provider Updates Managed by Apex</h4>
             <p style='color: {APEX_COLORS['charcoal']}; line-height: 1.6;'>
-                Models automatically update when providers rebalance—no manual intervention required
+                When providers rebalance their models, Apex applies updates to your subscriptions—no client action required
             </p>
         </div>
         """, unsafe_allow_html=True)
@@ -631,8 +631,8 @@ elif section == "📊 Executive Summary":
             Model Marketplace is Apex's <strong style='color: {APEX_COLORS['blue']};'>investment model distribution platform</strong> integrated within Ascend Rebalancer,
             allowing advisors to subscribe to professionally managed models from leading investment management providers.
             Models generate trade proposals based on market activity that realign investment portfolios according to a
-            defined set of holdings and their weight. Subscribed models receive <strong style='color: {APEX_COLORS['blue']};'>automatic updates and adjustments</strong>
-            from the provider, enabling efficient model updates, allocation changes, and compliance monitoring.
+            defined set of holdings and their weight. Subscribed models receive <strong style='color: {APEX_COLORS['blue']};'>updates managed by Apex</strong>
+            when providers rebalance, enabling efficient allocation changes and compliance monitoring without client intervention.
         </p>
     </div>
     """, unsafe_allow_html=True)
@@ -686,11 +686,11 @@ elif section == "📊 Executive Summary":
         </div>
         <div style='flex-grow: 1;'>
             <h4 style='color: {APEX_COLORS['navy']}; margin: 0 0 10px 0; font-size: 20px;'>
-                Automatic Model Updates from Providers
+                Provider Updates Managed by Apex
             </h4>
             <p style='color: {APEX_COLORS['charcoal']}; margin: 0; line-height: 1.7; font-size: 16px;'>
-                When providers rebalance or adjust their models, your subscriptions automatically receive the updates—
-                no manual data entry or model reconstruction required
+                When providers rebalance or adjust their models, Apex applies updates to your subscriptions—
+                no manual data entry or model reconstruction required from clients
             </p>
         </div>
     </div>
@@ -844,7 +844,7 @@ elif section == "📰 Press Release Brief":
         <h2 style='color: {APEX_COLORS['amethyst']}; font-size: 60px; font-weight: 900; margin: 10px 0;'>02</h2>
         <h3 style='color: {APEX_COLORS['amethyst']}; margin: 15px 0;'>Key Benefits</h3>
         <p style='font-size: 16px; line-height: 2.0; max-width: 600px; margin: 0 auto;'>
-            <strong style='color: {APEX_COLORS['amethyst']};'>Access to institutional-quality models</strong> • Automatic model updates • Seamless workflow integration • Tax optimization ready
+            <strong style='color: {APEX_COLORS['amethyst']};'>Access to institutional-quality models</strong> • Provider updates managed by Apex • Seamless workflow integration • Tax optimization ready
         </p>
     </div>
 
@@ -1031,16 +1031,6 @@ elif section == "📊 Why Model Marketplace":
                 </td>
                 <td style='padding: 15px; border: 1px solid #ddd; background: linear-gradient(135deg, rgba(128,44,192,0.05) 0%, rgba(236,0,117,0.02) 100%);'>
                     Best of both worlds ✨
-                </td>
-            </tr>
-            <tr style='background: #f9f9f9;'>
-                <td style='padding: 15px; border: 1px solid #ddd; font-weight: 600; color: {APEX_COLORS['blue']};'>Brand Control</td>
-                <td style='padding: 15px; border: 1px solid #ddd; background: linear-gradient(135deg, rgba(40,167,69,0.05) 0%, rgba(40,167,69,0.02) 100%);'>
-                    Full branding control ✅
-                </td>
-                <td style='padding: 15px; border: 1px solid #ddd;'>Provider-branded</td>
-                <td style='padding: 15px; border: 1px solid #ddd; background: linear-gradient(135deg, rgba(128,44,192,0.05) 0%, rgba(236,0,117,0.02) 100%);'>
-                    Selective white-labeling ✨
                 </td>
             </tr>
             <tr style='background: white;'>
@@ -1525,7 +1515,7 @@ elif section == "🔄 Process Flow":
         {
             "title": "Step 8: Unsubscribe (Optional)",
             "who": "Client/Advisor",
-            "what": "Stops automatic updates but retains last subscribed weights",
+            "what": "Stops provider updates but retains last subscribed weights",
             "where": "To fully discontinue: Delete model from Rebalancer",
             "timeline": "Immediate",
             "color": APEX_COLORS['amethyst'],
@@ -2080,7 +2070,7 @@ elif section == "📢 Marketing Strategy":
         <h4 style='color: {APEX_COLORS['blue']};'>Messaging for Advisors</h4>
         <ul>
             <li>Access institutional-quality models from Aptus Capital Advisors, Franklin Templeton, PIMCO, State Street Investment Management, and Zacks Investment Management</li>
-            <li><strong>Models automatically update</strong> when providers rebalance—no manual intervention</li>
+            <li><strong>Provider updates managed by Apex</strong> when providers rebalance—no client intervention required</li>
             <li>Streamline portfolio construction with professional model management</li>
             <li>Seamlessly integrates with existing Rebalancer workflow</li>
             <li>Combine marketplace + proprietary strategies</li>
@@ -2095,11 +2085,11 @@ elif section == "📢 Marketing Strategy":
         <h4 style='color: {APEX_COLORS['green']};'>Messaging for Firms</h4>
         <ul>
             <li>Launch managed portfolios without hiring investment team</li>
-            <li>Scale to thousands of accounts with automated updates</li>
+            <li>Scale to thousands of accounts with provider updates managed by Apex</li>
             <li><strong>Competitive pricing</strong> - 3 BPS + $0.20/account/month</li>
             <li>Compete with larger firms using institutional models</li>
             <li>Choose from multiple providers</li>
-            <li>Maintain compliance with automatic updates</li>
+            <li>Maintain compliance with provider updates managed by Apex</li>
         </ul>
         </div>
         """, unsafe_allow_html=True)
@@ -2110,7 +2100,7 @@ elif section == "📢 Marketing Strategy":
         <h4 style='color: {APEX_COLORS['purple']};'>Messaging for Model Providers</h4>
         <ul>
             <li><strong>Distribution reach:</strong> 41 RIA firms managing 33,080 accounts</li>
-            <li><strong>Automated platform:</strong> Upload once, updates propagate automatically</li>
+            <li><strong>Streamlined platform:</strong> Send updates to Apex, we distribute to all subscribers</li>
             <li><strong>Growing ecosystem:</strong> Reach Apex's digital advisors and wealth managers</li>
             <li><strong>Partnership opportunity</strong> with premier fintech custody platform</li>
         </ul>
@@ -2649,7 +2639,7 @@ elif section == "❓ Q&A":
         ("What if we want a specific provider added?", "Contact your RM. We're actively seeking new provider partnerships (current bottleneck: no dedicated BD resource)."),
         ("Are there regulatory/compliance concerns?", "Each provider has their own T&Cs that clients accept. Apex provides disclosure language on all trade orders. Clients maintain full responsibility for trade execution."),
         ("What happens if a model provider leaves the marketplace?", "You would be notified in advance. Already-assigned accounts would continue with the last known model composition, but new subscriptions would not be available."),
-        ("What happens if I unsubscribe from a model?", "Unsubscribing stops automatic updates from the provider, but your portfolios continue using the last subscribed weights. To fully discontinue, you must delete the model from Rebalancer. Your T&C acceptance is retained for future re-subscription."),
+        ("What happens if I unsubscribe from a model?", "Unsubscribing stops provider updates, but your portfolios continue using the last subscribed weights. To fully discontinue, you must delete the model from Rebalancer. Your T&C acceptance is retained for future re-subscription."),
         ("Do I need to configure anything after subscribing?", "Yes, two critical steps: (1) Verify each security in the model is assigned to the correct asset class in Rebalancer for optimal performance, and (2) Create goals and assign the model to fund those goals in your client accounts."),
         ("What if I have issues or questions?", "Open an Apex Service Center ticket and navigate to the Rebalancer category. Provide as much detail as possible about your issue. Support is handled by Park (primary) with engineering escalation available."),
         ("What Rebalancer features work with Model Marketplace models?", "All standard Rebalancer features apply: firm settings, thresholds, tax-loss harvesting, optimization between drift reduction and tax sensitivity, direct indexing, asset class management, and trade blotter analysis.")
