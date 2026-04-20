@@ -1870,7 +1870,7 @@ elif section == "💰 Revenue Model":
     with col1:
         st.markdown(f"""
         <div style='background: linear-gradient(135deg, {APEX_COLORS['green']} 0%, {APEX_COLORS['sky_blue']} 100%);
-                    padding: 30px; border-radius: 10px; text-align: center; color: white; min-height: 220px;
+                    padding: 30px; border-radius: 10px; text-align: center; color: white; height: 240px;
                     display: flex; flex-direction: column; justify-content: center;'>
             <div style='font-size: 48px; font-weight: bold;'>3 BPS</div>
             <div style='font-size: 18px; margin-top: 10px; font-weight: 600;'>Rebalancer Fee</div>
@@ -1881,9 +1881,9 @@ elif section == "💰 Revenue Model":
     with col2:
         st.markdown(f"""
         <div style='background: linear-gradient(135deg, {APEX_COLORS['blue']} 0%, {APEX_COLORS['bright_blue']} 100%);
-                    padding: 30px; border-radius: 10px; text-align: center; color: white; min-height: 220px;
+                    padding: 30px; border-radius: 10px; text-align: center; color: white; height: 240px;
                     display: flex; flex-direction: column; justify-content: center;'>
-            <div style='font-size: 40px; font-weight: bold;'>Varies</div>
+            <div style='font-size: 48px; font-weight: bold;'>Varies</div>
             <div style='font-size: 18px; margin-top: 10px; font-weight: 600;'>Direct Indexing</div>
             <div style='font-size: 15px; opacity: 0.9;'>3-6 BPS additional</div>
         </div>
@@ -1892,7 +1892,7 @@ elif section == "💰 Revenue Model":
     with col3:
         st.markdown(f"""
         <div style='background: linear-gradient(135deg, {APEX_COLORS['navy']} 0%, {APEX_COLORS['charcoal']} 100%);
-                    padding: 30px; border-radius: 10px; text-align: center; color: white; min-height: 220px;
+                    padding: 30px; border-radius: 10px; text-align: center; color: white; height: 240px;
                     display: flex; flex-direction: column; justify-content: center;'>
             <div style='font-size: 48px; font-weight: bold;'>Indirect</div>
             <div style='font-size: 18px; margin-top: 10px; font-weight: 600;'>Revenue Source</div>
