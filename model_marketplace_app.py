@@ -1873,7 +1873,7 @@ elif section == "💰 Revenue Model":
                     padding: 30px; border-radius: 10px; text-align: center; color: white;'>
             <div style='font-size: 48px; font-weight: bold;'>3 BPS</div>
             <div style='font-size: 18px; margin-top: 10px; font-weight: 600;'>Rebalancer Fee</div>
-            <div style='font-size: 15px; opacity: 0.9;'>+ $0.20/account/month</div>
+            <div style='font-size: 15px; opacity: 0.9;'>or $0.20/account/month<br>(whichever is greater)</div>
         </div>
         """, unsafe_allow_html=True)
 
@@ -2086,7 +2086,7 @@ elif section == "📢 Marketing Strategy":
         <ul>
             <li>Launch managed portfolios without hiring investment team</li>
             <li>Scale to thousands of accounts with provider updates managed by Apex</li>
-            <li><strong>Competitive pricing</strong> - 3 BPS + $0.20/account/month</li>
+            <li><strong>Competitive pricing</strong> - 3 BPS or $0.20/account/month (whichever is greater)</li>
             <li>Compete with larger firms using institutional models</li>
             <li>Choose from multiple providers</li>
             <li>Maintain compliance with provider updates managed by Apex</li>
@@ -2632,7 +2632,7 @@ elif section == "❓ Q&A":
     qa_data = [
         ("What if we're still on Classic?", "Model Marketplace is Ascend-only. Let's discuss your Ascend migration timeline and prioritize Model Marketplace access post-migration."),
         ("We're not Rebalancer clients. Can we still use Model Marketplace?", "No, Model Marketplace requires Rebalancer subscription. Let's explore if Rebalancer is right for your firm first."),
-        ("Do we have to pay for Model Marketplace?", "Rebalancer fees apply: 3 BPS of AUM assigned to rebalancing goals (billed monthly) + $0.20 per funded account per month. Direct indexing features have additional fees. Contact your RM for detailed pricing."),
+        ("Do we have to pay for Model Marketplace?", "Rebalancer fees apply: 3 BPS of AUM assigned to rebalancing goals OR $0.20 per funded account per month (whichever is greater), billed monthly. Direct indexing features have additional fees. Contact your RM for detailed pricing."),
         ("Can we customize the models after subscribing?", "Subscribed models from providers cannot be edited, but you can create custom models in Rebalancer and use marketplace models as a starting point/reference."),
         ("How often are models updated?", "Providers update their models on their own schedule. Franklin Templeton provides daily performance reporting. Model composition updates vary by provider."),
         ("Does Apex automatically rebalance our accounts?", "Not currently. You must manually initiate rebalancing or call our API."),
