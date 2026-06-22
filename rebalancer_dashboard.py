@@ -561,30 +561,46 @@ elif section == "✨ Features":
             "icon": "📊",
             "items": [
                 "**Goal-Based Portfolios**: Assign multiple investment goals to each account with separate allocations",
-                "**Model Management**: Create and maintain investment models with target allocations",
+                "**Model Management**: Create and maintain investment models with target allocations for taxable and tax-advantaged accounts",
+                "**Frameworks**: Three types - Glidepath (target-date based), Risk-Based (2 models, 0-100 risk score), Risk-Tier (2-10 tiers)",
                 "**Drift Monitoring**: Automatic tracking of portfolio drift from target allocations",
                 "**Multi-Account Support**: Rebalance hundreds or thousands of accounts simultaneously",
-                "**Asset Class Mapping**: Flexible security-to-asset-class mapping for accurate tracking"
+                "**Asset Class Mapping**: Flexible security-to-asset-class mapping for accurate tracking",
+                "**Model Marketplace**: Subscribe to professionally managed models with automatic updates from providers"
             ]
         },
         "Rebalancing & Optimization": {
             "icon": "⚖️",
             "items": [
                 "**Smart Rebalancing**: Optimize trade recommendations to minimize costs and tax impact",
-                "**Threshold Management**: Configurable drift thresholds (firm-level or account-level)",
+                "**Threshold Management**: Configurable drift thresholds for securities, asset classes, and cash (firm-level or account-level)",
                 "**Tax-Loss Harvesting**: Automatically identify and execute tax-loss harvesting opportunities",
-                "**Cash Flow Integration**: Incorporate deposits/withdrawals into rebalancing decisions",
-                "**Trade Blotter Analysis**: Review and modify proposed trades before execution"
+                "**Wash Sale Restrictions**: Automatic restrictions to prevent wash sale violations",
+                "**Cash Management**: Generate cash positions with minimum cash parameter",
+                "**Trade Blotter Analysis**: Review and modify proposed trades before execution",
+                "**Basket Trading**: Execute bulk orders across multiple securities"
             ]
         },
         "Advanced Features": {
             "icon": "🚀",
             "items": [
-                "**Direct Indexing**: Build custom index portfolios at the individual security level",
-                "**Model Marketplace Integration**: Subscribe to institutional investment models",
+                "**Direct Indexing**: Build custom index portfolios with tracking error constraints, security bands, and tax optimization",
+                "**Capital Gains Budget**: Set annual dollar limits on short-term and long-term gains with automatic restrictions",
+                "**Ticker Restrictions**: Create buy/sell restrictions on specific securities at client or account level",
+                "**Liquidate Positions**: Sell all holdings in an account with automatic restriction removal",
+                "**Quarantine Accounts**: Prevent trade proposals for specific accounts (automatic or manual)",
                 "**API Access**: Programmatic access for automated rebalancing workflows",
-                "**Batch Processing**: Execute rebalancing across entire client base",
-                "**Compliance Controls**: Pre-trade compliance checks and reporting"
+                "**Completion Portfolio**: Reduce drift for portfolios holding restricted securities"
+            ]
+        },
+        "Security & Administration": {
+            "icon": "🔐",
+            "items": [
+                "**Multi-Factor Authentication (MFA)**: Secure access via phone or authenticator app",
+                "**Organization Settings**: Add users, create API keys (max 5 per firm)",
+                "**Firm Settings**: Configure minimum trade size, trading limits, and tax-loss harvesting defaults",
+                "**Client Settings**: Customize preferences per client, override firm-wide settings",
+                "**Investor Settings**: Account-level customization and preferences"
             ]
         },
         "Reporting & Analytics": {
@@ -592,9 +608,10 @@ elif section == "✨ Features":
             "items": [
                 "**Performance Tracking**: Monitor portfolio performance vs. targets",
                 "**Drift Reports**: Visualize current portfolio drift by account or asset class",
-                "**Trade History**: Complete audit trail of all rebalancing activity",
+                "**Historical Trades**: Navigate, filter, and download past trades with advanced search",
                 "**Tax Reports**: Tax-loss harvesting summary and realized gains/losses",
-                "**Client Statements**: White-label reporting for end clients"
+                "**Client Statements**: White-label reporting for end clients",
+                "**Compliance Controls**: Pre-trade compliance checks and reporting"
             ]
         }
     }
